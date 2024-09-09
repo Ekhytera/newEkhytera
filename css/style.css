@@ -155,21 +155,21 @@ main .educacao .destaques{
 }
 
 main .educacao .destaques .not1{
-    background-image: url('/imgs/Germano-Couy-acer-brasil-712x370.webp');
+    background-image: url(/imgs/Germano-Couy-acer-brasil-712x370.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 main .educacao .destaques .not2{
-    background-image: url('/imgs/01164633377272.webp');
+    background-image: url(/imgs/01164633377272.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 main .educacao .destaques .not3{
-    background-image: url('/imgs/010150240401-processador-recozimento-3.jpg');
+    background-image: url(/imgs/010150240401-processador-recozimento-3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -206,14 +206,14 @@ main .materiais .content .card{
 }
 
 main .materiais .content .card:nth-child(1){
-    background-image: url('/imgs/gpubackimg.png');
+    background-image: url(/imgs/gpubackimg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 main .materiais .content .card:nth-child(2){
-    background-image: url('/imgs/codebackimg.png');
+    background-image: url(/imgs/codebackimg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

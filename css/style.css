@@ -162,7 +162,7 @@ main .educacao .destaques .not1{
 }
 
 main .educacao .destaques .not2{
-    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/vidautil.webp');
+    background-image: url("https://ekhytera.github.io/newEkhytera/imgs/vidautil.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -155,7 +155,7 @@ main .educacao .destaques{
 }
 
 main .educacao .destaques .not1{
-    background-image: url('/imgs/noticiaacer.webp');
+    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/noticiaacer.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

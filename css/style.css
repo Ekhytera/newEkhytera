@@ -1,0 +1,233 @@
+body {
+    min-height: 100vh;
+    background-color: hsla(211, 53%, 11%, 1);
+}
+
+main .firstContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+}
+
+main .firstContainer .textPart {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: hsla(75, 6%, 87%, 1);
+}
+
+main .firstContainer .textPart h1 {
+    font-size: 2rem;
+    background-image: linear-gradient(45deg, hsla(75, 6%, 87%, 1), hsla(212, 60%, 67%, 1));
+    background-size: 100%;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+main .firstContainer .textPart p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+main .firstContainer .textPart button {
+    background-image: linear-gradient(45deg, hsla(212, 60%, 67%, 1), hsla(0, 0%, 0%, 0.25));
+    padding: 0.5rem;
+    color: hsla(0, 0%, 100%, 1);
+    border: none;
+    font-weight: 600;
+}
+
+main .categorias {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-inline: 1rem;
+}
+
+main .categorias h2 {
+    color: hsla(75, 6%, 87%, 1);
+    font-size: 1rem;
+}
+
+main .categorias .options {
+    background: linear-gradient(262.57deg, rgba(0, 0, 0, 0.55) 1.51%, rgba(121, 167, 221, 0.55) 115.61%);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .categorias .options img {
+    display: block;
+}
+
+main .categorias .options .texts {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+main .categorias .options .texts h1 {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #415A77 0%, #79A7DD 100%);
+    background-size: 100%;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+main .categorias .options .texts p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsla(75, 6%, 87%, 1);
+}
+
+main .categorias .options .texts button {
+    background: linear-gradient(270deg, #79A7DD 0%, #415A77 100%);
+    background-size: 100%;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid hsla(212, 60%, 67%, 1);
+}
+
+main .categorias .changeCat{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main .categorias .changeCat button{
+    width: 80px;
+    height: 9px;
+    background: hsla(0, 0%, 0%, 0.55);
+    border: 1px solid hsla(0, 0%, 0%, 0.55);
+    cursor: pointer;
+}
+
+main .categorias .changeCat .selected{
+    background: linear-gradient(270deg, #79A7DD 0%, #415A77 100%);
+}
+
+main .educacao {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-inline: 1rem;
+}
+
+main .educacao h2 {
+    color: hsla(75, 6%, 87%, 1);
+    font-size: 1rem;
+}
+
+main .educacao p{
+    color: hsla(75, 6%, 87%, 1);
+    font-weight: 400;
+    background-color: hsla(0, 0%, 0%, 0.55);
+    padding: 0.5rem;
+}
+
+main .educacao .destaques{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+main .educacao .destaques .not1{
+    background-image: url(/imgs/Germano-Couy-acer-brasil-712x370.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main .educacao .destaques .not2{
+    background-image: url(/imgs/01164633377272.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main .educacao .destaques .not3{
+    background-image: url(/imgs/010150240401-processador-recozimento-3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main .materiais {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-inline: 1rem;
+}
+
+main .materiais h2 {
+    color: hsla(75, 6%, 87%, 1);
+    font-size: 1rem;
+}
+
+main .materiais .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main .materiais .content .card{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    color: hsla(0, 0%, 80%, 1);
+    padding: 1rem;
+}
+
+main .materiais .content .card:nth-child(1){
+    background-image: url(/imgs/gpubackimg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main .materiais .content .card:nth-child(2){
+    background-image: url(/imgs/codebackimg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main .materiais .content .card h3{
+    font-size: 1.5rem;
+}
+
+main .materiais .content .card ul{
+    list-style: none;
+}
+
+main .materiais .content .card ul li a{
+    text-decoration: underline;
+    color: hsla(0, 0%, 80%, 1);
+}

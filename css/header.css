@@ -1,0 +1,64 @@
+header{
+    padding: 1rem;
+}
+
+header .icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .icons #menuIcon{
+    cursor: pointer;
+}
+
+header .verticalNav{
+    display: none;
+    margin-top: 0.5rem;
+}
+
+header .verticalNav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+header .verticalNav ul li{
+    padding: 0.5rem;
+}
+
+header .verticalNav ul li a{
+    text-decoration: none;
+    color: hsla(75, 6%, 87%, 1);
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+header .verticalNav ul li a:hover{
+    background-color: rgb(28, 44, 61);
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+header .verticalNav nav{
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+header .verticalNav nav input{
+    width: 50%;
+    background-color: transparent;
+    border: 1px solid hsla(75, 6%, 87%, 1);
+    border-radius: 2rem;
+    padding-left: 0.5rem;
+    color: hsla(75, 6%, 87%, 1);
+}
+
+header .verticalNav ul li input::placeholder{
+    color: hsla(75, 6%, 87%, 1);
+}

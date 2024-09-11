@@ -3,7 +3,7 @@ body {
     background-color: hsla(211, 53%, 11%, 1);
 }
 
-main{
+main {
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -42,12 +42,31 @@ main .firstContainer .textPart p {
     font-weight: 400;
 }
 
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: hsla(212, 60%, 67%, 1);
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: hsla(0, 0%, 0%, 0.25);
+    inherits: false;
+}
+
 main .firstContainer .textPart button {
-    background-image: linear-gradient(45deg, hsla(212, 60%, 67%, 1), hsla(0, 0%, 0%, 0.25));
+    background-image: linear-gradient(45deg, var(--myColor1), var(--myColor2));
     padding: 0.5rem;
     color: hsla(0, 0%, 100%, 1);
     border: none;
     font-weight: 600;
+    cursor: pointer;
+    transition: --myColor1 0.3s, --myColor2 0.3s;
+}
+
+main .firstContainer .textPart button:hover {
+    --myColor1: hsla(0, 0%, 0%, 0.25);
+    --myColor2: hsla(212, 60%, 67%, 1);
 }
 
 main .categorias {
@@ -241,115 +260,115 @@ main .materiais .content .card ul li a {
 }
 
 @media only screen and (min-width: 600px) {
-    main .categorias .options img{
+    main .categorias .options img {
         width: 70%;
     }
 }
 
-@media only screen and (min-width: 768px){
-    main .firstContainer{
+@media only screen and (min-width: 768px) {
+    main .firstContainer {
         flex-direction: row;
         text-align: left;
     }
 
-    main .firstContainer .textPart h1{
+    main .firstContainer .textPart h1 {
         font-size: 3rem;
     }
 
-    main .categorias .options{
+    main .categorias .options {
         flex-direction: row;
     }
 
-    main .categorias .options img{
+    main .categorias .options img {
         width: 60%;
     }
 
-    main .firstContainer .textPart button{
+    main .firstContainer .textPart button {
         width: 50%;
     }
 
-    main .materiais .content{
+    main .materiais .content {
         flex-direction: row;
     }
 }
 
-@media only screen and (min-width: 992px){
-    main .firstContainer .textPart h1{
+@media only screen and (min-width: 992px) {
+    main .firstContainer .textPart h1 {
         font-size: 3rem;
     }
 
-    main .firstContainer .textPart p{
+    main .firstContainer .textPart p {
         font-size: 1rem;
     }
 
-    main .categorias .options{
+    main .categorias .options {
         flex-direction: row;
     }
-    
-    main .categorias .options img{
+
+    main .categorias .options img {
         width: 50%;
     }
 
-    main .categorias .options .texts{
+    main .categorias .options .texts {
         width: 50%;
     }
 
-    main .educacao .destaques{
+    main .educacao .destaques {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 
-    main .educacao .destaques .not1{
+    main .educacao .destaques .not1 {
         grid-column: span 2;
     }
 }
 
-@media only screen and (min-width: 1200px){
-    main{
+@media only screen and (min-width: 1200px) {
+    main {
         padding-inline: 10rem;
     }
 
-    main .firstContainer .textPart h1{
+    main .firstContainer .textPart h1 {
         font-size: 3.75rem;
     }
 
-    main .materiais .content .card{
+    main .materiais .content .card {
         height: 250px;
     }
 }
 
-@media only screen and (min-width: 1440px){
-    main .firstContainer .textPart{
+@media only screen and (min-width: 1440px) {
+    main .firstContainer .textPart {
         width: 50%;
     }
 
-    main .firstContainer .imgPart{
+    main .firstContainer .imgPart {
         display: flex;
         justify-content: center;
         width: 50%;
     }
 
-    main .firstContainer .textPart h1{
+    main .firstContainer .textPart h1 {
         font-size: 4rem;
     }
 
-    main .firstContainer .textPart p{
+    main .firstContainer .textPart p {
         font-size: 1.25rem;
     }
 
-    main .categorias .options .texts{
+    main .categorias .options .texts {
         text-align: right;
     }
 
-    main .categorias .options .texts h1{
+    main .categorias .options .texts h1 {
         font-size: 6rem;
     }
 
-    main .categorias .options .texts p{
+    main .categorias .options .texts p {
         font-size: 1.5rem;
     }
 
-    main .educacao .destaques{
+    main .educacao .destaques {
         height: 700px;
     }
 }

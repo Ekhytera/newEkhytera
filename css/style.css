@@ -302,11 +302,6 @@ main .materiais .content .card ul li a {
     main .educacao .destaques .not1{
         grid-column: span 2;
     }
-
-    footer{
-        flex-direction: row;
-        justify-content: space-between;
-    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -316,6 +311,10 @@ main .materiais .content .card ul li a {
 
     main .firstContainer .textPart h1{
         font-size: 3.75rem;
+    }
+
+    main .materiais .content .card{
+        height: 250px;
     }
 }
 
@@ -348,5 +347,9 @@ main .materiais .content .card ul li a {
 
     main .categorias .options .texts p{
         font-size: 1.5rem;
+    }
+
+    main .educacao .destaques{
+        height: 700px;
     }
 }

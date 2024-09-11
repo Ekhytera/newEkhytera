@@ -48,3 +48,11 @@ footer .box select{
 footer .box select option{
     color: hsl(75, 6%, 87%);
 }
+
+@media only screen and (min-width: 992px){
+    footer{
+        padding: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

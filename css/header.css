@@ -1,5 +1,8 @@
 header{
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
+    justify-content: space-between;
 }
 
 header .icons{
@@ -61,4 +64,72 @@ header .verticalNav nav input{
 
 header .verticalNav ul li input::placeholder{
     color: hsla(75, 6%, 87%, 1);
+}
+
+header .horizontalNav{
+    display: none;
+    flex-grow: 1;
+}
+
+header .horizontalNav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+}
+
+header .horizontalNav ul li a{
+    text-decoration: none;
+    color: hsla(75, 6%, 87%, 1);
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+header .horizontalNav ul li a:hover{
+    background-color: rgb(28, 44, 61);
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+header .iconsNav{
+    display: none;
+    justify-self: flex-end;
+    gap: 1rem;
+}
+
+header .iconsNav input{
+    background-color: transparent;
+    border: 1px solid hsla(75, 6%, 87%, 1);
+    border-radius: 2rem;
+    padding-left: 0.5rem;
+    color: hsla(75, 6%, 87%, 1);
+}
+
+header .iconsNav .userIcons{
+    display: flex;
+}
+
+@media only screen and (min-width: 1200px){
+    header{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header .icons #menuIcon{
+        display: none;
+    }
+    
+    header .verticalNav{
+        display: none;
+    }
+
+    header .horizontalNav{
+        display: block;
+    }
+
+    header .iconsNav{
+        display: flex;
+    }
 }

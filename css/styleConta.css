@@ -13,7 +13,7 @@ body{
     flex-wrap: wrap;
 }
 #img-fundo{
-    background-image: url('../img/ekhytera_background_pattern1.png');
+    background-image: url(../imgs/ekhytera_background_pattern1.png);
     background-attachment: fixed;
     width: 100%;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@ button{
 
 @media (min-width: 1025px) and (max-width:1439px){
     #img-fundo{
-        background-image: url('../img/ekhytera_background_pattern1.png');
+        background-image: url(../imgs/ekhytera_background_pattern1.png);
         background-size: 100% 1500px;
     }
     #bemVindo{
@@ -123,7 +123,7 @@ button{
 }
 @media (min-width: 601px) and (max-width:1024px){
     #img-fundo{
-        background-image: url('../img/ekhytera_background_pattern1.png');
+        background-image: url(../imgs/ekhytera_background_pattern1.png);
         background-size: 100% 1400px;
     }
     #bemVindo{
@@ -147,7 +147,7 @@ button{
 }
 @media (max-width: 600px){
     #img-fundo{
-        background-image: url('../img/ekhytera_background_pattern2.png');
+        background-image: url(../imgs/ekhytera_background_pattern2.png);
     }
     #bemVindo{
         display: none;

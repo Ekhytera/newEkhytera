@@ -1,13 +1,13 @@
 body {
     min-height: 100vh;
-    background-image: url(/imgs/img-noise-500x500.png);
+    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/img-noise-500x500.png');
 }
 
 main {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 6rem;
 }
 
 main .firstContainer {
@@ -21,7 +21,7 @@ main .firstContainer {
 main .firstContainer .textPart {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 2rem;
     color: hsla(75, 6%, 87%, 1);
 }
 
@@ -67,6 +67,11 @@ main .firstContainer .textPart button {
 main .firstContainer .textPart button:hover {
     --myColor1: hsla(0, 0%, 0%, 0.25);
     --myColor2: hsla(212, 60%, 67%, 1);
+}
+
+main .firstContainer .imgPart img{
+    max-width: 100%;
+    height: auto;
 }
 
 main .categorias {
@@ -275,12 +280,26 @@ main .materiais .content .card ul li a {
         font-size: 3rem;
     }
 
+    main .categorias{
+        gap: 5rem;
+    }
+
     main .categorias .options {
+        justify-content: flex-end;
         flex-direction: row;
+        position: relative;
+    }
+
+    main .categorias .options .texts{
+        width: 50%;
+        padding: 2.5rem;
     }
 
     main .categorias .options img {
-        width: 60%;
+        width: 57%;
+        position: absolute;
+        bottom: 0px;
+        left: -30px;
     }
 
     main .firstContainer .textPart button {
@@ -303,6 +322,7 @@ main .materiais .content .card ul li a {
 
     main .categorias .options {
         flex-direction: row;
+        margin-top: 5rem;
     }
 
     main .categorias .options img {
@@ -335,6 +355,10 @@ main .materiais .content .card ul li a {
     main .materiais .content .card {
         height: 250px;
     }
+
+    main .categorias .options{
+        margin-top: 3rem;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -356,8 +380,21 @@ main .materiais .content .card ul li a {
         font-size: 1.25rem;
     }
 
+    main .categorias{
+        margin-top: 8rem;
+    }
+
+    main .categorias .options{
+        margin-top: 5rem;
+    }
+
+    main .categorias .options img{
+        left: -55px;
+    }
+
     main .categorias .options .texts {
         text-align: right;
+        padding: 2rem;
     }
 
     main .categorias .options .texts h1 {

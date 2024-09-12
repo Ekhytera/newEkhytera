@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/styleMontagem.css">
+</head>
+
+<body>
+    <header>
+        <nav class="icons">
+            <img src="imgs/Logo Branca (1).png" alt="Logo Branca Ekhytera">
+            <img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" id="menuIcon">
+        </nav>
+        <nav class="verticalNav">
+            <ul>
+                <li><a href="#">Montagem</a></li>
+                <li><a href="#">Educação</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+            <nav>
+                <input type="text" placeholder="Pesquisar...">
+                <div class="userIcons">
+                    <a href="login.html">
+                        <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="User Icon"></a>
+                    <a href="#"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Three Dots Icon"></a>
+                </div>
+            </nav>
+        </nav>
+
+        <nav class="horizontalNav">
+            <ul>
+                <li><a href="#">Montagem</a></li>
+                <li><a href="#">Educação</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+        </nav>
+        <nav class="iconsNav">
+            <input type="text" placeholder="Pesquisar...">
+            <div class="userIcons">
+                <a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="33" viewBox="0 0 24 24"
+                        style="fill: rgba(255, 255, 255, 1);">
+                        <path
+                            d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z">
+                        </path>
+                        <path
+                            d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z">
+                        </path>
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="33" viewBox="0 0 24 24"
+                        style="fill: rgba(255, 255, 255, 1);">
+                        <path
+                            d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+                        </path>
+                    </svg></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="middle-content">
+            <div class="select-inputs">
+                <div>
+                    <label for="typeMontagem">Tipo da Montagem</label>
+                    <select name="montagem" id="typeMontagem">
+                        <option value="manual">Manual</option>
+                        <option value="automatica">Automatica</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="configPC">Configuração da Máquina</label>
+                    <select name="montagem" id="configPC">
+                        <option value="personalizada">Personalizada</option>
+                        <option value="predefinida">Predefinida</option>
+                    </select>
+                </div>
+            </div>
+            <img src="imgs/pngegg (1) 1 (1).png" alt="PC Gamer">
+        </section>
+
+        <section class="games" id="games">
+            <div id="toggleGames">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
+            </div>
+            <h1>Jogos</h1>
+            <p>Populares</p>
+            <div class="gameSelection">
+                <div><img src="imgs/cs2.png" alt="Counter Strike 2"></div>
+                <div><img src="imgs/fortnite.png" alt="Fortnite"></div>
+                <div><img src="imgs/gtav.png" alt="Grand Theft Auto V"></div>
+                <div><img src="imgs/hollowknight.png" alt="Hollow Knight"></div>
+                <div><img src="imgs/league.png" alt="League of Legends"></div>
+                <div><img src="imgs/minecraft.png" alt="Minecraft"></div>
+                <div><img src="imgs/nfs.png" alt="Need For Speed"></div>
+                <div><img src="imgs/reddead.png" alt="Red Dead Redemption"></div>
+                <div><img src="imgs/roblox.png" alt="Roblox"></div>
+                <div><img src="imgs/rocketleague.png" alt="Rocket League"></div>
+                <div><img src="imgs/thesims.png" alt="The Sims"></div>
+                <div><img src="imgs/valorant.png" alt="Valorant"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="box">
+            <h3>Ajuda</h3>
+            <a href="#">Nos contate</a>
+            <a href="#">FAQ</a>
+            <a href="#">Nos contate</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="box">
+            <h3>A Empresa</h3>
+            <a href="#">Sobre nós</a>
+            <a href="#">Código de Ética</a>
+            <a href="#">Política de Cookies e Privacidade</a>
+            <a href="#">Informações Corporativas</a>
+        </div>
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>Se inscreva no nosso newsletter para receber novidades e notícias!</p>
+            <input type="text" placeholder="E-Mail">
+            <h3>País/Região</h3>
+            <select name="pais/regiao">
+                <option value="br">Brasil</option>
+                <option value="usa">Estados Unidos</option>
+                <option value="jp">Japão</option>
+            </select>
+        </div>
+    </footer>
+    <script src="js/games.js"></script>
+</body>
+
+</html>

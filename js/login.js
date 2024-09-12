@@ -21,6 +21,9 @@ const usurs = [
         tipo: 'adm'
     },
 ] 
+const erroEmail = document.querySelector('#erroEmail')
+const erroSenha = document.querySelector('#erroSenha')
+const erroUser = document.querySelector('#erroUser') 
 
 function cadastrar(){
     const email = document.querySelector('#newEmail').value
@@ -37,8 +40,33 @@ function cadastrar(){
     usurs.push(NewUser)
     console.log(NewUser)
 
-    window.location.href = 'index.html'
+    if(email == '' || senha == '' || nome == ''){
+        if(email==''){
+            erroEmail.textContent = 'Forma de login invalida'
+            erroEmail.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
+        }
+        else{
+            erroEmail.textContent = ''
+        }
+
+        if(nome==''){
+            erroUser.textContent = 'Usuario invalido'
+            erroUser.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
+        }else{
+            erroUser.textContent = ''
+        }
+        
+        if(senha==''){
+            erroSenha.textContent = 'Senha invalida'
+            erroSenha.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
+        }else{
+            erroSenha.textContent = ''
+        }
+    }else{
+        window.location.href = 'index.html'
+    }
 }
+
 function getUsers(email, senha) {
     const u = usurs.filter(
         function(usu){
@@ -48,9 +76,24 @@ function getUsers(email, senha) {
     return u
 }
 
+function getEmail(email){
+    const e = usurs.filter(
+        function(em){
+            return em.email === email
+        }
+    )
+}
+function mudarSenha(){
+    const emailConf = document.querySelector('#email')
+    const newSenha = document.querySelector('#newSenha')
+    const confSenha = document.querySelector('#confSenha')
+
+    const email = getEmail(emailConf)
+    console.log(email)
+}
+
+
 function entrar(){
-    const erroEmail = document.querySelector('#erroEmail')
-    const erroSenha = document.querySelector('#erroSenha')
     const inputEmail = document.querySelector('#email').value 
     const inputSenha = document.querySelector('#senha').value 
 
@@ -58,9 +101,9 @@ function entrar(){
     console.log(user)
     if(user.length == 0){
             erroEmail.textContent = 'usuario ou senha invalido'
-            erroEmail.style.color = 'red'
+            erroEmail.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             erroSenha.textContent = 'usuario ou senha invalido'
-            erroSenha.style.color = 'red'
+            erroSenha.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             
     }else{
         if(user[0].tipo === 'adm'){

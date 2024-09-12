@@ -18,16 +18,19 @@
         <div>
             <label>Email ou Telefone</label>
             <input type="emial" id="newEmail">
+            <span id="erroEmail" class="erro"></span>
         </div>
         <div>
             <label>Nome de Usuário</label>
             <input type="text" id="newName">
+            <span id="erroUser" class="erro"></span>
         </div>
         <div>
             <label>Senha</label>
             <input type="password" id="newSenha">
+            <span id="erroSenha" class="erro"></span>
         </div>
-        <button onclick="cadastrar()">cadastrar</button>
+        <button onclick="cadastrar()" >cadastrar</button>
         <a href="login.html">Tem conta? Logar</a>
     </div>
 <script src="js/login.js"></script>

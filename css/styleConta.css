@@ -76,12 +76,20 @@ div input{
     width: 460px;
     height: 30px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);;
+    background: rgba(0, 0, 0, 0.55);
     color: #FFFFFF;
     border: none;
 
     font-size: 20px;
     padding: 10px;
+}
+.erro{
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    width: 250px;
 }
 a{
     color: white;

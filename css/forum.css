@@ -1,0 +1,36 @@
+/* container do input para posts e itens como foto de perfil, anexos, botões... */
+#write-post-container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/* foto de perfil */
+#profile-picture{
+	position: absolute; /* faz a imagem ser posicionada independentemente dos elementos ao redor */
+	width: 4rem; /* 4rem = tamanho da fonte padrão x 4 */
+	height: 4rem;
+	border-radius: 50%; /* arredondar imagem */
+	object-fit: cover; /* impedir imagem de esticar */
+}
+
+/* Input para digitar novo post */
+#post-input{
+	padding: 2rem;
+	padding-left: 6rem; /* este espaçamento deve ser maior que o tamanho da foto de perfil */
+	resize: none;
+
+	/* configurando borda */
+		background-color: transparent;
+		color: #E0E1DD;
+		border-top: 1px solid #E0E1DD;
+		border-bottom: 1px solid #E0E1DD;
+		border-left: none;
+		border-right: none;
+}
+
+#post-input::placeholder{
+	color: #E0E1DD;
+	opacity: 100%;
+	font-weight: bold;
+}

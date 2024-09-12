@@ -1,36 +1,129 @@
 /* container do input para posts e itens como foto de perfil, anexos, botões... */
-#write-post-container{
+#writePostContainer {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-/* foto de perfil */
-#profile-picture{
-	position: absolute; /* faz a imagem ser posicionada independentemente dos elementos ao redor */
-	width: 4rem; /* 4rem = tamanho da fonte padrão x 4 */
-	height: 4rem;
-	border-radius: 50%; /* arredondar imagem */
-	object-fit: cover; /* impedir imagem de esticar */
-}
-
-/* Input para digitar novo post */
-#post-input{
-	padding: 2rem;
-	padding-left: 6rem; /* este espaçamento deve ser maior que o tamanho da foto de perfil */
-	resize: none;
-
+	align-items: center;
+	padding: 1rem;
 	/* configurando borda */
-		background-color: transparent;
-		color: #E0E1DD;
-		border-top: 1px solid #E0E1DD;
-		border-bottom: 1px solid #E0E1DD;
-		border-left: none;
-		border-right: none;
+	border-top: 1px solid #E0E1DD;
+	border-bottom: 1px solid #E0E1DD;
+	border-left: none;
+	border-right: none;
 }
 
-#post-input::placeholder{
+/* Parte de cima do post (foto de perfil e campo de texto) */
+.postBody {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+}
+
+/* foto de perfil */
+.fotoPerfil {
+	padding: 0.5rem;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	/* arredondar imagem */
+	object-fit: cover;
+	/* impedir imagem de esticar */
+}
+/* Input para digitar novo post */
+.postInput {
+	display: flex;
+	align-items: center;
 	color: #E0E1DD;
-	opacity: 100%;
+	background-color: transparent;
+	border: none;
+	resize: none;
+	width: 100%;
+}
+.postInput:focus{
+	outline: 0;
+	border: 0;
+}
+.postInput::placeholder {
+	color: #E0E1DD;
+	opacity: 60%;
 	font-weight: bold;
 }
+
+.postFooter {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.postFooter>div>* {
+	margin-inline: 0.5rem;
+}
+
+/* Classe geral para botões com ícone dentro */
+.iconButton {
+	display: inline-flex;
+	padding: 1.2rem;
+	border-radius: 50%;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	border: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Troca cor quando está com o mouse em cima */
+.iconButton:hover {
+	background-color: #e0e1dd50;
+}
+
+.add-img {
+	background-image: url(../imgs/icon_image.png);
+	/* Ícone do botão */
+}
+
+.add-link {
+	background-image: url(../imgs/icon_link.png);
+	/* Ícone do botão */
+}
+
+.add-add{
+	background-image: url(../imgs/icon_add.svg);
+}
+
+/* Config. de Botões */
+	.button {
+		padding: 0.5em 1em;
+		border: none;
+	}
+
+	.vazado {
+		border: 1px solid #E0E1DD;
+		color: #E0E1DD;
+		background-color: transparent;
+	}
+
+	.vazado:hover {
+		background-color: #e0e1dd;
+		color: #191919;
+	}
+
+	.primario {
+		background-color: #415A77;
+		color: #e0e1dd;
+	}
+
+	.secundario {
+		background-color: #e0e1dd;
+		color: #191919;
+	}
+
+	.arredondado {
+		border-radius: 10em;
+	}

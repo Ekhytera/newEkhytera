@@ -25,7 +25,7 @@ body{
     box-sizing: border-box;
     position: absolute;
     width: 545px;
-    height: 700px;
+    height: 96%;
     top: 15px;
     left: 50px;
     background: rgba(0, 0, 0, 0.01);

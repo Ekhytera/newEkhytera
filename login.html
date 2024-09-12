@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Ekytera</title>
-    <link rel="shortcut icon" href="img/image.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styleConta.css">
 </head>
 <body>
@@ -17,15 +16,19 @@
         <img src="imgs/image.png" alt="logo">
         <div>
             <label>Email ou Telefone</label>
-            <input type="text">
+            <input type="email" id="email">
+            <span id="erroEmail"></span>
         </div>
         <div>
             <label>Senha</label>
-            <input type="text">
+            <input type="password" id="senha">
+            <span id="erroSenha"></span>
         </div>
+        <span id="erro"></span>
         <a href="trocarSenha.html">Esqueceu a senha? Clique aqui</a>
-        <button onclick="">Entrar</button>
+        <button onclick="entrar()">Entrar</button>
         <a href="cadastrar.html">Não tem conta? Cadastre-se</a>
     </div>
+    <script src="js/login.js"></script>
 </body>
 </html>

@@ -70,10 +70,31 @@
 		</nav>
 	</header>
 
+	<!---------------- CONTEUDO PRINCIPAL ---------------->
 	<main>
-		<div id="write-post-container">
-			<img id="profile-picture" src="imgs/gpubackimg.png">
-			<textarea id="post-input" placeholder="Escreva um assunto para o seu tópico..."></textarea>
+		<div id="writePostContainer">
+			<div class="postBody">
+				<!-- Foto de perfil -->
+				<img class="fotoPerfil" src="imgs/gpubackimg.png">
+				<!-- Campo de texto -->
+				<textarea class="postInput" placeholder="Escreva um assunto para o seu tópico..."></textarea>
+				<!-- Botões embaixo do campo de texto -->
+			</div>
+			<div class="postFooter">
+				<div>
+					<button type="button" class="iconButton add-img"></button>
+					<button type="button" class="iconButton add-link"></button>
+				</div>
+				<div>
+					<button type="button" class="button vazado arredondado">HTML</button>
+					<button type="button" class="button vazado arredondado">CPU</button>
+					<button type="button" class="button vazado arredondado">RAM</button>
+				</div>
+				<div>
+					<button type="button" class="button secundario arredondado">Salvar Rascunho</button>
+					<button type="button" class="button primario arredondado">Postar</button>
+				</div>
+			</div>
 		</div>
 	</main>
 

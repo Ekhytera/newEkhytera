@@ -21,51 +21,27 @@ const usurs = [
         tipo: 'adm'
     },
 ] 
+// Mostrar senha =>  Pagina de login -----------------
+// const senha = document.querySelector('#senha')
+// const verSenha = document.querySelector('#verSenha').addEventListener('click', ()=> {
+//     const type = senha.type === 'password' ? 'text' : 'password' 
+//     senha.type = type 
+// })
+
+const senha = document.querySelector('#senha')
+const verSenha = document.querySelector('#verSenha')
+
+verSenha.addEventListener('click', () => {
+    const type = senha.type === 'password' ? 'text' : 'password';
+    senha.type = type;
+    
+})
+
+
 const erroEmail = document.querySelector('#erroEmail')
 const erroSenha = document.querySelector('#erroSenha')
 const erroUser = document.querySelector('#erroUser') 
 
-function cadastrar(){
-    const email = document.querySelector('#newEmail').value
-    const nome = document.querySelector('#newName').value
-    const senha = document.querySelector('#newSenha').value
-
-
-    const NewUser = {
-        email: email,
-        nome: nome,
-        senha: senha
-    }
-
-    usurs.push(NewUser)
-    console.log(NewUser)
-
-    if(email == '' || senha == '' || nome == ''){
-        if(email==''){
-            erroEmail.textContent = 'Forma de login invalida'
-            erroEmail.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
-        }
-        else{
-            erroEmail.textContent = ''
-        }
-
-        if(nome==''){
-            erroUser.textContent = 'Usuario invalido'
-            erroUser.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
-        }else{
-            erroUser.textContent = ''
-        }
-        
-        if(senha==''){
-            erroSenha.textContent = 'Senha invalida'
-            erroSenha.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
-        }else{
-            erroSenha.textContent = ''
-        }
-    }else{
-        window.location.href = 'index.html'
-    }
-}
 
 function getUsers(email, senha) {
     const u = usurs.filter(
@@ -75,23 +51,6 @@ function getUsers(email, senha) {
     )
     return u
 }
-
-function getEmail(email){
-    const e = usurs.filter(
-        function(em){
-            return em.email === email
-        }
-    )
-}
-function mudarSenha(){
-    const emailConf = document.querySelector('#email')
-    const newSenha = document.querySelector('#newSenha')
-    const confSenha = document.querySelector('#confSenha')
-
-    const email = getEmail(emailConf)
-    console.log(email)
-}
-
 
 function entrar(){
     const inputEmail = document.querySelector('#email').value 
@@ -115,3 +74,21 @@ function entrar(){
         }
     }
 }
+
+function getEmail(email){
+    const e = usurs.filter(
+        function(em){
+            return em.email === email
+        }
+    )
+}
+function mudarSenha(){
+    const emailConf = document.querySelector('#email')
+    const newSenha = document.querySelector('#newSenha')
+    const confSenha = document.querySelector('#confSenha')
+
+    const email = getEmail(emailConf)
+    console.log(email)
+}
+
+

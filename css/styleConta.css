@@ -42,7 +42,7 @@ body{
     color: white;
     gap: 1rem;
 }
-#login img{
+#login .logo{
     object-fit: cover;
     width: 187px;
 }
@@ -50,6 +50,7 @@ body{
     display: flex;
     align-items: start;
     flex-direction: column;
+    width: 350px;
 }
 div label{
     font-size: 20px;
@@ -58,7 +59,6 @@ div label{
 }
 div input{
     width: 100%;
-    height: 30px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.55);
     color: #FFFFFF;
@@ -66,9 +66,15 @@ div input{
     font-size: 20px;
     padding: 10px;
 }
+#verSenha, #nSenha, #cSenha{
+    cursor: pointer;
+}
+#vSenha{
+    cursor: pointer;
+}
 .erro{
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 5px;
     font-size: 16px;
     margin-top: 5px;

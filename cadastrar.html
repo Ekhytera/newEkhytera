@@ -15,24 +15,25 @@
     </div>
     <div id="login">
         <img src="imgs/image.png" alt="logo">
-        <div>
+        <div class="email-senha">
             <label>Email ou Telefone</label>
-            <input type="emial" id="newEmail">
+            <div><input type="email" id="newEmail"></div>
             <span id="erroEmail" class="erro"></span>
         </div>
         <div>
             <label>Nome de Usuário</label>
-            <input type="text" id="newName">
+            <div><input type="text" id="newName"></div>
             <span id="erroUser" class="erro"></span>
         </div>
         <div>
             <label>Senha</label>
-            <input type="password" id="newSenha">
-            <span id="erroSenha" class="erro"></span>
+                <input type="password" id="addSenha">
+            <span id="verSenha">ver/mostrar senha</span>
+            <span id="erroSenha" class="erro"></span> 
         </div>
         <button onclick="cadastrar()" >cadastrar</button>
         <a href="login.html">Tem conta? Logar</a>
     </div>
-<script src="js/login.js"></script>
+<script src="js/cadastrar.js"></script>
 </body>
 </html>

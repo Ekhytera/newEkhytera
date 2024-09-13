@@ -13,6 +13,9 @@
 	border-right: none;
 }
 
+hr{
+	margin: 1rem 0;
+}
 /* Parte de cima do post (foto de perfil e campo de texto) */
 .postBody {
 	display: flex;
@@ -50,7 +53,6 @@
 	opacity: 60%;
 	font-weight: bold;
 }
-
 .postFooter {
 	display: flex;
 	flex-wrap: wrap;
@@ -58,7 +60,6 @@
 	width: 100%;
 	justify-content: space-around;
 }
-
 .postFooter>div>* {
 	margin-inline: 0.5rem;
 }
@@ -95,6 +96,18 @@
 
 .add-add{
 	background-image: url(../imgs/icon_add.svg);
+}
+
+.add-like{
+	background-image: url(../imgs/icon_like.png);
+}
+
+.add-comment{
+	background-image: url(../imgs/icon_comment.png);
+}
+
+.add-share{
+	background-image: url(../imgs/icon_share.png);
 }
 
 /* Config. de Botões */

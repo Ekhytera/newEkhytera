@@ -3,6 +3,7 @@ body {
     background-image: url('https://ekhytera.github.io/newEkhytera/imgs/img-noise-500x500.png');
 }
 
+
 main {
     padding: 1rem;
     display: flex;
@@ -69,9 +70,25 @@ main .firstContainer .textPart button:hover {
     --myColor2: hsla(212, 60%, 67%, 1);
 }
 
-main .firstContainer .imgPart img{
+main .firstContainer .imgPart {
+    position: relative;
+}
+
+main .firstContainer .imgPart img {
     max-width: 100%;
     height: auto;
+    z-index: 1;
+}
+
+main .firstContainer .imgPart::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgb(121, 167, 221, 1) 0%, rgba(0, 150, 255, 0) 100%);
+    border-radius: 50%;
+    filter: blur(150px);
+    z-index: -1;
 }
 
 main .categorias {
@@ -96,7 +113,7 @@ main .categorias .options {
 }
 
 main .categorias .options img {
-    display: block;
+    width: 300px;
 }
 
 main .categorias .options .texts {
@@ -266,7 +283,7 @@ main .materiais .content .card ul li a {
 
 @media only screen and (min-width: 600px) {
     main .categorias .options img {
-        width: 70%;
+        width: 450px;
     }
 }
 
@@ -280,7 +297,7 @@ main .materiais .content .card ul li a {
         font-size: 3rem;
     }
 
-    main .categorias{
+    main .categorias {
         gap: 5rem;
     }
 
@@ -290,13 +307,17 @@ main .materiais .content .card ul li a {
         position: relative;
     }
 
-    main .categorias .options .texts{
+    main .categorias .options .texts {
         width: 50%;
         padding: 2.5rem;
     }
 
+    main .categorias .options .texts h1 {
+        font-size: 3rem;
+    }
+
     main .categorias .options img {
-        width: 57%;
+        width: 450px;
         position: absolute;
         bottom: 0px;
         left: -30px;
@@ -325,10 +346,6 @@ main .materiais .content .card ul li a {
         margin-top: 5rem;
     }
 
-    main .categorias .options img {
-        width: 50%;
-    }
-
     main .categorias .options .texts {
         width: 50%;
     }
@@ -344,6 +361,10 @@ main .materiais .content .card ul li a {
 }
 
 @media only screen and (min-width: 1200px) {
+    header {
+        padding: 3rem;
+    }
+
     main {
         padding-inline: 10rem;
     }
@@ -356,8 +377,20 @@ main .materiais .content .card ul li a {
         height: 250px;
     }
 
-    main .categorias .options{
+    main .categorias .options {
         margin-top: 3rem;
+    }
+
+    main .categorias .options .texts {
+        margin-block: 2rem;
+    }
+
+    main .categorias .options img {
+        width: 540px;
+    }
+
+    main .categorias .options .texts h1 {
+        font-size: 3.75rem;
     }
 }
 
@@ -380,29 +413,29 @@ main .materiais .content .card ul li a {
         font-size: 1.25rem;
     }
 
-    main .categorias{
+    main .categorias {
         margin-top: 8rem;
     }
 
-    main .categorias .options{
+    main .categorias .options {
         margin-top: 5rem;
     }
 
-    main .categorias .options img{
+    main .categorias .options img {
+        width: 690px;
         left: -55px;
     }
 
     main .categorias .options .texts {
-        text-align: right;
-        padding: 2rem;
+        padding-block: 6rem;
     }
 
     main .categorias .options .texts h1 {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 
     main .categorias .options .texts p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     main .educacao .destaques {

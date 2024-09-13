@@ -10,6 +10,12 @@ header .icons{
     justify-content: space-between;
 }
 
+header .icons .logo{
+    max-width: 70px;
+    height: auto;
+    margin-right: 1rem;
+}
+
 header .icons #menuIcon{
     cursor: pointer;
 }

@@ -50,7 +50,7 @@ body{
     display: flex;
     align-items: start;
     flex-direction: column;
-    width: 350px;
+    width: 300px;
 }
 div label{
     font-size: 20px;
@@ -60,11 +60,26 @@ div label{
 div input{
     width: 100%;
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.55);
+    outline: none;
     color: #FFFFFF;
     border: none;
     font-size: 20px;
     padding: 10px;
+}
+div #senha{
+    background-color: transparent;
+}
+#login div #viewPassword{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#login div #viewPassword img{
+    width: 30px;
 }
 #verSenha, #nSenha, #cSenha{
     cursor: pointer;

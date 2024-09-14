@@ -1,72 +1,20 @@
-const usurs = [
-    {
-        id: 1,
-        email: 'joao@gmail.com',
-        userName: 'João',
-        tipo: 'adm',
-        senha: '123'
-    },
-    {
-        id: 2,
-        email: 'henrique@gmail.com',
-        userName: 'Henrique',
-        senha: '123',
-        tipo: 'adm'
-    },
-    {
-        id: 3,
-        email: 'luiz@gmail.com',
-        userName: 'Luiz',
-        senha: '123',
-        tipo: 'adm'
-    },
-    {
-        id: 4,
-        email: 'pedro@gmail.com',
-        userName: 'Pedro',
-        senha: '123',
-        tipo: 'adm'
-    },
-    {
-        id: 5,
-        email: 'evelyn@gmail.com',
-        userName: 'Evelyn',
-        senha: '123',
-        tipo: 'adm'
-    },
-    {
-        id: 6,
-        email: 'savyo@gmail.com',
-        userName: 'Sávyo',
-        senha: '123',
-        tipo: 'adm'
-    },
-    {
-        id: 7,
-        email: 'rian@gmail.com',
-        userName: 'Rian',
-        senha: '123',
-        tipo: 'adm'
-    }
-]
-
-sessionStorage.setItem('allUsers', JSON.stringify(usurs));
-
-const senhaVer = document.querySelector('#senha');
-const verSenha = document.querySelector('#verSenha');
-
-verSenha.addEventListener('click', () => {
-    const type = senhaVer.type === 'password' ? 'text' : 'password';
-    senhaVer.type = type;
-});
+let usurs = JSON.parse(localStorage.getItem('usurs')) || [
+    { id: 1, email: 'joao@gmail.com', userName: 'João', tipo: 'adm', senha: '123' },
+    { id: 2, email: 'henrique@gmail.com', userName: 'Henrique', senha: '123', tipo: 'adm' },
+    { id: 3, email: 'luiz@gmail.com', userName: 'Luiz', senha: '123', tipo: 'adm' },
+    { id: 4, email: 'pedro@gmail.com', userName: 'Pedro', senha: '123', tipo: 'adm' },
+    { id: 5, email: 'evelyn@gmail.com', userName: 'Evelyn', senha: '123', tipo: 'adm' },
+    { id: 6, email: 'savyo@gmail.com', userName: 'Sávyo', senha: '123', tipo: 'adm' },
+    { id: 7, email: 'rian@gmail.com', userName: 'Rian', senha: '123', tipo: 'adm' }
+];
 
 const erroEmail = document.querySelector('#erroEmail');
 const erroSenha = document.querySelector('#erroSenha');
 const erroUser = document.querySelector('#erroUser');
 
-function sair(){
+function sair() {
     sessionStorage.clear();
-    window.location.href = 'index.html'
+    window.location.href = 'index.html';
 }
 
 function entrar() {
@@ -74,26 +22,64 @@ function entrar() {
     const inputSenha = document.querySelector('#senha').value;
     let validateLogin = false;
 
-    // Recupera os usuários salvos no sessionStorage
-    const storedUsers = JSON.parse(sessionStorage.getItem('allUsers')) || [];
-
-    for (let i in storedUsers) {
-        if (inputEmail == storedUsers[i].email && inputSenha == storedUsers[i].senha) {
+    for (let i in usurs) {
+        if (inputEmail == usurs[i].email && inputSenha == usurs[i].senha) {
             validateLogin = true;
-            sessionStorage.setItem('userLogado', storedUsers[i].userName);
-            sessionStorage.setItem('sair', '<li><a class="dropdown-item" href="index.html" onclick="sair()">Sair</a></li>');
+            sessionStorage.setItem('userLogado', usurs[i].userName);
+            if (validateLogin) {
+                sessionStorage.setItem('sair', '<li><a class="dropdown-item" href="index.html" onclick="sair()">Sair</a></li>');
+                window.location.href = 'index.html';
+            }
             break;
         }
     }
 
-    if (validateLogin) {
-        window.location.href = 'index.html';
-    } else {
-        erroEmail.textContent = 'usuario ou senha invalido';
+    if (!validateLogin) {
+        erroEmail.textContent = 'Usuario ou senha invalido';
         erroEmail.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
-        erroSenha.textContent = 'usuario ou senha invalido';
+        erroSenha.textContent = 'Usuario ou senha invalido';
         erroSenha.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
     }
 }
 
-console.log(JSON.parse(sessionStorage.getItem('allUsers')));
+function cadastrar() {
+    const newEmail = document.querySelector('#newEmail').value;
+    const newNome = document.querySelector('#newName').value;
+    const newSenha = document.querySelector('#addSenha').value;
+
+    if (newEmail == '' || newSenha == '' || newNome == '') {
+        if (newEmail == '') {
+            erroEmail.textContent = 'Forma de login invalida';
+            erroEmail.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+        } else {
+            erroEmail.textContent = '';
+        }
+
+        if (newNome == '') {
+            erroUser.textContent = 'Usuario invalido';
+            erroUser.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+        } else {
+            erroUser.textContent = '';
+        }
+
+        if (newSenha == '') {
+            erroSenha.textContent = 'Senha invalida';
+            erroSenha.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+        } else {
+            erroSenha.textContent = '';
+        }
+    } else {
+        const newUser = {
+            id: usurs.length + 1,
+            userName: newNome,
+            email: newEmail,
+            senha: newSenha,
+            tipo: 'user'
+        };
+
+        usurs.push(newUser);
+        localStorage.setItem('usurs', JSON.stringify(usurs));
+
+        window.location.href = 'login.html';
+    }
+}

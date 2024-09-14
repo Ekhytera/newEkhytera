@@ -5,5 +5,6 @@ window.addEventListener('load', () => {
         const nomeUser = document.getElementById('nomeUser');
         nomeUser.innerHTML = userAtual.toUpperCase() + ", ";
         document.getElementById('dropLogin').innerHTML = sair;
+        document.getElementById('dropLogin2').innerHTML = sair;
     }
 })

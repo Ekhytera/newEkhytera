@@ -8,11 +8,12 @@ body{
     font-family: 'Inter';
     background-image: url(../imgs/ekhytera_background_pattern1.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 
 #bemVindo{
+    width: 50%;
     display: none;
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.01);
@@ -41,16 +42,16 @@ body{
     align-items: center;
     color: white;
     gap: 1rem;
+    padding-inline: 1rem;
 }
 #login .logo{
-    object-fit: cover;
-    width: 187px;
+    width: 180px;
 }
 #login div{
+    width: 100%;
     display: flex;
     align-items: start;
     flex-direction: column;
-    width: 300px;
 }
 div label{
     font-size: 20px;
@@ -125,5 +126,15 @@ button{
 
     #login{
         width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #login div{
+        width: 70%;
+    }
+
+    #login div #viewPassword{
+        width: 100%;
     }
 }

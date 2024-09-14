@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Ekytera</title>
+    <title>Ekhytera</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styleConta.css">
 </head>
 <body>
-    <div id="img-fundo"></div>
     <div id="bemVindo">
         <p>Bem-Vindo!</p>
     </div>
     <div id="login">
-        <img src="imgs/image.png" alt="logo" class="logo">
+        <a href="index.html"><img src="imgs/ekhyteralogo.png" alt="logo" class="logo"></a>
         <div>
             <label for="email">Email ou Telefone</label>
             <input type="email" id="email">
@@ -22,13 +21,17 @@
         </div>
         <div>
             <label for="senha">Senha</label>
-            <div id="viewPassword"><input type="password" id="senha"><img src="imgs/verSenha.png" alt="" id="verSenha"></div>
+            <div id="viewPassword">
+                <input type="password" id="senha">
+                <img src="imgs/verSenha.png" alt="" id="verSenha">
+            </div>
             <span id="erroSenha" class="erro"></span>
         </div>
         <a href="trocarSenha.html">Esqueceu a senha? Clique aqui</a>
         <button onclick="entrar()">Entrar</button>
         <a href="cadastrar.html">Não tem conta? Cadastre-se</a>
     </div>
+
     <script src="js/login.js"></script>
 </body>
 </html>

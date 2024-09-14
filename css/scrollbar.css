@@ -1,0 +1,12 @@
+::-webkit-scrollbar{
+    width: 5px;
+    background: hsla(0, 0%, 10%, 0.5);
+}
+
+::-webkit-scrollbar-button{
+    display: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg, #415A77 0%, #79A7DD 100%);
+}

@@ -8,10 +8,10 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
 main .gameSelector{
-    height: 530px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -25,10 +25,75 @@ main .gameSelector{
 }
 
 main .gameSelector .allGames{
-    height: 100%;
+    height: 300px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     overflow: scroll;
+    justify-content: center;
+}
+
+main .gameSelector .allGames div{
+    width: 79px;
+    height: 130px;
+}
+
+main .gameSelector .allGames::-webkit-scrollbar{
+    width: 2px;
+}
+
+main .middle-part{
+    display: flex;
+    flex-direction: column;
+}
+
+main .middle-part .both-inputs{
+    width: 100%;
+    display: flex;
+    color: hsla(75, 6%, 87%, 1);
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+main .middle-part .both-inputs .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main .middle-part .both-inputs .inputs label{
+    font-weight: 700;
+}
+
+main .middle-part .both-inputs .inputs select{
+    width: 100%;
+    border: 0.5px solid hsla(75, 6%, 87%, 1);
+    background: hsla(0, 0%, 0%, 0.55);
+    color: hsla(75, 6%, 87%, 1);
+    font-weight: 700;
+    outline: none;
+    border-radius: 0.5rem;
+    padding-block: 0.5rem;
+    text-align: center;
+}
+
+body .selection-bar{
+    display: flex;
+    overflow: auto;
+    background-color: hsla(0, 0%, 0%);
+    position: sticky;
+    bottom: 0;
+}
+
+body .selection-bar .select-option{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsla(0, 0%, 80%, 1);
+    padding: 1rem;
 }

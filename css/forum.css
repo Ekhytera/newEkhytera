@@ -1,114 +1,170 @@
-/* container do input para posts e itens como foto de perfil, anexos, botões... */
-#writePostContainer {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 1rem;
-	/* configurando borda */
-	border-top: 1px solid #E0E1DD;
-	border-bottom: 1px solid #E0E1DD;
-	border-left: none;
-	border-right: none;
-}
-
-hr{
+hr {
 	margin: 1rem 0;
 }
-/* Parte de cima do post (foto de perfil e campo de texto) */
-.postBody {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	align-items: center;
-}
 
-/* foto de perfil */
-.fotoPerfil {
-	padding: 0.5rem;
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	/* arredondar imagem */
-	object-fit: cover;
-	/* impedir imagem de esticar */
-}
+/* Parte de cima do post (foto de perfil e campo de texto) */
+	article.post {
+		background-color: rgba(0, 0, 0, 0.55);
+		color: #E0E1DD;
+		padding: 1rem;	
+		margin-inline: 1rem;
+	}
+
+	article.post>p {
+		margin-left: 4rem;
+	}
+
+	.postBody {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+	}
+
+	.fotoPerfil {
+		padding: 0.5rem;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.postAuthor {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	
+	.postFooter{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.postFooter>span{
+		font-weight: bold;
+		margin-right: 1.5rem;
+		margin-left: 0.1rem;
+	}
+
+	.postDetails{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.subtitle {
+		opacity: 50%;
+		font-weight: 200;
+	}
+	
 /* Input para digitar novo post */
-.postInput {
-	display: flex;
-	align-items: center;
-	color: #E0E1DD;
-	background-color: transparent;
-	border: none;
-	resize: none;
-	width: 100%;
-}
-.postInput:focus{
-	outline: 0;
-	border: 0;
-}
-.postInput::placeholder {
-	color: #E0E1DD;
-	opacity: 60%;
-	font-weight: bold;
-}
-.postFooter {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	width: 100%;
-	justify-content: space-around;
-}
-.postFooter>div>* {
-	margin-inline: 0.5rem;
-}
+
+	.writePostContainer {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+		border-top: 1px solid #E0E1DD;
+		border-bottom: 1px solid #E0E1DD;
+		border-left: none;
+		border-right: none;
+	}
+	
+	.writePost {
+		display: flex;
+		align-items: center;
+		color: #E0E1DD;
+		background-color: transparent;
+		border: none;
+		resize: none;
+		width: 100%;
+	}
+
+	.writePost:focus {
+		outline: 0;
+		border: 0;
+	}
+
+	.writePost::placeholder {
+		color: #E0E1DD;
+		opacity: 60%;
+		font-weight: bold;
+	}
+
+	.writePostFooter {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	.writePostFooter>div>* {
+		margin-inline: 0.5rem;
+	}
+
+	.writePostContainer>.writePostCategories{
+		display: none;
+		justify-content: flex-start;
+	}
+	@media only screen and (max-width: 768px){
+		.writePostFooter .writePostCategories{
+			display: none;
+		}
+		.writePostContainer>.writePostCategories{
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
 
 /* Classe geral para botões com ícone dentro */
-.iconButton {
-	display: inline-flex;
-	padding: 1.2rem;
-	border-radius: 50%;
-	background-color: transparent;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 60%;
-	border: none;
-	cursor: pointer;
-	align-items: center;
-	justify-content: center;
-}
+	.iconButton {
+		display: inline-flex;
+		padding: 1.3rem;
+		border-radius: 50%;
+		background-color: transparent;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 60%;
+		border: none;
+		cursor: pointer;
+		align-items: center;
+		justify-content: center;
+	}
 
 /* Troca cor quando está com o mouse em cima */
-.iconButton:hover {
-	background-color: #e0e1dd50;
-}
+	.iconButton:hover {
+		background-color: #e0e1dd50;
+	}
 
-.add-img {
-	background-image: url(../imgs/icon_image.png);
-	/* Ícone do botão */
-}
+	.add-img {
+		background-image: url(../imgs/icon_image.png);
+		/* Ícone do botão */
+	}
 
-.add-link {
-	background-image: url(../imgs/icon_link.png);
-	/* Ícone do botão */
-}
+	.add-link {
+		background-image: url(../imgs/icon_link.png);
+		/* Ícone do botão */
+	}
 
-.add-add{
-	background-image: url(../imgs/icon_add.svg);
-}
+	.add-add {
+		background-image: url(../imgs/icon_add.svg);
+	}
 
-.add-like{
-	background-image: url(../imgs/icon_like.png);
-}
+	.add-like {
+		background-image: url(../imgs/icon_like.png);
+	}
 
-.add-comment{
-	background-image: url(../imgs/icon_comment.png);
-}
+	.add-comment {
+		background-image: url(../imgs/icon_comment.png);
+	}
 
-.add-share{
-	background-image: url(../imgs/icon_share.png);
-}
+	.add-share {
+		background-image: url(../imgs/icon_share.png);
+	}
 
 /* Config. de Botões */
 	.button {
@@ -122,19 +178,21 @@ hr{
 		background-color: transparent;
 	}
 
-	.vazado:hover {
+	.button.vazado:hover {
 		background-color: #e0e1dd;
 		color: #191919;
 	}
 
 	.primario {
-		background-color: #415A77;
+		background: rgb(65,90,119);
+		background: linear-gradient(90deg, rgba(65,90,119,1) 0%, rgba(121,167,221,1) 100%); 
 		color: #e0e1dd;
 	}
 
 	.secundario {
-		background-color: #e0e1dd;
-		color: #191919;
+		background-color: transparent;
+		color: #79a7dd;
+		box-shadow: 0px 0px 0px 1px #79a7dd inset;
 	}
 
 	.arredondado {

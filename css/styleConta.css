@@ -61,7 +61,7 @@ div label{
 div input{
     width: 100%;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(255, 255, 255, 0.2);
     outline: none;
     color: #FFFFFF;
     border: none;
@@ -73,7 +73,7 @@ div #senha{
 }
 #login div #viewPassword{
     display: flex;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     align-items: center;
     flex-direction: row;
@@ -82,12 +82,10 @@ div #senha{
 #login div #viewPassword img{
     width: 30px;
 }
-#verSenha, #nSenha, #cSenha{
+#verSenha, #vsenha , #nSenha, #cSenha, #emailNaoEnc, #senhaDiferentes{
     cursor: pointer;
 }
-#vSenha{
-    cursor: pointer;
-}
+
 .erro{
     color: white;
     font-weight: 500;

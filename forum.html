@@ -72,40 +72,47 @@
 
 	<!---------------- CONTEUDO PRINCIPAL ---------------->
 	<main>
-		<div id="writePostContainer">
+		<div class="writePostContainer">
+			<div class="writePostCategories">
+				<button type="button" class="button vazado arredondado">HTML</button>
+				<button type="button" class="button vazado arredondado">CPU</button>
+				<button type="button" class="button vazado arredondado">RAM</button>
+			</div>
 			<div class="postBody">
 				<!-- Foto de perfil -->
 				<img class="fotoPerfil" src="imgs/gpubackimg.png">
 				<!-- Campo de texto -->
-				<textarea class="postInput" placeholder="Escreva um assunto para o seu tópico..."></textarea>
+				<textarea class="writePost" placeholder="Escreva um assunto para o seu tópico..."></textarea>
 				<!-- Botões embaixo do campo de texto -->
 			</div>
-			<div class="postFooter">
-				<div>
+			<div class="writePostFooter">
+				<div class="writePostAttachments">
 					<button type="button" class="iconButton add-img"></button>
 					<button type="button" class="iconButton add-link"></button>
 				</div>
-				<div>
+				<div class="writePostCategories">
 					<button type="button" class="button vazado arredondado">HTML</button>
 					<button type="button" class="button vazado arredondado">CPU</button>
 					<button type="button" class="button vazado arredondado">RAM</button>
 				</div>
-				<div>
+				<div class="writePostControls">
 					<button type="button" class="button secundario arredondado">Salvar Rascunho</button>
 					<button type="button" class="button primario arredondado">Postar</button>
 				</div>
 			</div>
 		</div>
 
-		<article>
+		<article class="post">
 			<div class="postDetails">
-				<div>
+				<div class="postAuthor">
 					<img class="fotoPerfil" src="imgs/gpubackimg.png">
-					<h2>Usuário 1</h2>
-					<h3 class="subtitle">2h atrás</h3>
+					<div>
+						<h2>Usuário 1</h2>
+						<h3 class="subtitle">2h atrás</h3>
+					</div>
 				</div>
 				<div>
-					<!-- categorias e 3 pontos -->
+					
 				</div>
 			</div>
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium impedit rem, veritatis magnam odio
@@ -115,9 +122,11 @@
 				quas ab iste sit voluptates iure.
 			</p>
 			<hr>
-			<button class="iconButton add-like"></button>
-			<button class="iconButton add-comment"></button>
-			<button class="iconButton add-share"></button>
+			<div class="postFooter">
+				<button class="iconButton add-like"></button><span>354</span>
+				<button class="iconButton add-comment"></button><span>76</span>
+				<button class="iconButton add-share"></button><span>3</span>
+			</div>
 		</article>
 	</main>
 

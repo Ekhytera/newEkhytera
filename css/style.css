@@ -203,24 +203,60 @@ main .educacao .destaques {
 }
 
 main .educacao .destaques .not1 {
+    background-color: rgba(0, 0, 0, 0.393);
     background-image: url('https://ekhytera.github.io/newEkhytera/imgs/noticiaacer.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .educacao .destaques .not1:hover{
+    background-blend-mode: darken;
+    padding-bottom: 2rem;
 }
 
 main .educacao .destaques .not2 {
+    background-color: rgba(0, 0, 0, 0.393);
     background-image: url('https://ekhytera.github.io/newEkhytera/imgs/g1-tecnologia.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .educacao .destaques .not2:hover{
+    background-blend-mode: darken;
+    padding-bottom: 2rem;
 }
 
 main .educacao .destaques .not3 {
+    background-color: rgba(0, 0, 0, 0.393);
     background-image: url('https://ekhytera.github.io/newEkhytera/imgs/010150240401-processador-recozimento-3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .educacao .destaques .not3:hover{
+    background-blend-mode: darken;
+    padding-bottom: 2rem;
 }
 
 main .materiais {

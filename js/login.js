@@ -83,3 +83,30 @@ function cadastrar() {
         window.location.href = 'login.html';
     }
 }
+
+// function trocarSenha(){
+//     const emailTrocarSenha = document.querySelector('#emailTrocarSenha').value;
+//     const addSenha = document.querySelector('#addSenha').value;
+//     const confSenha = document.querySelector('#confSenha').value;
+//     const senhaDif = document.querySelector('#senhaDiferentes');
+//     const emailNaoEnc = document.querySelector('#emailNaoEnc');
+
+//     for (let i in usurs){
+//         if (emailTrocarSenha == usurs[i].email){
+//             if(addSenha == confSenha && addSenha != '' && confSenha != ''){
+//                 usurs[i].senha = addSenha
+//                 console.log(addSenha)
+//                 console.log(usurs[i].senha)
+//                 window.location.href = 'login.html'  
+
+//                 break
+//             } else{
+//                 senhaDif.innerHTML = 'A senha incorreta '
+//                 senhaDif.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+//             }
+//         } else{
+//             emailNaoEnc.innerHTML = 'Email não encontrado'
+//             emailNaoEnc.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+//         }
+//     }
+// }

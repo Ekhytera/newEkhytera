@@ -15,17 +15,19 @@
         <a href="index.html"><img src="imgs/ekhyteralogo.png" alt="logo" class="logo"></a>
         <div>
             <label for="email">Email ou Telefone</label>
-            <input type="email" id="email">
+            <input type="email" id="emailTrocarSenha">
+            <span id="emailNaoEnc"></span>
         </div>
         <div>
             <label for="newSenha">Nova Senha</label>
-            <input type="password" id="newSenha">
+            <input type="password" id="addSenha">
         </div>
         <div>
             <label for="confSenha">Confirmar Senha</label>
             <input type="password" id="confSenha">
+            <span id="senhaDiferentes"></span>
         </div>
-        <button onclick="mudarSenha()">Trocar</button>
+        <button onclick="trocarSenha()">Trocar</button>
         <a href="login.html">Voltar</a>
     </div>
     <script src="js/login.js"></script>

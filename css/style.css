@@ -110,6 +110,7 @@ main .categorias .options {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 541px;
 }
 
 main .categorias .options img {
@@ -281,9 +282,23 @@ main .materiais .content .card ul li a {
     color: hsla(0, 0%, 80%, 1);
 }
 
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
 @media only screen and (min-width: 600px) {
     main .categorias .options img {
         width: 450px;
+    }
+
+    main .categorias .options{
+        height: 650px;
     }
 }
 
@@ -305,6 +320,7 @@ main .materiais .content .card ul li a {
         justify-content: flex-end;
         flex-direction: row;
         position: relative;
+        height: 332px;
     }
 
     main .categorias .options .texts {
@@ -344,6 +360,7 @@ main .materiais .content .card ul li a {
     main .categorias .options {
         flex-direction: row;
         margin-top: 5rem;
+        height: 308px;
     }
 
     main .categorias .options .texts {
@@ -361,10 +378,6 @@ main .materiais .content .card ul li a {
 }
 
 @media only screen and (min-width: 1200px) {
-    header {
-        padding: 3rem;
-    }
-
     main {
         padding-inline: 10rem;
     }
@@ -379,6 +392,7 @@ main .materiais .content .card ul li a {
 
     main .categorias .options {
         margin-top: 3rem;
+        height: 386px;
     }
 
     main .categorias .options .texts {
@@ -419,6 +433,7 @@ main .materiais .content .card ul li a {
 
     main .categorias .options {
         margin-top: 5rem;
+        height: 500px;
     }
 
     main .categorias .options img {
@@ -427,7 +442,7 @@ main .materiais .content .card ul li a {
     }
 
     main .categorias .options .texts {
-        padding-block: 6rem;
+        
     }
 
     main .categorias .options .texts h1 {

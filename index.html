@@ -37,7 +37,7 @@
                 <li><a href="#">Catálogo</a></li>
                 <li><a href="#">Promoções</a></li>
                 <li><a href="#">Sobre nós</a></li>
-                <li><input type="text" placeholder="Pesquisar..."></li>
+                <li><input type="text" placeholder="Pesquisar..." name="pesquisar"></li>
             </ul>
         </nav>
 
@@ -52,7 +52,7 @@
             </ul>
         </nav>
         <nav class="iconsNav">
-            <input type="text" placeholder="Pesquisar...">
+            <input type="text" placeholder="Pesquisar..." name="pesquisar">
             <div class="userIcons">
                 <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,10 +81,10 @@
         <section class="categorias">
             <h2>CATEGORIAS</h2>
             <div class="options">
-                <img src="imgs/jett.png" alt="Jett Valorant">
+                <img src="imgs/jett.png" alt="Jett Valorant" id="cateImg" class="visible">
                 <div class="texts">
-                    <h1>GAMES</h1>
-                    <p>Precisa de mais desempenho na hora da jogatina? Te recomendamos as melhores peças sem você se
+                    <h1 id="cateTitle" class="visible">GAMES</h1>
+                    <p id="cateText" class="visible">Precisa de mais desempenho na hora da jogatina? Te recomendamos as melhores peças sem você se
                         endividar.</p>
                     <button>Acessar catálogo</button>
                 </div>
@@ -149,7 +149,7 @@
         <div class="box">
             <h3>Newsletter</h3>
             <p>Se inscreva no nosso newsletter para receber novidades e notícias!</p>
-            <input type="text" placeholder="E-Mail">
+            <input type="text" placeholder="E-Mail" name="email" autocomplete="email">
             <h3>País/Região</h3>
             <select name="pais/regiao">
                 <option value="br">Brasil</option>
@@ -166,6 +166,7 @@
     <script src="js/nome.js"></script>
     <script src="js/header.js"></script>
     <script src="js/montagem.js"></script>
+    <script src="js/categorias.js"></script>
 </body>
 
 </html>

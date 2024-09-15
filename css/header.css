@@ -120,6 +120,7 @@ header .iconsNav .userIcons{
     header{
         flex-direction: row;
         align-items: center;
+        padding: 3rem;
     }
 
     header .icons div{

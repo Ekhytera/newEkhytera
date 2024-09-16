@@ -11,6 +11,11 @@ main{
 }
 
 /* Parte de cima do post (foto de perfil e campo de texto) */
+
+	#postsContainer{
+		display: flex;
+		flex-direction: column-reverse;
+	}
 	article.post {
 		background-color: rgba(0, 0, 0, 0.55);
 		color: #E0E1DD;
@@ -188,12 +193,15 @@ main{
 		justify-content: center;
 		align-items: center;
 		padding: 1.5em;
+		margin-inline: 1em;
+		flex: 1;
 		background-color: rgba(0, 0, 0, 0.55);
 	}
 	.communityCard *{
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 	}
 	.communityCard h3{
 		margin-top: 0.5em;
@@ -210,6 +218,9 @@ main{
 	}
 
 	@media only screen and (max-width: 768px) {
+		.communityCard{
+			margin-inline: 0.3em;
+		}
 		.communityCard h3{
 			font-size: 1em;
 		}

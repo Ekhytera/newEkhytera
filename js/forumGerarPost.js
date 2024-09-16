@@ -76,15 +76,7 @@ function addCommunities() {
 							</h5>
 							<button type="button" class="button primario">Entrar</button>
 					</div>
-					<div class="communityCard">
-						<img class="communityIcon arredondado" src="imgs/codebackimg.png">
-						<h3>NVIDIA Fans</h3>
-						<h4>126,309 membros</h5>
-							<h5>
-								<div class="statusIndicator"></div>63 online
-							</h5>
-							<button type="button" class="button primario">Entrar</button>
-					</div>
+					
 					<div class="communityCard">
 						<img class="communityIcon arredondado" src="imgs/codebackimg.png">
 						<h3>NVIDIA Fans</h3>
@@ -105,6 +97,14 @@ function addCommunities() {
 	commContainer.appendChild(comm)
 }
 
+function postar(){
+	addPost({
+		username: 'PUXAR_DO_LOCALSTORAGE',
+		pfp: 'ekhyteralogo.png',
+		text: document.getElementById('writePostInput').value,
+		categories: ['Teste']
+	})
+}
 
 addPost({
 	username: 'Usuário 1',
@@ -119,6 +119,14 @@ addPost({
 	pfp: 'codebackimg.png',
 	text: 'Testestestetdstdsthdskjt',
 	attachment: 'codebackimg.png',
+	categories: ['Teste']
+})
+
+addPost({
+	username: 'Usuário 3',
+	pfp: 'jett.png',
+	text: 'usdhfsdjkgfadgvsdjkbadsbfsdafbjksagf sadf sg fsgfjka',
+	attachment: '',
 	categories: ['Teste']
 })
 

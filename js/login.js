@@ -99,7 +99,6 @@ function trocarSenha() {
             if (addSenha === confSenha && addSenha !== '' && confSenha !== '') {
                 usurs[i].senha = addSenha;
                 localStorage.setItem('usurs', JSON.stringify(usurs)); // Atualiza o localStorage
-                console.log("Senha alterada para:", addSenha);
                 window.location.href = 'login.html';
                 break;
             } else {
@@ -108,7 +107,6 @@ function trocarSenha() {
             }
         }
     }
-
     if (!usuarioEncontrado) {
         emailNaoEnc.innerHTML = 'Email não encontrado';
         emailNaoEnc.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';

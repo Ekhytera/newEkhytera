@@ -4,7 +4,10 @@ hr {
 }
 
 main{
-	gap: 3rem
+	gap: 1rem;
+}
+.posts>*{
+	margin-top: 3rem;
 }
 
 /* Parte de cima do post (foto de perfil e campo de texto) */
@@ -15,17 +18,23 @@ main{
 		margin-inline: 1rem;
 	}
 
-	article.post>p {
+	article.post>.postBody {
 		margin-left: 4rem;
 	}
 
 	.postBody {
 		display: flex;
-		flex-direction: row;
-		width: 100%;
-		align-items: center;
+		flex-direction: column;
+		width: auto;
 	}
 
+	.postBody img{
+		max-width: 40em;
+		/* assumindo que o tamanho padrão da fonte da página seja 
+		16px, a largura máxima das imagens nos posts será de 640px. 
+		(40 x 16px) */
+	}
+	
 	.fotoPerfil {
 		padding: 0.5rem;
 		width: 4rem;
@@ -39,6 +48,15 @@ main{
 		flex-direction: row;
 		align-items: center;
 		justify-content: flex-start;
+		flex: 4;
+	}.postAuthor>div{
+		display: flex;
+		flex-direction: column;
+	}.postAuthor .username{
+		font-size: 1.25em;
+		margin: 0;
+	}.postAuthor .subtitle{
+		font-size: 1.20em;
 	}
 	
 	.postFooter{
@@ -64,14 +82,23 @@ main{
 		font-weight: 200;
 	}
 
-	.categoryButtons{
+	.postAside{
 		display: inline-flex;
 		flex-direction: row;
+		flex: 1;
+		justify-content: flex-end;
+	}.categoryButtons{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 	}.categoryButtons>*{
 		margin-inline: 0.2rem;
+		overflow: hidden;
+		text-wrap: nowrap;
+		text-overflow: ellipsis;
 	}
-/* Input para digitar novo post */
 
+/* Input para digitar novo post */
 	.writePostContainer {
 		position: relative;
 		display: flex;
@@ -106,6 +133,14 @@ main{
 		font-weight: bold;
 	}
 
+	.writePostBody{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+	}
+
 	.writePostFooter {
 		display: flex;
 		flex-wrap: wrap;
@@ -131,6 +166,72 @@ main{
 		}
 	}
 
+/* Seção de comunidades */
+	.communitiesContainer{
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+		color: #e0e1dd;
+	}.communitiesContainer>div, .communityCards{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.communityCards{
+		width: 100%;
+		padding-inline: 2em;
+	}
+	.communityCard{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1.5em;
+		background-color: rgba(0, 0, 0, 0.55);
+	}
+	.communityCard *{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.communityCard h3{
+		margin-top: 0.5em;
+		font-size: 1.5em;
+	}.communityCard h4{
+		font-size: 0.9em;
+	}.communityCard h5{
+		font-size: 0.9em;
+	}
+	.communityIcon{
+		width: 8em;
+		height: 8em;
+		object-fit: cover;
+	}
+
+/* Menu 3 pontos */
+	.postOptions{
+		display: flex;
+		position: absolute;
+		background-color: #191919;
+		color: #E0E1DD
+	}
+	.postOptions>ul{
+		list-style: none;
+		margin: 0;
+		padding: 1rem;
+	}
+	.postOptions>ul>li{
+		margin: 0;
+		padding: 1rem;
+		font-weight: bold;
+	}
+	.postOptions>ul>li:hover{
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+	.postOptions>ul>hr{
+		margin: 0 0.1rem
+	}
 /* Classe geral para botões com ícone dentro */
 	.iconButton {
 		display: inline-flex;
@@ -144,13 +245,13 @@ main{
 	}
 
 	.iconButton>img {
-		width: 1.5em;
+		min-width: 1.5em;
 		height: 1.5em;
 		object-fit: contain;
 	}
 /* Troca cor quando está com o mouse em cima */
 	.iconButton:hover {
-		background-color: #e0e1dd50;
+		background-color: rgba(224, 225, 221, 0.15);
 	}
 
 /* Config. de Botões */
@@ -212,4 +313,14 @@ main{
 		background-color: transparent;
 		color: #e0e1dd;
 		border: 2px solid #e0e1dd;
+	}
+
+/* Indicadores de status (online, ausente, dnd) */
+	.statusIndicator{
+		display: inline-flex;
+		width: 1em;
+		height: 1em;
+		border-radius: 50rem;
+		background-color: rgb(29, 196, 93);
+		margin-right: 0.5em;
 	}

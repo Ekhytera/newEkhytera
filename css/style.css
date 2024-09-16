@@ -153,6 +153,15 @@ main .categorias .options .texts button {
     padding: 0.5rem;
     background-color: transparent;
     border: 1px solid hsla(212, 60%, 67%, 1);
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+main .categorias .options .texts button:hover {
+    background: linear-gradient(270deg, #79A7DD 0%, #415A77 100%);
+    color: hsla(211, 53%, 11%, 1);
+    -webkit-text-fill-color: unset;
+    -moz-text-fill-color: unset;
 }
 
 main .categorias .changeCat {
@@ -475,10 +484,6 @@ main .materiais .content .card ul li a {
     main .categorias .options img {
         width: 690px;
         left: -55px;
-    }
-
-    main .categorias .options .texts {
-        
     }
 
     main .categorias .options .texts h1 {

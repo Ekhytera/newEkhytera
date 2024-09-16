@@ -49,6 +49,7 @@ main .gameSelector .allGames{
 main .gameSelector .allGames div{
     width: 79px;
     height: 130px;
+    cursor: pointer;
 }
 
 main .gameSelector .allGames::-webkit-scrollbar{

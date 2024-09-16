@@ -53,13 +53,12 @@ function entrar() {
             validateLogin = true;
             sessionStorage.setItem('userLogado', usurs[i].userName);
             if (validateLogin) {
-                sessionStorage.setItem('sair', '<li><a class="dropdown-item" href="index.html" onclick="sair()">Sair</a></li>');
+                sessionStorage.setItem('sair', '<li><button class="dropdown-item" id="leave">Sair</button></li>');
                 window.location.href = 'index.html';
             }
             break;
         }
     }
-
     if (!validateLogin) {
         erroEmail.textContent = 'Usuario ou senha invalido';
         erroEmail.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';

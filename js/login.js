@@ -16,6 +16,32 @@ function sair() {
     sessionStorage.clear();
     window.location.href = 'index.html';
 }
+function verificarUser(){
+    let userAtual = sessionStorage.getItem('userLogado');
+    const forum = document.querySelector('#forum');
+
+    if(userAtual){
+    for (let i in usurs) {
+        if(userAtual === usurs[i].userName){
+            if(usurs[i].tipo === 'adm'){
+                forum.addEventListener('click', () => {
+                    window.location.href = 'adm.html'})
+                    break
+            }else if(usurs[i].tipo === 'user'){
+                forum.addEventListener('click', () => {
+                    window.location.href = 'user.html'})
+                    break
+            }
+        } 
+    }
+    } else{
+        if(forum){
+            forum.addEventListener('click', () => {
+                window.location.href = 'visitante.html'});
+        }
+    }
+}
+window.onload = verificarUser;
 
 function entrar() {
     const inputEmail = document.querySelector('#email').value;

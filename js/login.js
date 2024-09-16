@@ -86,7 +86,7 @@ function cadastrar() {
 
 // function trocarSenha(){
 //     const emailTrocarSenha = document.querySelector('#emailTrocarSenha').value;
-//     const addSenha = document.querySelector('#addSenha').value;
+//     const addSenha = document.querySelector('#senhaNova').value;
 //     const confSenha = document.querySelector('#confSenha').value;
 //     const senhaDif = document.querySelector('#senhaDiferentes');
 //     const emailNaoEnc = document.querySelector('#emailNaoEnc');

@@ -20,16 +20,23 @@
         </div>
         <div>
             <label for="newSenha">Nova Senha</label>
-            <input type="password" id="addSenha">
+            <div id="viewPassword">
+                <input type="password" id="senhaNova">
+                <img src="imgs/verSenha.png" id="nSenha">
+            </div>
+            
         </div>
         <div>
             <label for="confSenha">Confirmar Senha</label>
-            <input type="password" id="confSenha">
-            <span id="senhaDiferentes"></span>
+            <div id="viewPassword">
+                <input type="password" id="confSenha">
+                <img src="imgs/verSenha.png" id="cSenha">
+            </div>
         </div>
         <button onclick="trocarSenha()">Trocar</button>
         <a href="login.html">Voltar</a>
     </div>
+    <script src="js/versenha.js"></script>
     <script src="js/login.js"></script>
 </body>
 </html>

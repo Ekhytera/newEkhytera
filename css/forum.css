@@ -1,5 +1,10 @@
 hr {
-	margin: 1rem 0;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+main{
+	gap: 3rem
 }
 
 /* Parte de cima do post (foto de perfil e campo de texto) */
@@ -53,11 +58,18 @@ hr {
 		align-items: center;
 		justify-content: space-between;
 	}
+	
 	.subtitle {
 		opacity: 50%;
 		font-weight: 200;
 	}
-	
+
+	.categoryButtons{
+		display: inline-flex;
+		flex-direction: row;
+	}.categoryButtons>*{
+		margin-inline: 0.2rem;
+	}
 /* Input para digitar novo post */
 
 	.writePostContainer {
@@ -100,85 +112,65 @@ hr {
 		flex-direction: row;
 		width: 100%;
 		justify-content: space-around;
+		align-items: center;
 	}
 
 	.writePostFooter>div>* {
 		margin-inline: 0.5rem;
 	}
 
-	.writePostContainer>.writePostCategories{
-		display: none;
+	.writePostCategories{
+		display: flex;
+		align-items: center;
 		justify-content: flex-start;
 	}
-	@media only screen and (max-width: 768px){
-		.writePostFooter .writePostCategories{
+	
+	@media only screen and (max-width: 992px){
+		.writePostCategories>div{
 			display: none;
-		}
-		.writePostContainer>.writePostCategories{
-			display: flex;
-			justify-content: flex-start;
 		}
 	}
 
 /* Classe geral para botões com ícone dentro */
 	.iconButton {
 		display: inline-flex;
-		padding: 1.3rem;
+		padding: 0.5rem;
 		border-radius: 50%;
 		background-color: transparent;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 60%;
 		border: none;
 		cursor: pointer;
 		align-items: center;
 		justify-content: center;
 	}
 
+	.iconButton>img {
+		width: 1.5em;
+		height: 1.5em;
+		object-fit: contain;
+	}
 /* Troca cor quando está com o mouse em cima */
 	.iconButton:hover {
 		background-color: #e0e1dd50;
 	}
 
-	.add-img {
-		background-image: url(../imgs/icon_image.png);
-		/* Ícone do botão */
-	}
-
-	.add-link {
-		background-image: url(../imgs/icon_link.png);
-		/* Ícone do botão */
-	}
-
-	.add-add {
-		background-image: url(../imgs/icon_add.svg);
-	}
-
-	.add-like {
-		background-image: url(../imgs/icon_like.png);
-	}
-
-	.add-comment {
-		background-image: url(../imgs/icon_comment.png);
-	}
-
-	.add-share {
-		background-image: url(../imgs/icon_share.png);
-	}
-
 /* Config. de Botões */
 	.button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		padding: 0.5em 1em;
 		border: none;
+	}.button, .iconButton{
+		transition: 0.2s;
 	}
-
+	
 	.vazado {
 		border: 1px solid #E0E1DD;
 		color: #E0E1DD;
 		background-color: transparent;
 	}
 
-	.button.vazado:hover {
+	.button.vazado:hover, .buttonAdd:hover {
 		background-color: #e0e1dd;
 		color: #191919;
 	}
@@ -189,12 +181,35 @@ hr {
 		color: #e0e1dd;
 	}
 
+	.primario:hover{
+		background: rgb(84, 121, 164);
+		background: linear-gradient(90deg, rgb(84, 121, 164) 0%, rgb(140, 194, 255) 100%); 
+	}
+
 	.secundario {
 		background-color: transparent;
 		color: #79a7dd;
 		box-shadow: 0px 0px 0px 1px #79a7dd inset;
 	}
+	.secundario:hover {
+		background-color: #79a7dd;
+		color: #191919;
+	}
 
 	.arredondado {
 		border-radius: 10em;
+	}
+
+	.buttonAdd{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+		width: 1rem;
+		height: 1rem;
+		font-weight: bold;
+		font-size: larger;
+		background-color: transparent;
+		color: #e0e1dd;
+		border: 2px solid #e0e1dd;
 	}

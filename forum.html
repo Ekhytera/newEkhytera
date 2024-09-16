@@ -73,27 +73,25 @@
 	<!---------------- CONTEUDO PRINCIPAL ---------------->
 	<main>
 		<div class="writePostContainer">
-			<div class="writePostCategories">
-				<button type="button" class="button vazado arredondado">HTML</button>
-				<button type="button" class="button vazado arredondado">CPU</button>
-				<button type="button" class="button vazado arredondado">RAM</button>
-			</div>
 			<div class="postBody">
 				<!-- Foto de perfil -->
 				<img class="fotoPerfil" src="imgs/gpubackimg.png">
 				<!-- Campo de texto -->
 				<textarea class="writePost" placeholder="Escreva um assunto para o seu tópico..."></textarea>
-				<!-- Botões embaixo do campo de texto -->
 			</div>
+			<!-- Botões embaixo do campo de texto -->
 			<div class="writePostFooter">
 				<div class="writePostAttachments">
-					<button type="button" class="iconButton add-img"></button>
-					<button type="button" class="iconButton add-link"></button>
+					<button type="button" class="iconButton add-img"><img src="imgs/icon_image.png"></button>
+					<button type="button" class="iconButton add-link"><img src="imgs/icon_link.png"></button>
 				</div>
 				<div class="writePostCategories">
-					<button type="button" class="button vazado arredondado">HTML</button>
-					<button type="button" class="button vazado arredondado">CPU</button>
-					<button type="button" class="button vazado arredondado">RAM</button>
+					<button type="button" class="button arredondado buttonAdd">+</button>
+					<div class="categoryButtons">
+						<button type="button" class="button vazado arredondado">HTML</button>
+						<button type="button" class="button vazado arredondado">CPU</button>
+						<button type="button" class="button vazado arredondado">RAM</button>
+					</div>
 				</div>
 				<div class="writePostControls">
 					<button type="button" class="button secundario arredondado">Salvar Rascunho</button>
@@ -112,7 +110,11 @@
 					</div>
 				</div>
 				<div>
-					
+					<div class="categoryButtons">
+						<button type="button" class="button secundario arredondado">Debate</button>
+						<button type="button" class="button secundario arredondado">Placas de Vídeo</button>
+						<div class="moreOptions"><button type="button" class="iconButton"><img src="imgs/moreOptions.png"></button></div>
+					</div>
 				</div>
 			</div>
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium impedit rem, veritatis magnam odio
@@ -123,9 +125,39 @@
 			</p>
 			<hr>
 			<div class="postFooter">
-				<button class="iconButton add-like"></button><span>354</span>
-				<button class="iconButton add-comment"></button><span>76</span>
-				<button class="iconButton add-share"></button><span>3</span>
+				<button class="iconButton add-like"><img src="imgs/icon_like.png"></button><span>354</span>
+				<button class="iconButton add-comment"><img src="imgs/icon_comment.png"></button><span>76</span>
+				<button class="iconButton add-share"><img src="imgs/icon_share.png"></button><span>3</span>
+			</div>
+		</article>
+		<article class="post">
+			<div class="postDetails">
+				<div class="postAuthor">
+					<img class="fotoPerfil" src="imgs/gpubackimg.png">
+					<div>
+						<h2>Usuário 1</h2>
+						<h3 class="subtitle">2h atrás</h3>
+					</div>
+				</div>
+				<div>
+					<div class="categoryButtons">
+						<button type="button" class="button secundario arredondado">Debate</button>
+						<button type="button" class="button secundario arredondado">Placas de Vídeo</button>
+						<div class="moreOptions"><button type="button" class="iconButton"><img src="imgs/moreOptions.png"></button></div>
+					</div>
+				</div>
+			</div>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium impedit rem, veritatis magnam odio
+				hic, quo expedita neque quis quam molestias! Similique ipsum nulla omnis maiores eaque, saepe reiciendis
+				assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aperiam rem animi
+				voluptatem doloremque optio provident? Esse quod dolor quisquam. Dolore similique assumenda incidunt,
+				quas ab iste sit voluptates iure.
+			</p>
+			<hr>
+			<div class="postFooter">
+				<button class="iconButton add-like"><img src="imgs/icon_like.png"></button><span>354</span>
+				<button class="iconButton add-comment"><img src="imgs/icon_comment.png"></button><span>76</span>
+				<button class="iconButton add-share"><img src="imgs/icon_share.png"></button><span>3</span>
 			</div>
 		</article>
 	</main>

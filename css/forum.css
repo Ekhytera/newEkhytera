@@ -209,12 +209,23 @@ main{
 		object-fit: cover;
 	}
 
+	@media only screen and (max-width: 768px) {
+		.communityCard h3{
+			font-size: 1em;
+		}
+		.communityIcon{
+			width: 5em;
+			height: 5em;
+		}
+	}
 /* Menu 3 pontos */
 	.postOptions{
+		opacity: 0%;
 		display: flex;
 		position: absolute;
 		background-color: #191919;
-		color: #E0E1DD
+		color: #E0E1DD;
+		transition: 1s;
 	}
 	.postOptions>ul{
 		list-style: none;
@@ -236,8 +247,8 @@ main{
 	.iconButton {
 		display: inline-flex;
 		padding: 0.5rem;
-		border-radius: 50%;
 		background-color: transparent;
+		border-radius: 0.5rem;
 		border: none;
 		cursor: pointer;
 		align-items: center;
@@ -252,6 +263,7 @@ main{
 /* Troca cor quando está com o mouse em cima */
 	.iconButton:hover {
 		background-color: rgba(224, 225, 221, 0.15);
+		border-radius: 50%;
 	}
 
 /* Config. de Botões */
@@ -262,7 +274,7 @@ main{
 		padding: 0.5em 1em;
 		border: none;
 	}.button, .iconButton{
-		transition: 0.2s;
+		transition: 0.3s;
 	}
 	
 	.vazado {

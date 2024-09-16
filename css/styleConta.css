@@ -86,7 +86,7 @@ div #senha, div #addSenha, div #senhaNova, div #confSenha{
     cursor: pointer;
 }
 
-.erro{
+.erro, #senhaDiferentes, #emailNaoEnc{
     color: white;
     font-weight: 500;
     border-radius: 5px;

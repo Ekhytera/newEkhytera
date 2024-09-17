@@ -1,10 +1,20 @@
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
     let sair = sessionStorage.getItem('sair');
     let userAtual = sessionStorage.getItem('userLogado');
+
     if (userAtual) {
-        const nomeUser = document.getElementById('nomeUser');
-        nomeUser.innerHTML = userAtual.toUpperCase() + ", ";
-        document.getElementById('dropLogin').innerHTML = sair;
-        document.getElementById('dropLogin2').innerHTML = sair;
+        document.querySelectorAll('#nomeUser').forEach(function (element) {
+            element.innerHTML = userAtual.toUpperCase() + ', ';
+        });
+        document.querySelectorAll('#dropLogin').forEach(function (element) {
+            element.innerHTML = sair;
+        });
+
+        document.querySelectorAll('#leave').forEach(function(element){
+            element.addEventListener('click', function(){
+                sessionStorage.clear();
+                window.location.href = 'index.html';
+            })
+        })
     }
 })

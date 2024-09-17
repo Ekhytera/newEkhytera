@@ -68,7 +68,7 @@ div input{
     font-size: 20px;
     padding: 10px;
 }
-div #senha{
+div #senha, div #addSenha, div #senhaNova, div #confSenha{
     background-color: transparent;
 }
 #login div #viewPassword{
@@ -82,11 +82,11 @@ div #senha{
 #login div #viewPassword img{
     width: 30px;
 }
-#verSenha, #vsenha , #nSenha, #cSenha, #emailNaoEnc, #senhaDiferentes{
+#verSenha, #verSenhaCad , #nSenha, #cSenha{
     cursor: pointer;
 }
 
-.erro{
+.erro, #senhaDiferentes, #emailNaoEnc{
     color: white;
     font-weight: 500;
     border-radius: 5px;

@@ -16,6 +16,32 @@ function sair() {
     sessionStorage.clear();
     window.location.href = 'index.html';
 }
+function verificarUser(){
+    let userAtual = sessionStorage.getItem('userLogado');
+    const forum = document.querySelector('#forum');
+
+    if(userAtual){
+    for (let i in usurs) {
+        if(userAtual === usurs[i].userName){
+            if(usurs[i].tipo === 'adm'){
+                forum.addEventListener('click', () => {
+                    window.location.href = 'adm.html'})
+                    break
+            }else if(usurs[i].tipo === 'user'){
+                forum.addEventListener('click', () => {
+                    window.location.href = 'user.html'})
+                    break
+            }
+        } 
+    }
+    } else{
+        if(forum){
+            forum.addEventListener('click', () => {
+                window.location.href = 'visitante.html'});
+        }
+    }
+}
+window.onload = verificarUser;
 
 function entrar() {
     const inputEmail = document.querySelector('#email').value;
@@ -27,13 +53,12 @@ function entrar() {
             validateLogin = true;
             sessionStorage.setItem('userLogado', usurs[i].userName);
             if (validateLogin) {
-                sessionStorage.setItem('sair', '<li><a class="dropdown-item" href="index.html" onclick="sair()">Sair</a></li>');
+                sessionStorage.setItem('sair', '<li><button class="dropdown-item" id="leave">Sair</button></li>');
                 window.location.href = 'index.html';
             }
             break;
         }
     }
-
     if (!validateLogin) {
         erroEmail.textContent = 'Usuario ou senha invalido';
         erroEmail.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
@@ -84,29 +109,31 @@ function cadastrar() {
     }
 }
 
-// function trocarSenha(){
-//     const emailTrocarSenha = document.querySelector('#emailTrocarSenha').value;
-//     const addSenha = document.querySelector('#addSenha').value;
-//     const confSenha = document.querySelector('#confSenha').value;
-//     const senhaDif = document.querySelector('#senhaDiferentes');
-//     const emailNaoEnc = document.querySelector('#emailNaoEnc');
+function trocarSenha() {
+    const emailTrocarSenha = document.querySelector('#emailTrocarSenha').value;
+    const addSenha = document.querySelector('#senhaNova').value;
+    const confSenha = document.querySelector('#confSenha').value;
+    const senhaDif = document.querySelector('#senhaDiferentes');
+    const emailNaoEnc = document.querySelector('#emailNaoEnc');
 
-//     for (let i in usurs){
-//         if (emailTrocarSenha == usurs[i].email){
-//             if(addSenha == confSenha && addSenha != '' && confSenha != ''){
-//                 usurs[i].senha = addSenha
-//                 console.log(addSenha)
-//                 console.log(usurs[i].senha)
-//                 window.location.href = 'login.html'  
+    let usuarioEncontrado = false;
 
-//                 break
-//             } else{
-//                 senhaDif.innerHTML = 'A senha incorreta '
-//                 senhaDif.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
-//             }
-//         } else{
-//             emailNaoEnc.innerHTML = 'Email não encontrado'
-//             emailNaoEnc.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
-//         }
-//     }
-// }
+    for (let i in usurs) {
+        if (emailTrocarSenha === usurs[i].email) {
+            usuarioEncontrado = true;
+            if (addSenha === confSenha && addSenha !== '' && confSenha !== '') {
+                usurs[i].senha = addSenha;
+                localStorage.setItem('usurs', JSON.stringify(usurs)); // Atualiza o localStorage
+                window.location.href = 'login.html';
+                break;
+            } else {
+                senhaDif.innerHTML = 'As senhas não coincidem ou estão vazias';
+                senhaDif.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+            }
+        }
+    }
+    if (!usuarioEncontrado) {
+        emailNaoEnc.innerHTML = 'Email não encontrado';
+        emailNaoEnc.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+    }
+}

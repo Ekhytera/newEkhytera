@@ -119,7 +119,7 @@ function addCommunities() {
 					</div>
 					<div class="communityCard">
 						<img class="communityIcon arredondado" src="imgs/codebackimg.png">
-						<h3>NVIDIA Fans</h3>
+						<h3>AMD Fans</h3>
 						<h4>126,309 membros</h5>
 							<h5>
 								<div class="statusIndicator"></div>63 online
@@ -129,7 +129,7 @@ function addCommunities() {
 					
 					<div class="communityCard">
 						<img class="communityIcon arredondado" src="imgs/codebackimg.png">
-						<h3>NVIDIA Fans</h3>
+						<h3>Intel Fans</h3>
 						<h4>126,309 membros</h5>
 							<h5>
 								<div class="statusIndicator"></div>63 online
@@ -172,7 +172,7 @@ function postar() {
 
 addPost({
 	username: 'Usuário 1',
-	pfp: 'jett.png',
+	pfp: 'pexels-danxavier-1239291.jpg',
 	text: 'A placa de vídeo GT 730 roda Red Dead Redemption 2 em 4k?',
 	attachment: 'gpubackimg.png',
 	categories: ['Teste']
@@ -180,7 +180,7 @@ addPost({
 
 addPost({
 	username: 'Usuário 2',
-	pfp: '',
+	pfp: 'pexels-justin-shaifer-501272-1222271.jpg',
 	text: 'Acredito que a UniFOA seja a melhor faculdade do mundo.',
 	attachment: 'codebackimg.png',
 	categories: ['Code']
@@ -188,7 +188,7 @@ addPost({
 
 addPost({
 	username: 'Usuário 3',
-	pfp: 'jett.png',
+	pfp: 'pexels-jjagtenberg-103123.jpg',
 	text: 'Como faz pra montar um pc gamer com 20 reais???',
 	attachment: '',
 	categories: ['Teste']

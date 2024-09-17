@@ -16,7 +16,7 @@ function sair() {
     sessionStorage.clear();
     window.location.href = 'index.html';
 }
-function verificarUser() {
+function verificarUser(){
     let userAtual = sessionStorage.getItem('userLogado');
     const forum = document.querySelector('#forum');
 

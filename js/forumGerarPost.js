@@ -187,6 +187,8 @@ function addCommunities() {
 const textArea = document.getElementById('writePostInput');
 
 const userPost = sessionStorage.getItem('userLogado');
+const foto = sessionStorage.getItem('fotoUser');
+console.log(userPost)
 
 function postar() {
 	if (userPost === null) {
@@ -198,7 +200,7 @@ function postar() {
 	else {
 		addPost({
 			username: userPost,
-			pfp: 'ekhyteralogo.png',
+			pfp: foto,
 			text: document.getElementById('writePostInput').value,
 			categories: ['Teste']
 		});

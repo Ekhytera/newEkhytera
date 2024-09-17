@@ -1,6 +1,6 @@
 let usurs = JSON.parse(localStorage.getItem('usurs')) || [
     { id: 1, email: 'joao@gmail.com', userName: 'João', tipo: 'adm', senha: '123' },
-    { id: 2, email: 'henrique@gmail.com', userName: 'Henrique', senha: '123', tipo: 'adm' },
+    { id: 2, email: 'henrique@gmail.com', userName: 'Henrique', senha: '123', tipo: 'adm', pfp: 'controle.png' },
     { id: 3, email: 'luiz@gmail.com', userName: 'Luiz', senha: '123', tipo: 'adm' },
     { id: 4, email: 'pedro@gmail.com', userName: 'Pedro', senha: '123', tipo: 'adm' },
     { id: 5, email: 'evelyn@gmail.com', userName: 'Evelyn', senha: '123', tipo: 'adm' },
@@ -56,6 +56,7 @@ function entrar() {
             validateLogin = true;
             sessionStorage.setItem('userLogado', usurs[i].userName);
             sessionStorage.setItem('tipoUser', usurs[i].tipo);
+            sessionStorage.setItem('fotoUser', usurs[i].pfp);
             if (validateLogin) {
                 sessionStorage.setItem('sair', '<li><button class="dropdown-item" id="leave">Sair</button></li>');
                 window.location.href = 'index.html';

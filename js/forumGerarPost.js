@@ -91,7 +91,7 @@ function addPost(settings) {
 				</div>
 				<hr>
 				<div class="postFooter">
-					<button class="iconButton add-like"><img src="imgs/icon_like.png"></button><span>354</span>
+					<button class="iconButton add-like" id="buttonImgLike"><img src="imgs/icon_like.png"></button><span id="likeCount">354</span>
 					<button class="iconButton add-comment"><img src="imgs/icon_comment.png"></button><span>76</span>
 					<button class="iconButton add-share"><img src="imgs/icon_share.png"></button><span>3</span>
 				</div>
@@ -101,6 +101,22 @@ function addPost(settings) {
 	const postsContainer = document.getElementById('postsContainer');
 	postsContainer.appendChild(post);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	const likeButtons = document.querySelectorAll('.add-like');
+
+	likeButtons.forEach(button => {
+		button.addEventListener('click', () => {
+		const likeCountDisplay = button.nextElementSibling;
+		let likeCount = parseInt(likeCountDisplay.textContent);
+
+		likeCount++;
+		likeCountDisplay.textContent = likeCount;
+		button.disabled = true;
+		});
+	});
+});
+
 
 function addCommunities() {
 	let comm = document.createElement('div');

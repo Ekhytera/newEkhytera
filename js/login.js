@@ -52,6 +52,7 @@ function entrar() {
         if (inputEmail == usurs[i].email && inputSenha == usurs[i].senha) {
             validateLogin = true;
             sessionStorage.setItem('userLogado', usurs[i].userName);
+            sessionStorage.setItem('tipoUser', usurs[i].tipo);
             if (validateLogin) {
                 sessionStorage.setItem('sair', '<li><button class="dropdown-item" id="leave">Sair</button></li>');
                 window.location.href = 'index.html';

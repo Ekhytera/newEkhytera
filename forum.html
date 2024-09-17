@@ -22,7 +22,7 @@
 			<div>
 				<img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" id="menuIcon">
 				<img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
-					type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					type="button" data-bs-toggle="dropdown">
 				<ul class="dropdown-menu" id="dropLogin">
 					<li><a class="dropdown-item" href="login.html">Entrar</a></li>
 					<li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
@@ -34,7 +34,7 @@
 			<ul>
 				<li><a href="montagem.html">Montagem</a></li>
 				<li><a href="#">Educação</a></li>
-				<li><a href="#">Fórum</a></li>
+				<li><a href="forum.html" id="forum">Fórum</a></li>
 				<li><a href="#">Catálogo</a></li>
 				<li><a href="#">Promoções</a></li>
 				<li><a href="#">Sobre nós</a></li>
@@ -46,7 +46,7 @@
 			<ul>
 				<li><a href="montagem.html">Montagem</a></li>
 				<li><a href="#">Educação</a></li>
-				<li><a href="#">Fórum</a></li>
+				<li><a href="forum.html" id="forum">Fórum</a></li>
 				<li><a href="#">Catálogo</a></li>
 				<li><a href="#">Promoções</a></li>
 				<li><a href="#">Sobre nós</a></li>
@@ -56,12 +56,13 @@
 			<input type="text" placeholder="Pesquisar..." name="pesquisar">
 			<div class="userIcons">
 				<img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
-					type="button" data-bs-toggle="dropdown" aria-expanded="false">
-				<ul class="dropdown-menu" id="dropLogin2">
+					type="button" data-bs-toggle="dropdown">
+				<ul class="dropdown-menu" id="dropLogin">
 					<li><a class="dropdown-item" href="login.html">Entrar</a></li>
 					<li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
 				</ul>
-				<a href="#"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+				<a href="#" title="dots"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+						alt=""></a>
 			</div>
 		</nav>
 	</header>
@@ -73,7 +74,8 @@
 				<!-- Foto de perfil -->
 				<img class="fotoPerfil" src="imgs/gpubackimg.png">
 				<!-- Campo de texto -->
-				<textarea id="writePostInput" class="writePost" placeholder="Escreva um assunto para o seu tópico..."></textarea>
+				<textarea id="writePostInput" class="writePost"
+					placeholder="Escreva um assunto para o seu tópico..."></textarea>
 			</div>
 			<!-- Botões embaixo do campo de texto -->
 			<div class="writePostFooter">
@@ -99,10 +101,10 @@
 
 		<!-- Post -->
 		<div id="postsContainer" class="posts">
-			
+
 		</div>
 		<section id="communitiesContainer">
-			
+
 		</section>
 	</main>
 
@@ -134,9 +136,14 @@
 		</div>
 	</footer>
 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<script src="js/nome.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/forumGerarPost.js"></script>
 	<script src="js/forum.js"></script>
+	<script src="js/verificarTipo.js"></script>
 </body>
 
 

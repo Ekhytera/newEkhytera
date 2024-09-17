@@ -1,5 +1,5 @@
+/*
 function addPost(settings) {
-
 	function loadCategories() {
 		let buttons = ''
 		if (settings.categories.length > 0) {
@@ -11,45 +11,95 @@ function addPost(settings) {
 	}
 
 	let post = document.createElement('div');
-	const htmlPost = `<article class="post">
-                <div class="postDetails">
+	const htmlPost = `<article class="post" id="postagem">
+				<div class="postDetails">
 
 
-                    <div class="postAuthor">
-                        <img class="fotoPerfil" src="imgs/${settings.pfp}">
-                        <div>
-                            <span class="username">${settings.username}</span>
-                            <span class="subtitle">2h atrás</span>
-                        </div>
-                    </div>
+					<div class="postAuthor">
+						<img class="fotoPerfil" src="imgs/${settings.pfp}">
+						<div>
+							<span class="username">${settings.username}</span>
+							<span class="subtitle">2h atrás</span>
+						</div>
+					</div>
 
-                    <div class="postAside">
-                        <div class="categoryButtons">
+					<div class="postAside">
+						<div class="categoryButtons">
 							${loadCategories()}                        
-                        </div>
-                        <div class="moreOptions"><button type="button" class="iconButton" onclick="showMenu(this)"><img
-                                    src="imgs/moreOptions.png" ></button></div>
-                    </div>
+						</div>
+						<div class="moreOptions"><button type="button" class="iconButton" onclick="showMenu(this)"><img
+									src="imgs/moreOptions.png" ></button></div>
+					</div>
 
 
-                </div>
-                <div class="postBody">
-                    <p>${settings.text}</p>
-                    ${settings.attachment ? `<img src="imgs/${settings.attachment}">` : ''}
-                </div>
-                <hr>
-                <div class="postFooter">
-                    <button class="iconButton add-like"><img src="imgs/icon_like.png"></button><span>354</span>
-                    <button class="iconButton add-comment"><img src="imgs/icon_comment.png"></button><span>76</span>
-                    <button class="iconButton add-share"><img src="imgs/icon_share.png"></button><span>3</span>
-                </div>
-            </article> 
+				</div>
+				<div class="postBody">
+					<p>${settings.text}</p>
+					${settings.attachment ? `<img src="imgs/${settings.attachment}">` : ''}
+				</div>
+				<hr>
+				<div class="postFooter">
+					<button class="iconButton add-like"><img src="imgs/icon_like.png"></button><span>354</span>
+					<button class="iconButton add-comment"><img src="imgs/icon_comment.png"></button><span>76</span>
+					<button class="iconButton add-share"><img src="imgs/icon_share.png"></button><span>3</span>
+				</div>
+			</article> 
 `
 
-	post.innerHTML = htmlPost
+	post.innerHTML = htmlPost;
 	const postsContainer = document.getElementById("postsContainer")
 
-	postsContainer.appendChild(post)
+	postsContainer.appendChild(post);
+}
+*/
+
+function addPost(settings) {
+	function loadCategories() {
+		let buttons = '';
+		if (settings.categories.length > 0) {
+			settings.categories.forEach(element => {
+				buttons += `<button type="button" class="button secundario arredondado">${element}</button>`;
+			});
+		}
+		return buttons;
+	}
+
+	let post = document.createElement('div');
+	post.className = 'postWrapper'; // Classe adicionada para facilitar a remoção
+
+	const htmlPost = `<article class="post" id="postagem">
+				<div class="postDetails">
+					<div class="postAuthor">
+						<img class="fotoPerfil" src="imgs/${settings.pfp}">
+						<div>
+							<span class="username">${settings.username}</span>
+							<span class="subtitle">2h atrás</span>
+						</div>
+					</div>
+					<div class="postAside">
+						<div class="categoryButtons">
+							${loadCategories()}                        
+						</div>
+						<div class="moreOptions">
+							<button type="button" class="iconButton" onclick="showMenu(this)"><img src="imgs/moreOptions.png"></button>
+						</div>
+					</div>
+				</div>
+				<div class="postBody">
+					<p>${settings.text}</p>
+					${settings.attachment ? `<img src="imgs/${settings.attachment}">` : ''}
+				</div>
+				<hr>
+				<div class="postFooter">
+					<button class="iconButton add-like"><img src="imgs/icon_like.png"></button><span>354</span>
+					<button class="iconButton add-comment"><img src="imgs/icon_comment.png"></button><span>76</span>
+					<button class="iconButton add-share"><img src="imgs/icon_share.png"></button><span>3</span>
+				</div>
+			</article>`;
+
+	post.innerHTML = htmlPost;
+	const postsContainer = document.getElementById('postsContainer');
+	postsContainer.appendChild(post);
 }
 
 function addCommunities() {
@@ -97,43 +147,56 @@ function addCommunities() {
 	commContainer.appendChild(comm)
 }
 
-function postar(){
-	addPost({
-		username: 'PUXAR_DO_LOCALSTORAGE',
-		pfp: 'ekhyteralogo.png',
-		text: document.getElementById('writePostInput').value,
-		categories: ['Teste']
-	})
+const textArea = document.getElementById('writePostInput');
+
+const userPost = sessionStorage.getItem('userLogado');
+
+function postar() {
+	if (userPost === null) {
+		return
+	}
+	else if(textArea.value === ''){
+		return
+	}
+	else {
+		addPost({
+			username: userPost,
+			pfp: 'ekhyteralogo.png',
+			text: document.getElementById('writePostInput').value,
+			categories: ['Teste']
+		});
+		textArea.value = '';
+	}
 }
+
 
 addPost({
 	username: 'Usuário 1',
 	pfp: 'jett.png',
-	text: 'Testestestetdstdsthdskjt',
+	text: 'A placa de vídeo GT 730 roda Red Dead Redemption 2 em 4k?',
 	attachment: 'gpubackimg.png',
 	categories: ['Teste']
 })
 
 addPost({
 	username: 'Usuário 2',
-	pfp: 'codebackimg.png',
-	text: 'Testestestetdstdsthdskjt',
+	pfp: '',
+	text: 'Acredito que a UniFOA seja a melhor faculdade do mundo.',
 	attachment: 'codebackimg.png',
-	categories: ['Teste']
+	categories: ['Code']
 })
 
 addPost({
 	username: 'Usuário 3',
 	pfp: 'jett.png',
-	text: 'usdhfsdjkgfadgvsdjkbadsbfsdafbjksagf sadf sg fsgfjka',
+	text: 'Como faz pra montar um pc gamer com 20 reais???',
 	attachment: '',
 	categories: ['Teste']
 })
 
-
 addCommunities()
-
-/* <article class="post">
+/*
+	<article article class="post" >
 				<div class="postDetails">
 
 
@@ -306,5 +369,4 @@ addCommunities()
 					<button type="button" class="iconButton"><img src="imgs/arrow_right.png"></button>
 				</div>
 			</section>
-			
 */

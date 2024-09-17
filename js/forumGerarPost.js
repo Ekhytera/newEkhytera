@@ -104,15 +104,18 @@ function addPost(settings) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	const likeButtons = document.querySelectorAll('.add-like');
+	let userAtual = sessionStorage.getItem('userLogado');
 
 	likeButtons.forEach(button => {
 		button.addEventListener('click', () => {
 		const likeCountDisplay = button.nextElementSibling;
 		let likeCount = parseInt(likeCountDisplay.textContent);
-
-		likeCount++;
-		likeCountDisplay.textContent = likeCount;
-		button.disabled = true;
+		
+		if(userAtual){
+			likeCount++;
+			likeCountDisplay.textContent = likeCount;
+			button.disabled = true;	
+		}
 		});
 	});
 });

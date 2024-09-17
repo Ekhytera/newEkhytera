@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('#leave').forEach(function(element){
             element.addEventListener('click', function(){
                 sessionStorage.clear();
-                window.location.href = 'index.html';
+                window.location.reload(true);
             })
         })
     }

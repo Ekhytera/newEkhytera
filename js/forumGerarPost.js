@@ -101,7 +101,24 @@ function addPost(settings) {
 	const postsContainer = document.getElementById('postsContainer');
 	postsContainer.appendChild(post);
 }
+function darLike(){
+	const likeButtons = document.querySelectorAll('.add-like');
+	let userAtual = sessionStorage.getItem('userLogado');
 
+	likeButtons.forEach(button => {
+		button.addEventListener('click', () => {
+		const likeCountDisplay = button.nextElementSibling;
+		let likeCount = parseInt(likeCountDisplay.textContent);
+		
+		if(userAtual){
+			likeCount++;
+			likeCountDisplay.textContent = likeCount;
+			likeCountDisplay.style.color = '#4169E1'
+			button.disabled = true;	
+		}
+		});
+	});
+};
 document.addEventListener('DOMContentLoaded', () => {
 	const likeButtons = document.querySelectorAll('.add-like');
 	let userAtual = sessionStorage.getItem('userLogado');
@@ -114,11 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		if(userAtual){
 			likeCount++;
 			likeCountDisplay.textContent = likeCount;
+			likeCountDisplay.style.color = '#4169E1'
 			button.disabled = true;	
 		}
 		});
 	});
-});
+})
 
 
 function addCommunities() {
@@ -184,6 +202,8 @@ function postar() {
 			text: document.getElementById('writePostInput').value,
 			categories: ['Teste']
 		});
+	document.addEventListener('load', darLike())
+
 		textArea.value = '';
 	}
 }

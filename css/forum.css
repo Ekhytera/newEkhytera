@@ -350,3 +350,9 @@ main{
 		background-color: rgb(29, 196, 93);
 		margin-right: 0.5em;
 	}
+
+@media only screen and (max-width: 600px){
+	.card2, .card3{
+		display: none;
+	}
+}

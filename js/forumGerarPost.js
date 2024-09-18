@@ -233,7 +233,6 @@ addPost({
 	categories: ['Teste']
 })
 
-addCommunities()
 /*
 	<article article class="post" >
 				<div class="postDetails">

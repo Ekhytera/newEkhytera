@@ -254,6 +254,9 @@ main{
 	.postOptions>ul>hr{
 		margin: 0 0.1rem
 	}
+	.delete{
+		color: var(--bs-red)
+	}
 /* Classe geral para botões com ícone dentro */
 	.iconButton {
 		display: inline-flex;

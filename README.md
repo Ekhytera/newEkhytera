@@ -1,5 +1,5 @@
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Ekhytera Logo](https://github.com/user-attachments/assets/66000895-ac1a-41ec-87e4-5f8c26c7d1b2)
 
 
 # Ekhytera: Faça a Escolha Certa!

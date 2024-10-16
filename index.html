@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dotsTab.css">
 </head>
 
 <body>
@@ -27,18 +28,18 @@
                     <li><a class="dropdown-item" href="login.html">Entrar</a></li>
                     <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
                 </ul>
-                <a href="#"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Três Pontos"></a>
+                <a href="#" class="tres"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Três Pontos"></a>
             </div>
         </nav>
         <nav class="verticalNav">
             <ul>
+                <li><input type="text" placeholder="Pesquisar..." name="pesquisar"></li>
                 <li><a href="montagem.html">Montagem</a></li>
                 <li><a href="#">Educação</a></li>
                 <li><a href="forum.html">Fórum</a></li>
                 <li><a href="#">Catálogo</a></li>
                 <li><a href="#">Promoções</a></li>
                 <li><a href="#">Sobre nós</a></li>
-                <li><input type="text" placeholder="Pesquisar..." name="pesquisar"></li>
             </ul>
         </nav>
 
@@ -61,12 +62,46 @@
                     <li><a class="dropdown-item" href="login.html">Entrar</a></li>
                     <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
                 </ul>
-                <a href="#" title="dots"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+                <a href="#" title="dots" class="tres"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt=""></a>
             </div>
         </nav>
     </header>
 
     <main>
+        <section class="threeDotsTab">
+            <div class="container-logo">
+                <img src="imgs/logo_vazada1.png" alt="" id="logo">
+            </div>
+            <div class="contorno">
+                <img src="" alt="" id="userFoto">
+                <div id="infoUser">
+                    <h1>Nome do usuario</h1>
+                    <span>email do usuario</span>
+                </div>
+            </div>
+            <h3>Minha conta</h3>
+            <p>adicionar conta</p>
+            <p>Remover conta</p>
+            <p>Deslogar</p>
+
+            <hr>
+
+            <h3>Aparencia</h3>
+
+            <p>
+                <span>Modo claro</span> <input type="checkbox" name="" id="">
+            </p>
+
+            <hr>
+
+            <h3>Opções</h3>
+            <p>Configurações</p>
+            <p>Privacidade</p>
+            <p>termos de serviço</p>
+            <p>Ajuda</p>
+
+        </section>
         <section class="firstContainer">
             <div class="textPart">
                 <h1><span id="nomeUser"></span>FAÇA A ESCOLHA CERTA!</h1>
@@ -85,7 +120,8 @@
                 <img src="imgs/jett.png" alt="Jett Valorant" id="cateImg" class="visible">
                 <div class="texts">
                     <h1 id="cateTitle" class="visible">GAMES</h1>
-                    <p id="cateText" class="visible">Precisa de mais desempenho na hora da jogatina? Te recomendamos as melhores peças sem você se
+                    <p id="cateText" class="visible">Precisa de mais desempenho na hora da jogatina? Te recomendamos as
+                        melhores peças sem você se
                         endividar.</p>
                     <button>Acessar catálogo</button>
                 </div>

@@ -1,0 +1,63 @@
+.threeDotsTab{
+    position: absolute;
+    z-index: 2;
+    right: 1rem;
+    top: -1.8%;
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(0, 0%, 10%, 1);
+    color: white;
+    padding: 1rem;
+    display: none;
+    border-radius: 10px;
+}
+.threeDotsTab .container-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+.threeDotsTab .container-logo #logo{
+    width: 150px;
+}
+.threeDotsTab .contorno{
+    display: flex;
+    background: linear-gradient(90deg, rgba(121,167,221,1) 0%, rgba(65,90,119,1) 100%);
+    border-radius: 15px;
+    padding: .8rem;
+}
+.threeDotsTab p{
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+}
+.threeDotsTab .contorno #userFoto{
+    width: 80px;
+    height: 80px;
+    background-color: gainsboro;
+    border-radius: 50%;
+}
+.threeDotsTab .contorno #infoUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.threeDotsTab .contorno #infoUser h1{
+    font-size: 1.5rem;
+}
+.threeDotsTab .contorno #infoUser h1, span{
+    margin: 0;
+    padding-left: .5rem;
+}
+.threeDotsTab h3{
+    font-size: 1.3rem;
+}
+.threeDotsTab h3, .threeDotsTab p{
+    margin: 1rem;
+}
+@media only screen and (max-width: 1200px){
+    .threeDotsTab{
+        position: absolute;
+        top: -0.8rem;
+        right: 0.5rem;
+    }
+}

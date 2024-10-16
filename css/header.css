@@ -1,4 +1,5 @@
 header{
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -27,8 +28,15 @@ header .icons #menuIcon{
 }
 
 header .verticalNav{
+    position: absolute;
+    z-index: 1;
+    top: 3.5rem;
+    right: 0;
     display: none;
     margin-top: 0.5rem;
+    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/img-noise-500x500.png');
+    border-radius: 0px 0px 0px 10px;
+    width: 200px;
 }
 
 header .verticalNav ul{
@@ -36,6 +44,7 @@ header .verticalNav ul{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding-right: 1rem;
 }
 
 header .verticalNav ul li{
@@ -58,7 +67,7 @@ header .verticalNav ul li a:hover{
 }
 
 header .verticalNav ul li input{
-    width: 50%;
+    width: 100%;
     background-color: transparent;
     border: 1px solid hsla(75, 6%, 87%, 1);
     border-radius: 2rem;

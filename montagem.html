@@ -17,43 +17,71 @@
 
 <body>
     <header>
+
         <nav class="icons">
             <a href="index.html"><img src="imgs/ekhyteralogo.png" alt="Logo Branca Ekhytera" class="logo"></a>
             <div>
-                <img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" id="menuIcon">
-                <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
-                    type="button" data-bs-toggle="dropdown">
-                <ul class="dropdown-menu" id="dropLogin">
-                    <li><a class="dropdown-item" href="login.html">Entrar</a></li>
-                    <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
-                </ul>
-                <a href="#"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Três Pontos"></a>
+                <img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" class="menuIcon">
             </div>
         </nav>
+
         <nav class="verticalNav">
-            <ul>
+            <div class="container-logo">
+                <img src="imgs/logo_vazada1.png" alt="logo" id="logo">
+            </div>
+            <div class="contorno">
+                <img src="imgs/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg" alt="foto" id="userFoto">
+                <div id="infoUser">
+                    <h1>Nome do usuario</h1>
+                    <span>email do usuario</span>
+                </div>
+                <img src="imgs/arrow_right.png" alt="arrow" id="seta">
+            </div>
+
+            <div id="infoConta">
+                <h3>Minha conta</h3>
+                <p>Acessar conta</p>
+                <p>adicionar conta</p>
+                <p>Remover conta</p>
+                <p>Deslogar</p>
+            </div>
+            <hr>
+            <ul id="menuVerticalNav">
+                <li><input type="text" placeholder="Pesquisar..."></li>
                 <li><a href="montagem.html">Montagem</a></li>
                 <li><a href="#">Educação</a></li>
                 <li><a href="forum.html">Fórum</a></li>
                 <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Promoções</a></li>
+                <li><a href="#">promoções</a></li>
                 <li><a href="#">Sobre nós</a></li>
-                <li><input type="text" placeholder="Pesquisar..." title="pesquisa"></li>
+                <hr>
             </ul>
+            <div class="conf">
+                <h3>Aparencia</h3>
+                <p>
+                    <span>Modo claro</span> <input type="checkbox" name="" id="">
+                </p>
+                <hr>
+                <h3>Opções</h3>
+                <p>Configurações</p>
+                <p>Privacidade</p>
+                <p>termos de serviço</p>
+                <p>Ajuda</p>
+            </div>
         </nav>
 
         <nav class="horizontalNav">
             <ul>
                 <li><a href="montagem.html">Montagem</a></li>
                 <li><a href="#">Educação</a></li>
-                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="forum.html" id="forum">Fórum</a></li>
                 <li><a href="#">Catálogo</a></li>
                 <li><a href="#">Promoções</a></li>
                 <li><a href="#">Sobre nós</a></li>
             </ul>
         </nav>
         <nav class="iconsNav">
-            <input type="text" placeholder="Pesquisar..." title="pesquisa">
+            <input type="text" placeholder="Pesquisar..." name="pesquisar">
             <div class="userIcons">
                 <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
                     type="button" data-bs-toggle="dropdown">
@@ -61,7 +89,8 @@
                     <li><a class="dropdown-item" href="login.html">Entrar</a></li>
                     <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
                 </ul>
-                <a href="#" title="dots"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+                <a href="#" title="dots" class="menuIcon"><img
+                        src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
             </div>
         </nav>
     </header>

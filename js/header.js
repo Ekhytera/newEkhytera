@@ -1,23 +1,23 @@
-const toggleMenu = document.getElementById('menuIcon');
+const toggleMenu = document.querySelectorAll('.menuIcon');
 const verticalNav = document.querySelector('.verticalNav');
+const divInfoUser = document.querySelector('.contorno');
+const infoUser = document.querySelector('#infoConta');
+const arrow = document.querySelector('#seta');
 
-verticalNav.style.display = 'none'
+verticalNav.style.display = 'none';
+infoUser.style.display = 'none';
 
-const threeDotsTab = document.querySelector('.threeDotsTab');
+toggleMenu.forEach(e => {
+    e.addEventListener('click', (evt) => {
+        evt.stopPropagation();
 
-threeDotsTab.style.display = 'none';
-
-toggleMenu.addEventListener('click', () => {
-    if (verticalNav.style.display === 'none') {
-        verticalNav.style.display = 'block';
-
-        if(threeDotsTab.style.display === 'block'){
-            threeDotsTab.style.display = 'none'
+        if (verticalNav.style.display === 'none') {
+            verticalNav.style.display = 'block';
         }
-    }
-    else {
-        verticalNav.style.display = 'none';
-    }
+        else {
+            verticalNav.style.display = 'none';
+        }
+    })
 })
 
 window.addEventListener('resize', () => {
@@ -26,18 +26,19 @@ window.addEventListener('resize', () => {
     }
 });
 
-// tres pontos aba:
+window.addEventListener('click', (evt) => {
+    if (verticalNav.style.display === 'block' && !verticalNav.contains(evt.target)) {
+        verticalNav.style.display = 'none';
+    }
+})
 
-const tresPontos = document.querySelectorAll('.tres').forEach((el) => {
-    el.addEventListener('click', () => {
-        if (threeDotsTab.style.display === 'none') {
-            threeDotsTab.style.display = 'block';
+divInfoUser.addEventListener('click', () => {
+    if (infoUser.style.display === 'none') {
+        infoUser.style.display = 'block';
+        arrow.style.transform = 'rotate(270deg)';
+    } else {
+        infoUser.style.display = 'none';
+        arrow.style.transform = 'rotate(90deg)';
+    }
+})
 
-            if (verticalNav.style.display === 'block') {
-                verticalNav.style.display = 'none'
-            }
-        } else {
-            threeDotsTab.style.display = 'none'
-        }
-    })
-});

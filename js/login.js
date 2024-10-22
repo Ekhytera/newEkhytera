@@ -35,6 +35,7 @@ function entrar() {
             if (inputSenha.value === usurs[i].senha) {
                 senhaValida = true;
                 validateLogin = true;
+                sessionStorage.setItem('userInfo', usurs)
                 sessionStorage.setItem('userLogado', usurs[i].userName);
                 sessionStorage.setItem('tipoUser', usurs[i].tipo);
                 sessionStorage.setItem('sair', '<li><button class="dropdown-item" id="leave">Sair</button></li>');

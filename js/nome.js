@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     let sair = sessionStorage.getItem('sair');
     let userAtual = sessionStorage.getItem('userLogado');
+    console.log(userAtual)
 
     if (userAtual) {
         document.querySelectorAll('#nomeUser').forEach(function (element) {

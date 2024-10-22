@@ -91,9 +91,11 @@ header .verticalNav #infoConta {
 }
 
 header .verticalNav #infoConta p:hover {
-    padding-left: 2rem;
     cursor: pointer;
-    transition: .3s;
+    background-color: rgb(28, 44, 61);
+    border-radius: .5rem;
+    transition: 0.3s;
+    width: 9rem;
 }
 
 header .verticalNav #infoConta h3 {

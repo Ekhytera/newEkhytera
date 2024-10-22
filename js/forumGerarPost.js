@@ -54,7 +54,7 @@ function addPost(settings) {
 // 		button.addEventListener('click', () => {
 // 		const likeCountDisplay = button.nextElementSibling;
 // 		let likeCount = parseInt(likeCountDisplay.textContent);
-		
+
 // 		if(userAtual){
 // 			likeCount++;
 // 			likeCountDisplay.textContent = likeCount;
@@ -70,15 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	likeButtons.forEach(button => {
 		button.addEventListener('click', () => {
-		const likeCountDisplay = button.nextElementSibling;
-		let likeCount = parseInt(likeCountDisplay.textContent);
-		
-		if(userAtual){
-			likeCount++;
-			likeCountDisplay.textContent = likeCount;
-			likeCountDisplay.style.color = '#4169E1'
-			button.disabled = true;	
-		}
+			Swal.fire({
+				title: 'Error!',
+				text: 'Do you want to continue',
+				icon: 'error',
+				confirmButtonText: 'Cool',
+			}).then(() => {
+				window.location.href = 'login.html'
+			})
+			const likeCountDisplay = button.nextElementSibling;
+			let likeCount = parseInt(likeCountDisplay.textContent);
+
+			if (userAtual) {
+				likeCount++;
+				likeCountDisplay.textContent = likeCount;
+				likeCountDisplay.style.color = '#4169E1'
+				button.disabled = true;
+			}
 		});
 	});
 })

@@ -115,17 +115,30 @@ main .middle-part .imgPart::before{
 }
 
 main .addedGames{
-    height: 424.8px;
+    min-height: 424.8px;
     text-align: center;
     background-color: hsla(0, 0%, 0%, 0.55);
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
     gap: 0.5rem;
     color: hsla(0, 0%, 80%, 1);
+}
+
+main .addedGames .pcSpecs{
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+main .addedGames .pcSpecs button{
+    padding: .5rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
 }
 
 main .addedGames h1{
@@ -146,6 +159,7 @@ body .selection-bar{
 }
 
 body .selection-bar .select-option{
+    cursor: pointer;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -153,6 +167,19 @@ body .selection-bar .select-option{
     align-items: center;
     color: hsla(0, 0%, 80%, 1);
     padding: 1rem;
+}
+
+.pcBuild{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.pcBuild .component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (min-width: 600px){

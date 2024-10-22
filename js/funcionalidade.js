@@ -9,6 +9,7 @@ const games = [
             CPU: {
                 model: 'Intel Core i3-3225',
                 rating: 51,
+                socket: 'LGA 1155',
             },
             RAM: 8,
         },
@@ -139,7 +140,9 @@ let lolButton = document.getElementById('league');
 let gtaButton = document.getElementById('gta');
 
 let gameOptionsDiv = document.getElementById('gameOptions');
-let pc = document.getElementById('pc');
+const printGPU = document.getElementById('gpu');
+const printCPU = document.getElementById('cpu');
+const printRAM = document.getElementById('ram');
 
 let selectedGames = [];
 
@@ -182,7 +185,9 @@ gtaButton.addEventListener('click', function () {
 
 function calculateRecSpecsPC() {
     if (selectedGames.length === 0) {
-        pc.textContent = 'Nenhum jogo foi selecionado!';
+        printCPU.textContent = 'Nenhum jogo selecionado!';
+        printGPU.textContent = 'Nenhum jogo selecionado!';
+        printRAM.textContent = 'Nenhum jogo selecionado!';
     }
     else {
         let maxGPU = selectedGames[0].recHardware.GPU;
@@ -207,13 +212,17 @@ function calculateRecSpecsPC() {
             RAM: maxRAM,
         };
 
-        pc.textContent = Object.values(pcBuild).join(' / ');
+        printGPU.textContent = pcBuild.GPU;
+        printCPU.textContent = pcBuild.CPU;
+        printRAM.textContent = pcBuild.RAM + 'GB';
     }
 }
 
 function calculateMinSpecsPC() {
     if (selectedGames.length === 0) {
-        pc.textContent = 'Nenhum jogo foi selecionado!';
+        printCPU.textContent = 'Nenhum jogo selecionado!';
+        printGPU.textContent = 'Nenhum jogo selecionado!';
+        printRAM.textContent = 'Nenhum jogo selecionado!';
     }
     else {
         let maxGPU = selectedGames[0].minHardware.GPU;
@@ -238,6 +247,8 @@ function calculateMinSpecsPC() {
             RAM: maxRAM,
         };
 
-        pc.textContent = Object.values(pcBuild).join(' / ');
+        printGPU.textContent = pcBuild.GPU;
+        printCPU.textContent = pcBuild.CPU;
+        printRAM.textContent = pcBuild.RAM + 'GB';
     }
 }

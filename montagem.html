@@ -136,9 +136,24 @@
         </section>
 
         <section class="addedGames">
-            <button onclick="calculateRecSpecsPC()">REQUISITOS RECOMENDADOS</button>
-            <button onclick="calculateMinSpecsPC()">REQUISITOS MÍNIMOS</button>
-            <div class="" id="pc"></div>
+            <div class="pcSpecs">
+                <button onclick="calculateRecSpecsPC()">REQUISITOS RECOMENDADOS</button>
+                <button onclick="calculateMinSpecsPC()">REQUISITOS MÍNIMOS</button>
+            </div>
+            <div class="pcBuild">
+                <div class="component">
+                    <img src="imgs/placadevideo.png" alt="GPU">
+                    <span id="gpu">Nenhum jogo selecionado!</span>
+                </div>
+                <div class="component">
+                    <img src="imgs/processador.png" alt="CPU">
+                    <span id="cpu">Nenhum jogo selecionado!</span>
+                </div>
+                <div class="component">
+                    <img src="imgs/ram.png" alt="RAM">
+                    <span id="ram">Nenhum jogo selecionado!</span>
+                </div>
+            </div>
         </section>
     </main>
 

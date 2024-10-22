@@ -1,4 +1,4 @@
-let usurs = JSON.parse(localStorage.getItem('usurs')) || [
+let allUsers = JSON.parse(localStorage.getItem('allUsers')) || [
     { id: 1, email: 'joao@gmail.com', userName: 'João', tipo: 'adm', senha: '123' },
     { id: 2, email: 'henrique@gmail.com', userName: 'Henrique', senha: '123', tipo: 'adm' },
     { id: 3, email: 'luiz@gmail.com', userName: 'Luiz', senha: '123', tipo: 'adm' },
@@ -29,12 +29,14 @@ function entrar() {
     inputEmail.style.border = '';
     inputSenha.style.border = '';
 
-    for (let i in usurs) {
-        if (inputEmail.value === usurs[i].email) {
+    for (let i in allUsers) {
+        if (inputEmail.value === allUsers[i].email) {
             emailValido = true;
-            if (inputSenha.value === usurs[i].senha) {
+            if (inputSenha.value === allUsers[i].senha) {
                 senhaValida = true;
                 validateLogin = true;
+                sessionStorage.setItem('userLogado', allUsers[i].userName);
+                sessionStorage.setItem('tipoUser', allUsers[i].tipo);
                 sessionStorage.setItem('userInfo', usurs)
                 sessionStorage.setItem('userLogado', usurs[i].userName);
                 sessionStorage.setItem('tipoUser', usurs[i].tipo);
@@ -91,8 +93,8 @@ function cadastrar() {
         valid = false;
     }
 
-    for (let i in usurs) {
-        if (inputEmail.value === usurs[i].email) {
+    for (let i in allUsers) {
+        if (inputEmail.value === allUsers[i].email) {
             emailExiste = true;
             break;
         }
@@ -121,15 +123,15 @@ function cadastrar() {
 
     if (valid) {
         const newUser = {
-            id: usurs.length + 1,
+            id: allUsers.length + 1,
             userName: inputNome.value,
             email: inputEmail.value,
             senha: inputSenha.value,
             tipo: 'user'
         };
 
-        usurs.push(newUser);
-        localStorage.setItem('usurs', JSON.stringify(usurs));
+        allUsers.push(newUser);
+        localStorage.setItem('allUsers', JSON.stringify(allUsers));
 
         window.location.href = 'login.html';
     }
@@ -188,11 +190,11 @@ function trocarSenha() {
     }
 
     if (valid) {
-        for (let i in usurs) {
-            if (inputEmail.value === usurs[i].email) {
+        for (let i in allUsers) {
+            if (inputEmail.value === allUsers[i].email) {
                 usuarioEncontrado = true;
-                usurs[i].senha = inputSenha.value; 
-                localStorage.setItem('usurs', JSON.stringify(usurs));
+                allUsers[i].senha = inputSenha.value; 
+                localStorage.setItem('allUsers', JSON.stringify(allUsers));
                 window.location.href = 'login.html';
                 break;
             }

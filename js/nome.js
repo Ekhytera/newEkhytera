@@ -7,9 +7,14 @@ window.addEventListener('DOMContentLoaded', () => {
     if (userAtual) {
         document.querySelectorAll('#nomeUser').forEach(function (element) {
             element.innerHTML = userAtual.toUpperCase() + ', ';
-            document.querySelector('#userName').innerHTML = userAtual
-            document.querySelector('#CadatroInfo').innerHTML = userAtualEmail
+            
         });
+        document.querySelectorAll('#userName').forEach( function (element){
+            element.innerHTML = userAtual
+        })
+        document.querySelectorAll('#CadatroInfo').forEach(function(){
+            element.innerHTML = userAtualEmail
+        })
         document.querySelectorAll('#dropLogin').forEach(function (element) {
             element.innerHTML = sair;
         });

@@ -7,20 +7,20 @@ window.addEventListener('DOMContentLoaded', () => {
     if (userAtual) {
         document.querySelectorAll('#nomeUser').forEach(function (element) {
             element.innerHTML = userAtual.toUpperCase() + ', ';
-            
+
         });
-        document.querySelectorAll('#userName').forEach( function (element){
-            element.innerHTML = userAtual
+        document.querySelectorAll('#userName').forEach(function (element) {
+            element.innerHTML = userAtual;
         })
-        document.querySelectorAll('#CadatroInfo').forEach(function(){
-            element.innerHTML = userAtualEmail
+        document.querySelectorAll('#CadatroInfo').forEach(function (element) {
+            element.innerHTML = userAtualEmail;
         })
         document.querySelectorAll('#dropLogin').forEach(function (element) {
             element.innerHTML = sair;
         });
 
-        document.querySelectorAll('#leave').forEach(function(element){
-            element.addEventListener('click', function(){
+        document.querySelectorAll('#leave').forEach(function (element) {
+            element.addEventListener('click', function () {
                 sessionStorage.clear();
                 window.location.reload(true);
             })

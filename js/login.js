@@ -190,8 +190,8 @@ function trocarSenha() {
         for (let i in usurs) {
             if (inputEmail.value === usurs[i].email) {
                 usuarioEncontrado = true;
-                usurs[i].senha = inputSenha.value; // Atualiza a senha
-                localStorage.setItem('usurs', JSON.stringify(usurs)); // Atualiza o localStorage
+                usurs[i].senha = inputSenha.value; 
+                localStorage.setItem('usurs', JSON.stringify(usurs));
                 window.location.href = 'login.html';
                 break;
             }

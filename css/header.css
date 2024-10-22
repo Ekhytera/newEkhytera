@@ -1,48 +1,123 @@
-header{
+header {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     justify-content: space-between;
 }
 
-header .icons{
+header .icons {
     display: flex;
     justify-content: space-between;
 }
 
-header .icons .logo{
+header .icons .logo {
     max-width: 70px;
     height: auto;
     margin-right: 1rem;
 }
 
-header .icons div{
+header .icons div {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-header .icons #menuIcon{
+header .icons .menuIcon {
     cursor: pointer;
 }
 
-header .verticalNav{
+header .verticalNav {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
     display: none;
-    margin-top: 0.5rem;
+    background-color: rgb(26, 26, 26);
+    border-radius: 0px 0px 0px 10px;
+    width: 90%;
+    height: 100vh;
+    overflow-y: scroll;
+    color: hsla(75, 6%, 87%, 1);
+    padding: 1rem;
 }
 
-header .verticalNav ul{
+header .verticalNav .container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+header .verticalNav .container-logo #logo {
+    width: 150px;
+}
+
+header .verticalNav .contorno #userFoto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+header .verticalNav .contorno {
+    display: flex;
+    background: linear-gradient(90deg, rgba(121, 167, 221, 1) 0%, rgba(65, 90, 119, 1) 100%);
+    border-radius: 15px;
+    padding: .8rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .verticalNav .contorno h1 {
+    font-size: 1.5rem;
+}
+
+header .verticalNav .contorno #infoUser h1,
+span {
+    margin: 0;
+    padding-left: .5rem;
+}
+
+header .verticalNav .contorno #seta {
+    width: 20px;
+    margin-left: 1.5rem;
+    transform: rotate(90deg);
+    transition: .3s;
+}
+
+header .verticalNav #infoConta {
+    display: none;
+    padding-left: 10px;
+}
+
+header .verticalNav #infoConta p:hover {
+    padding-left: 2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+header .verticalNav #infoConta h3 {
+    padding-top: .5rem;
+    font-size: 1.3rem;
+}
+
+header .verticalNav #infoConta p {
+    padding-left: 15px;
+}
+
+header .verticalNav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding-right: 1rem;
 }
 
-header .verticalNav ul li{
+header .verticalNav ul li {
     padding-block: 0.5rem;
 }
 
-header .verticalNav ul li a{
+header .verticalNav ul li a {
     text-decoration: none;
     color: hsla(75, 6%, 87%, 1);
     font-weight: 700;
@@ -51,14 +126,15 @@ header .verticalNav ul li a{
     transition: 0.3s;
 }
 
-header .verticalNav ul li a:hover{
+header .verticalNav ul li a:hover {
     background-color: rgb(28, 44, 61);
     border-radius: 1rem;
     transition: 0.3s;
 }
 
-header .verticalNav ul li input{
-    width: 50%;
+header .verticalNav ul li input {
+    width: 80%;
+    height: 2.5rem;
     background-color: transparent;
     border: 1px solid hsla(75, 6%, 87%, 1);
     border-radius: 2rem;
@@ -66,24 +142,32 @@ header .verticalNav ul li input{
     color: hsla(75, 6%, 87%, 1);
 }
 
-header .verticalNav ul li input::placeholder{
+header .verticalNav ul li input::placeholder {
     color: hsla(75, 6%, 87%, 1);
 }
 
-header .horizontalNav{
+header .verticalNav .conf h3 {
+    padding-left: 1rem;
+}
+
+header .verticalNav .conf p {
+    padding-left: 1.5rem;
+}
+
+header .horizontalNav {
     display: none;
     align-items: center;
     flex-grow: 1;
 }
 
-header .horizontalNav ul{
+header .horizontalNav ul {
     display: flex;
     list-style: none;
     gap: 1rem;
     align-items: center;
 }
 
-header .horizontalNav ul li a{
+header .horizontalNav ul li a {
     text-decoration: none;
     color: hsla(75, 6%, 87%, 1);
     font-weight: 700;
@@ -92,19 +176,19 @@ header .horizontalNav ul li a{
     transition: 0.3s;
 }
 
-header .horizontalNav ul li a:hover{
+header .horizontalNav ul li a:hover {
     background-color: rgb(28, 44, 61);
     border-radius: 1rem;
     transition: 0.3s;
 }
 
-header .iconsNav{
+header .iconsNav {
     display: none;
     justify-self: flex-end;
     gap: 1rem;
 }
 
-header .iconsNav input{
+header .iconsNav input {
     background-color: transparent;
     border: 1px solid hsla(75, 6%, 87%, 1);
     border-radius: 2rem;
@@ -112,36 +196,46 @@ header .iconsNav input{
     color: hsla(75, 6%, 87%, 1);
 }
 
-header .iconsNav .userIcons{
+header .iconsNav .userIcons {
     display: flex;
 }
 
-@media only screen and (min-width: 1200px){
-    header{
+@media only screen and (min-width: 768px) {
+    header .verticalNav {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
         flex-direction: row;
         align-items: center;
         padding: 3rem;
     }
 
-    header .icons div{
-        display: none;
-    }
-    
-    header .verticalNav{
+    header .icons div {
         display: none;
     }
 
-    header .horizontalNav{
+    header .verticalNav {
+        width: 400px;
+    }
+
+    header #menuVerticalNav {
+        display: none;
+    }
+
+    header .horizontalNav {
         display: flex;
         align-items: center;
     }
 
-    header .horizontalNav ul{
+    header .horizontalNav ul {
         margin: 0;
         padding: 0;
     }
 
-    header .iconsNav{
+    header .iconsNav {
         display: flex;
     }
 }

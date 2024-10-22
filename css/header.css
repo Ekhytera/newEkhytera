@@ -72,6 +72,14 @@ header .verticalNav .contorno h1 {
     font-size: 1.5rem;
 }
 
+header .verticalNav .contorno #infoUser{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    width: 100%;
+    align-items: flex-start;
+}
+
 header .verticalNav .contorno #infoUser h1,
 span {
     margin: 0;

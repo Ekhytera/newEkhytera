@@ -37,9 +37,9 @@ function entrar() {
                 validateLogin = true;
                 sessionStorage.setItem('userLogado', allUsers[i].userName);
                 sessionStorage.setItem('tipoUser', allUsers[i].tipo);
-                sessionStorage.setItem('userInfo', usurs)
-                sessionStorage.setItem('userLogado', usurs[i].userName);
-                sessionStorage.setItem('tipoUser', usurs[i].tipo);
+                sessionStorage.setItem('userInfo', allUsers[i])
+                sessionStorage.setItem('userLogado', allUsers[i].userName);
+                sessionStorage.setItem('tipoUser', allUsers[i].tipo);
                 sessionStorage.setItem('sair', '<li><button class="dropdown-item" id="leave">Sair</button></li>');
                 window.location.href = 'index.html';
                 break;

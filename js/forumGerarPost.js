@@ -70,14 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	likeButtons.forEach(button => {
 		button.addEventListener('click', () => {
-			Swal.fire({
-				title: 'Error!',
-				text: 'Do you want to continue',
-				icon: 'error',
-				confirmButtonText: 'Cool',
-			}).then(() => {
-				window.location.href = 'login.html'
-			})
 			const likeCountDisplay = button.nextElementSibling;
 			let likeCount = parseInt(likeCountDisplay.textContent);
 

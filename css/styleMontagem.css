@@ -169,6 +169,10 @@ body .selection-bar .select-option{
     padding: 1rem;
 }
 
+body .hidden{
+    display: none;
+}
+
 .pcBuild{
     display: flex;
     flex-direction: column;

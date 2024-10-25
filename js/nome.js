@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let sair = sessionStorage.getItem('sair');
     let userAtual = sessionStorage.getItem('userLogado');
     let userAtualEmail = sessionStorage.getItem('userEmail');
-    console.log(userAtual, userAtualEmail)
 
     if (userAtual) {
         document.querySelectorAll('#nomeUser').forEach(function (element) {

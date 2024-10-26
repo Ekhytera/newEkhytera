@@ -41,9 +41,9 @@ function entrar() {
                 sessionStorage.setItem('sair', '<li><button class="dropdown-item" id="leave">Sair</button></li>');
                 window.location.href = 'index.html';
                 break;
-            }
-        }
-    }
+            };
+        };
+    };
 
     if (!validateLogin) {
         if (!emailValido) {
@@ -55,9 +55,9 @@ function entrar() {
             erroSenha.textContent = 'Senha incorreta.';
             erroSenha.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
             inputSenha.style.border = '2px solid rgba(255, 0, 0, 0.7)';
-        }
-    }
-}
+        };
+    };
+};
 
 document.querySelector('#email').addEventListener('input', function () {
     erroEmail.textContent = '';

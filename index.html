@@ -37,8 +37,8 @@
             <div class="contorno">
                 <img src="imgs/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg" alt="foto" id="userFoto">
                 <div id="infoUser">
-                    <h1 id="userName">Nome do usuario</h1>
-                    <span id="CadatroInfo">email do usuario</span>
+                    <h1 id="userName">Faça login!</h1>
+                    <span id="CadatroInfo">Faça login!</span>
                 </div>
                 <img src="imgs/arrow_right.png" alt="arrow" id="seta">
             </div>
@@ -58,9 +58,9 @@
                 <li><a href="forum.html">Fórum</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="promocoes.html">Promoções</a></li>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">promoções</a></li>
-                <li><a href="#">Sobre nós</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="promocoes.html">promoções</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
                 <hr>
             </ul>
             <div class="conf">
@@ -80,25 +80,15 @@
         <nav class="horizontalNav">
             <ul>
                 <li><a href="montagem.html">Montagem</a></li>
-                <li><a href="#">Educação</a></li>
+                <li><a href="educacao.html">Educação</a></li>
                 <li><a href="forum.html" id="forum">Fórum</a></li>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Promoções</a></li>
-                <li><a href="#">Sobre nós</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
             </ul>
         </nav>
         <nav class="iconsNav">
-            <input type="text" placeholder="Pesquisar..." name="pesquisar">
-            <div class="userIcons">
-                <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
-                    type="button" data-bs-toggle="dropdown">
-                <ul class="dropdown-menu" id="dropLogin">
-                    <li><a class="dropdown-item" href="login.html">Entrar</a></li>
-                    <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
-                </ul>
-                <a href="#" title="dots" class="menuIcon"><img
-                        src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
-            </div>
+            <img class="menuIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAdFJREFUWEftV9txAjEQ2+0kVJJQSUIlCZUEKoFUEjrZnBib8fn8kB3D3GTiT+a8J7SSdk9lZUdXhkf+BiAzexKRTxF5yTB8FpGdql5aO9DFkJl9iMh75WUAdFgToL2qAnjTuSdDYwE5naAt0MtND2S7PCv76f4BWsrVi+nLMmRm3w6MvwM9QMQA2HIgbIj8LbiE37Yp0ScBNbLQAi58NtnSBSBHLdi590mylALEWHoU2AVLM0Ad7EBXX04jAAl9vUZ6qYHfhFqKAbHsgG44D2JdHDOD+JHkjAHgwp0v0gsIDkmC8YUdqFONHhGZtS2lIdjT50+qHh14ZgaWQrvH9RbjpSWHfLEqOwFLAANQ8bmo6ib1b5sB6TSgiDZcHymYZBwgEZm5ogRuNCDLvIxeKwrC5keHmY0UdSlGAAoGme1Mvbavtm2I7Qmb+i4ywchkEOrlc8iJEIWYhEUx0H2csgauwc6Ddj8PGx3Oquz4YN1feq48XINAi5ezES+nwnH9C1qBpd+usOH625XU/mPQ58X1o885kd2tbxpxMYChjTrH3LZAz6VQAGQ80FtBWLsXEOPEhwLKrRXhn30oIOirFKBnVd32ZEVXy3pexN75B1Rj6ge6yPUlgIC6FQAAAABJRU5ErkJggg=="/>
         </nav>
     </header>
 
@@ -109,7 +99,7 @@
                 <h1><span id="nomeUser"></span>FAÇA A ESCOLHA CERTA!</h1>
                 <p>Utilize nosso serviço de recomendações personalizadas e tenha mais assertividade ao montar sua
                     máquina.</p>
-                <button id="montagem">Monte seu computador</button>
+                <a href="montagem.html" class="montePc" id="animatedButton">MONTE SEU COMPUTADOR!</a>
             </div>
             <div class="imgPart">
                 <img src="imgs/pcgamermaior.png" alt="Imagem PC">
@@ -204,8 +194,8 @@
     <script src="js/login.js"></script>
     <script src="js/nome.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/montagem.js"></script>
     <script src="js/categorias.js"></script>
+    <script src="js/buttonAnimation.js"></script>
 </body>
 
 </html>

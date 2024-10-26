@@ -43,32 +43,19 @@ main .firstContainer .textPart p {
     font-weight: 400;
 }
 
-@property --myColor1 {
-    syntax: '<color>';
-    initial-value: hsla(212, 60%, 67%, 1);
-    inherits: false;
-}
-
-@property --myColor2 {
-    syntax: '<color>';
-    initial-value: hsla(0, 0%, 0%, 0.25);
-    inherits: false;
-}
-
-main .firstContainer .textPart button {
-    background-image: linear-gradient(45deg, var(--myColor1), var(--myColor2));
-    padding: 0.5rem;
+main .firstContainer .textPart .montePc {
+    background-image: -webkit-linear-gradient(45deg, var(--myColor1, hsla(212, 60%, 67%, 1)), var(--myColor2, hsla(0, 0%, 0%, 1)));
+    background-image: linear-gradient(45deg, var(--myColor1, hsla(212, 60%, 67%, 1)), var(--myColor2, hsla(0, 0%, 0%, 1)));
+    padding: 0.7rem;
     color: hsla(0, 0%, 100%, 1);
     border: none;
     font-weight: 600;
     cursor: pointer;
-    transition: --myColor1 0.3s, --myColor2 0.3s;
-    cursor: pointer;
-}
-
-main .firstContainer .textPart button:hover {
-    --myColor1: hsla(0, 0%, 0%, 0.25);
-    --myColor2: hsla(212, 60%, 67%, 1);
+    transition: background-image 0.3s ease, background-color 0.3s ease;
+    width: auto;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
 }
 
 main .firstContainer .imgPart {
@@ -226,7 +213,7 @@ main .educacao .destaques .not1 {
     transition: 0.3s;
 }
 
-main .educacao .destaques .not1:hover{
+main .educacao .destaques .not1:hover {
     background-blend-mode: darken;
     padding-bottom: 2rem;
 }
@@ -245,7 +232,7 @@ main .educacao .destaques .not2 {
     transition: 0.3s;
 }
 
-main .educacao .destaques .not2:hover{
+main .educacao .destaques .not2:hover {
     background-blend-mode: darken;
     padding-bottom: 2rem;
 }
@@ -264,7 +251,7 @@ main .educacao .destaques .not3 {
     transition: 0.3s;
 }
 
-main .educacao .destaques .not3:hover{
+main .educacao .destaques .not3:hover {
     background-blend-mode: darken;
     padding-bottom: 2rem;
 }
@@ -343,7 +330,7 @@ main .materiais .content .card ul li a {
         width: 450px;
     }
 
-    main .categorias .options{
+    main .categorias .options {
         height: 650px;
     }
 }
@@ -385,7 +372,7 @@ main .materiais .content .card ul li a {
         left: -30px;
     }
 
-    main .firstContainer .textPart button {
+    main .firstContainer .textPart .montePc {
         width: 50%;
     }
 

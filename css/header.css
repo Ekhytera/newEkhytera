@@ -23,8 +23,9 @@ header .icons div {
     gap: 0.5rem;
 }
 
-header .icons .menuIcon {
+header .iconsNav .menuIcon {
     cursor: pointer;
+
 }
 
 header .verticalNav {

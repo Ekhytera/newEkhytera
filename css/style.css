@@ -96,7 +96,7 @@ main .categorias .options {
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 541px;
 }
@@ -130,26 +130,19 @@ main .categorias .options .texts p {
     color: hsla(75, 6%, 87%, 1);
 }
 
-main .categorias .options .texts button {
-    background: linear-gradient(270deg, #79A7DD 0%, #415A77 100%);
-    background-size: 100%;
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+main .categorias .options .texts a {
+    background-image: -webkit-linear-gradient(45deg, var(--myColor1, hsla(212, 60%, 67%, 1)), var(--myColor2, hsla(0, 0%, 0%, 1)));
+    background-image: linear-gradient(45deg, var(--myColor1, hsla(212, 60%, 67%, 1)), var(--myColor2, hsla(0, 0%, 0%, 1)));
     padding: 0.5rem;
-    background-color: transparent;
-    border: 1px solid hsla(212, 60%, 67%, 1);
+    color: hsla(0, 0%, 100%, 1);
+    border: none;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-main .categorias .options .texts button:hover {
-    background: linear-gradient(270deg, #79A7DD 0%, #415A77 100%);
-    color: hsla(211, 53%, 11%, 1);
-    -webkit-text-fill-color: unset;
-    -moz-text-fill-color: unset;
+    transition: background-image 0.3s ease, background-color 0.3s ease;
+    width: auto;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
 }
 
 main .categorias .changeCat {
@@ -359,10 +352,15 @@ main .materiais .content .card ul li a {
     main .categorias .options .texts {
         width: 50%;
         padding: 2.5rem;
+        align-items: center;
     }
 
     main .categorias .options .texts h1 {
         font-size: 3rem;
+    }
+
+    main .categorias .options .texts a{
+        width: fit-content;
     }
 
     main .categorias .options img {
@@ -397,6 +395,10 @@ main .materiais .content .card ul li a {
     }
 
     main .categorias .options .texts {
+        width: 50%;
+    }
+
+    main .categorias .options .texts a{
         width: 50%;
     }
 

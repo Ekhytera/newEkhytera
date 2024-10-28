@@ -1,0 +1,38 @@
+main {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .selectors {
+    display: flex;
+    gap: 1rem;
+}
+main .selectors button {
+    background: none;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+main .carrossel {
+    width: 80%;
+    overflow-x: auto; 
+    padding: 1rem; 
+    box-sizing: border-box;
+}
+main .carrossel .images {
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+}
+main .carrossel .images div {
+    flex: 0 0 282px; 
+    height: 454px;
+}
+main .carrossel .images div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; 
+}

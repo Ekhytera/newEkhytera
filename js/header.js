@@ -34,7 +34,7 @@ window.addEventListener('click', (evt) => {
 
 divInfoUser.addEventListener('click', () => {
     if (infoUser.style.display === 'none') {
-        infoUser.style.display = 'block';
+        infoUser.style.display = 'flex';
         arrow.style.transform = 'rotate(270deg)';
     } else {
         infoUser.style.display = 'none';

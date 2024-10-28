@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let lightness = 70;
         let direction = 1;
         function animateGradient() {
-            lightness += 0.2 * direction;
+            lightness += 0.3 * direction;
             if (lightness >= 85 || lightness <= 55) direction *= -1;
             button.style.setProperty('--myColor1', `hsl(${hue}, ${saturation}%, ${lightness}%)`);
             button.style.setProperty('--myColor2', `hsl(${hue}, ${saturation}%, ${lightness - 10}%)`);

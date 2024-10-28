@@ -17,54 +17,68 @@
 
 <body>
     <header>
-        < <nav class="icons">
+        <nav class="icons">
             <a href="index.html"><img src="imgs/ekhyteralogo.png" alt="Logo Branca Ekhytera" class="logo"></a>
             <div>
-                <img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" id="menuIcon">
-                <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
-                    type="button" data-bs-toggle="dropdown">
-                <ul class="dropdown-menu" id="dropLogin">
-                    <li><a class="dropdown-item" href="login.html">Entrar</a></li>
-                    <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
-                </ul>
-                <a href="#"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Três Pontos"></a>
+                <img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" class="menuIcon">
             </div>
-            </nav>
-            <nav class="verticalNav">
-                <ul>
-                    <li><a href="montagem.html">Montagem</a></li>
-                    <li><a href="#">Educação</a></li>
-                    <li><a href="forum.html">Fórum</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Sobre nós</a></li>
-                    <li><input type="text" placeholder="Pesquisar..." name="pesquisar"></li>
-                </ul>
-            </nav>
+        </nav>
 
-            <nav class="horizontalNav">
-                <ul>
-                    <li><a href="montagem.html">Montagem</a></li>
-                    <li><a href="#">Educação</a></li>
-                    <li><a href="forum.html" id="forum">Fórum</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Sobre nós</a></li>
-                </ul>
-            </nav>
-            <nav class="iconsNav">
-                <input type="text" placeholder="Pesquisar..." name="pesquisar">
-                <div class="userIcons">
-                    <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""
-                        class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                    <ul class="dropdown-menu" id="dropLogin">
-                        <li><a class="dropdown-item" href="login.html">Entrar</a></li>
-                        <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
-                    </ul>
-                    <a href="#" title="dots"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-                            alt=""></a>
+        <nav class="verticalNav">
+            <div class="container-logo">
+                <img src="imgs/logo_vazada1.png" alt="logo" id="logo">
+            </div>
+            <div class="contorno">
+                <img src="imgs/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg" alt="foto" id="userFoto">
+                <div id="infoUser">
+                    <h1 id="userName">Faça login!</h1>
+                    <span id="CadatroInfo">Faça login!</span>
                 </div>
-            </nav>
+                <img src="imgs/arrow_right.png" alt="arrow" id="seta">
+            </div>
+
+            <div id="infoConta">
+                <h3>Minha conta</h3>
+                <a id="fazerLogin" href="login.html">Fazer Login</a>
+                <a id="criarConta" href="cadastrar.html">Criar Conta</a>
+            </div>
+            <hr>
+            <ul id="menuVerticalNav">
+                <li><a href="montagem.html">Montagem</a></li>
+                <li><a href="educacao.html">Educação</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+                <hr>
+            </ul>
+            <div class="conf">
+                <h3>Aparencia</h3>
+                <p>
+                    <span>Modo claro</span> <input type="checkbox" name="" id="">
+                </p>
+                <hr>
+                <h3>Opções</h3>
+                <p>Configurações</p>
+                <p>Privacidade</p>
+                <p>Termos de Serviço</p>
+                <p>Ajuda</p>
+            </div>
+        </nav>
+
+        <nav class="horizontalNav">
+            <ul>
+                <li><a href="montagem.html">Montagem</a></li>
+                <li><a href="educacao.html">Educação</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+        <nav class="iconsNav">
+            <img class="menuIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAdFJREFUWEftV9txAjEQ2+0kVJJQSUIlCZUEKoFUEjrZnBib8fn8kB3D3GTiT+a8J7SSdk9lZUdXhkf+BiAzexKRTxF5yTB8FpGdql5aO9DFkJl9iMh75WUAdFgToL2qAnjTuSdDYwE5naAt0MtND2S7PCv76f4BWsrVi+nLMmRm3w6MvwM9QMQA2HIgbIj8LbiE37Yp0ScBNbLQAi58NtnSBSBHLdi590mylALEWHoU2AVLM0Ad7EBXX04jAAl9vUZ6qYHfhFqKAbHsgG44D2JdHDOD+JHkjAHgwp0v0gsIDkmC8YUdqFONHhGZtS2lIdjT50+qHh14ZgaWQrvH9RbjpSWHfLEqOwFLAANQ8bmo6ib1b5sB6TSgiDZcHymYZBwgEZm5ogRuNCDLvIxeKwrC5keHmY0UdSlGAAoGme1Mvbavtm2I7Qmb+i4ywchkEOrlc8iJEIWYhEUx0H2csgauwc6Ddj8PGx3Oquz4YN1feq48XINAi5ezES+nwnH9C1qBpd+usOH625XU/mPQ58X1o885kd2tbxpxMYChjTrH3LZAz6VQAGQ80FtBWLsXEOPEhwLKrRXhn30oIOirFKBnVd32ZEVXy3pexN75B1Rj6ge6yPUlgIC6FQAAAABJRU5ErkJggg=="/>
+        </nav>
     </header>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

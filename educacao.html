@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ekhytera</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="shortcut icon" href="imgs/ekhyteralogo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -12,60 +17,176 @@
     <link rel="stylesheet" href="css/scrollbar.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/educacao.css">
+
 </head>
 
 <body>
     <header>
-        < <nav class="icons">
+        <nav class="icons">
             <a href="index.html"><img src="imgs/ekhyteralogo.png" alt="Logo Branca Ekhytera" class="logo"></a>
             <div>
-                <img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" id="menuIcon">
-                <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="dropdown-toggle"
-                    type="button" data-bs-toggle="dropdown">
-                <ul class="dropdown-menu" id="dropLogin">
-                    <li><a class="dropdown-item" href="login.html">Entrar</a></li>
-                    <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
-                </ul>
-                <a href="#"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Três Pontos"></a>
+                <img src="imgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" class="menuIcon">
             </div>
-            </nav>
-            <nav class="verticalNav">
-                <ul>
-                    <li><a href="montagem.html">Montagem</a></li>
-                    <li><a href="#">Educação</a></li>
-                    <li><a href="forum.html">Fórum</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Sobre nós</a></li>
-                    <li><input type="text" placeholder="Pesquisar..." name="pesquisar"></li>
-                </ul>
-            </nav>
+        </nav>
 
-            <nav class="horizontalNav">
-                <ul>
-                    <li><a href="montagem.html">Montagem</a></li>
-                    <li><a href="#">Educação</a></li>
-                    <li><a href="forum.html" id="forum">Fórum</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Sobre nós</a></li>
-                </ul>
-            </nav>
-            <nav class="iconsNav">
-                <input type="text" placeholder="Pesquisar..." name="pesquisar">
-                <div class="userIcons">
-                    <img src="imgs/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt=""
-                        class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                    <ul class="dropdown-menu" id="dropLogin">
-                        <li><a class="dropdown-item" href="login.html">Entrar</a></li>
-                        <li><a class="dropdown-item" href="cadastrar.html">Criar Conta</a></li>
-                    </ul>
-                    <a href="#" title="dots"><img src="imgs/more_vert_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
-                            alt=""></a>
+        <nav class="verticalNav">
+            <div class="container-logo">
+                <img src="imgs/logo_vazada1.png" alt="logo" id="logo">
+            </div>
+            <div class="contorno">
+                <img src="imgs/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg" alt="foto" id="userFoto">
+                <div id="infoUser">
+                    <h1 id="userName">Faça login!</h1>
+                    <span id="CadatroInfo">Faça login!</span>
                 </div>
-            </nav>
+                <img src="imgs/arrow_right.png" alt="arrow" id="seta">
+            </div>
+
+            <div id="infoConta">
+                <h3>Minha conta</h3>
+                <a id="fazerLogin" href="login.html">Fazer Login</a>
+                <a id="criarConta" href="cadastrar.html">Criar Conta</a>
+            </div>
+            <hr>
+            <ul id="menuVerticalNav">
+                <li><a href="montagem.html">Montagem</a></li>
+                <li><a href="educacao.html">Educação</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+                <hr>
+            </ul>
+            <div class="conf">
+                <h3>Aparencia</h3>
+                <p>
+                    <span>Modo claro</span> <input type="checkbox" name="" id="">
+                </p>
+                <hr>
+                <h3>Opções</h3>
+                <p>Configurações</p>
+                <p>Privacidade</p>
+                <p>Termos de Serviço</p>
+                <p>Ajuda</p>
+            </div>
+        </nav>
+
+        <nav class="horizontalNav">
+            <ul>
+                <li><a href="montagem.html">Montagem</a></li>
+                <li><a href="educacao.html">Educação</a></li>
+                <li><a href="forum.html" id="forum">Fórum</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+        <nav class="iconsNav">
+            <img class="menuIcon"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAdFJREFUWEftV9txAjEQ2+0kVJJQSUIlCZUEKoFUEjrZnBib8fn8kB3D3GTiT+a8J7SSdk9lZUdXhkf+BiAzexKRTxF5yTB8FpGdql5aO9DFkJl9iMh75WUAdFgToL2qAnjTuSdDYwE5naAt0MtND2S7PCv76f4BWsrVi+nLMmRm3w6MvwM9QMQA2HIgbIj8LbiE37Yp0ScBNbLQAi58NtnSBSBHLdi590mylALEWHoU2AVLM0Ad7EBXX04jAAl9vUZ6qYHfhFqKAbHsgG44D2JdHDOD+JHkjAHgwp0v0gsIDkmC8YUdqFONHhGZtS2lIdjT50+qHh14ZgaWQrvH9RbjpSWHfLEqOwFLAANQ8bmo6ib1b5sB6TSgiDZcHymYZBwgEZm5ogRuNCDLvIxeKwrC5keHmY0UdSlGAAoGme1Mvbavtm2I7Qmb+i4ywchkEOrlc8iJEIWYhEUx0H2csgauwc6Ddj8PGx3Oquz4YN1feq48XINAi5ezES+nwnH9C1qBpd+usOH625XU/mPQ58X1o885kd2tbxpxMYChjTrH3LZAz6VQAGQ80FtBWLsXEOPEhwLKrRXhn30oIOirFKBnVd32ZEVXy3pexN75B1Rj6ge6yPUlgIC6FQAAAABJRU5ErkJggg==" />
+        </nav>
     </header>
+
+    <main>
+        <h1 id="nv-material">Novos materiais</h1>
+
+        <section class="content">
+            <div class="container">
+                <div class="capa-content">
+                    <img src="imgs/image 35.png" alt="">
+                </div>
+                <div class="title-tema">
+                    <h3>Computer Organization and Design</h3>
+                    <p>Arquitetura de Computadores</p>
+                </div>
+                <p class="autor">David A. Patterson, John L. Hennessy</p>
+                <div class="symbols">
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-regular fa-file-pdf"></i>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="content-icons">
+                <i class="fa-regular fa-thumbs-up icons"></i> 654
+                <i class="fa-solid fa-share-nodes icons"></i> 187
+                <i class="fa-regular fa-comment-dots icons"></i> 321
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="capa-content">
+                    <img src="imgs/image 38.png" alt="">
+                </div>
+                <div class="title-tema">
+                    <h3>Computer Organization and Design</h3>
+                    <p>Arquitetura de Computadores</p>
+                </div>
+                <p class="autor">David A. Patterson, John L. Hennessy</p>
+                <div class="symbols">
+                    <i class="fa-solid fa-download"></i>
+                    <i class="fa-regular fa-file-pdf"></i>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="content-icons">
+                <i class="fa-regular fa-thumbs-up icons"></i> 654
+                <i class="fa-solid fa-share-nodes icons"></i> 187
+                <i class="fa-regular fa-comment-dots icons"></i> 321
+            </div>
+        </section>
+
+        <button id="verMais">Ver Mais</button>
+
+        <section class="educacao">
+            <h1>DESTAQUES DA SEMANA</h1>
+
+            <div class="destaques">
+                <div class="not1">Acer expande presença no mercado brasileiro com novos lançamentos</div>
+                <div class="not2">Lançamento comercial 5G</div>
+                <div class="not3">Computadores de recozimento prometem rivalizar com computadores quânticos</div>
+            </div>
+        </section>
+
+        <section class="noticias">
+            <div class="info">
+                <p class="title">Hoje</p>
+                <p class="title">Última semana</p>
+                <p class="title">Último mês</p>
+                <p class="title">Destaques</p>
+            </div>
+
+            <div class="container-noticias">
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+                <h4>Google Fotos vai liberar recursos de edição com IA para todos os usuários</h4>
+                <p class="sup">6 horas atrás</p>
+
+                <hr>
+
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+                <h4>Marco Legal dos Games: Abragames se posiciona sobre aprovação do novo texto</h4>
+                <p class="sup">6 horas atrás</p>
+
+                <hr>
+
+                <div class="img">
+                    <img src="" alt="">
+                </div>
+                <h4>Governo Federal abre inscrições para curso na área da Tecnologia da Informação no Vale e região</h4>
+                <p class="sup">6 horas atrás</p>
+
+
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -1,0 +1,136 @@
+body {
+    background-color: rgba(13, 27, 42, 1);
+    color: rgba(224, 225, 221, 1);
+}
+
+main h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+main .content {
+    background-color: rgba(0, 0, 0, 0.555);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+}
+
+main .container .autor {
+    color: rgba(224, 225, 221, 1);
+    font-size: .8rem;
+}
+
+main .container .title-tema h3 {
+    font-weight: bold;
+}
+
+main .container .title-tema p {
+    border: solid 2px rgba(65, 90, 119, 1);
+    width: fit-content;
+    padding: .2rem;
+    color: rgba(65, 90, 119, 1);
+    border-radius: 15px;
+    text-align: center;
+
+}
+
+main .container .symbols i {
+    margin-inline-end: 1rem;
+    font-size: 1.3rem;
+}
+
+main .content-icons {
+    display: flex;
+
+}
+
+main .content-icons i {
+    padding-left: .8rem;
+    margin-right: .3rem;
+    font-size: 1.3rem;
+}
+
+main #verMais {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    color: rgba(224, 225, 221, 1);
+    background: none;
+    border: 2px solid rgba(224, 225, 221, 1);
+    padding: .5rem;
+    font-weight: bold;
+}
+main .educacao{
+    margin-top: 3rem;
+}
+main .educacao .destaques {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+
+}
+
+main .educacao .destaques .not1 {
+    background-color: rgba(0, 0, 0, 0.393);
+    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/noticiaacer.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .educacao .destaques .not1:hover {
+    background-blend-mode: darken;
+    padding-bottom: 2rem;
+}
+
+main .educacao .destaques .not2 {
+    background-color: rgba(0, 0, 0, 0.393);
+    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/g1-tecnologia.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .educacao .destaques .not2:hover {
+    background-blend-mode: darken;
+    padding-bottom: 2rem;
+}
+
+main .educacao .destaques .not3 {
+    background-color: rgba(0, 0, 0, 0.393);
+    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/010150240401-processador-recozimento-3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main .educacao .destaques .not3:hover {
+    background-blend-mode: darken;
+    padding-bottom: 2rem;
+}

@@ -1,3 +1,8 @@
+body{
+    background-color: #0D1B2A;
+    background-image: none;
+}
+
 main {
     padding: 0;
     margin: 0;
@@ -16,6 +21,13 @@ main .selectors button {
     color: white;
     border: none;
     font-weight: bold;
+    transition: 0.3s;
+    border-bottom: 0px solid #79A7DD;
+}
+
+main .selectors button:hover{
+    border-bottom: 5px solid #79A7DD;
+    transition: 0.3s;
 }
 
 main .selectors .selected{
@@ -35,6 +47,11 @@ main .carrossel i{
     height: auto;
 }
 
+main .carrossel .images{
+    display: flex;
+    gap: 1rem;
+}
+
 main .carrossel .images :nth-child(2), main .carrossel .images :nth-child(3), main .carrossel .images :nth-child(4){
     display: none;
 }
@@ -42,10 +59,13 @@ main .carrossel .images :nth-child(2), main .carrossel .images :nth-child(3), ma
 main .carrossel .images .carrossel-image{
     width: 275px;
     height: 450px;
-    background-image: url('/imgsCarrossel/csgoCar.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+main .carrossel .images .carrossel-image:hover{
+    opacity: 0.8;
 }
 
 main .mais-opcoes{
@@ -60,4 +80,38 @@ main .mais-opcoes:hover{
     color: black;
     background-color: white;
     transition: 0.3s;
+}
+
+@media only screen and (min-width: 600px) {
+    main .selectors{
+        gap: 3rem;
+    }
+
+    main .carrossel i{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    main .carrossel .images :nth-child(2){
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    main .carrossel .images :nth-child(3){
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    main .carrossel .images{
+        gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    main .carrossel .images :nth-child(4){
+        display: block;
+    }
 }

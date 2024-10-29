@@ -7,6 +7,7 @@ main h1 {
     text-align: center;
     font-weight: bold;
     font-size: 1.4em;
+    margin-top: 2rem;
 }
 
 main .content {
@@ -66,7 +67,7 @@ main #verMais {
     font-weight: bold;
 }
 main .educacao{
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 main .educacao .destaques {
     width: 100%;
@@ -133,4 +134,29 @@ main .educacao .destaques .not3 {
 main .educacao .destaques .not3:hover {
     background-blend-mode: darken;
     padding-bottom: 2rem;
+}
+
+main .noticias{
+    margin-inline: .5rem;
+    margin-top: 5rem;
+}
+
+main .noticias .info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main .noticias .info .title, main .noticias .posts-destaques{
+    font-weight: bold;
+    margin: 0%;
+}
+main .noticias .container-noticias .posts-noticias{
+    display: flex;
+    flex-wrap: wrap;
+}
+main .noticias .container-noticias .posts-noticias h4{
+    font-weight: bold;
+}
+main .noticias .container-noticias .posts-noticias .img{
+    margin: .5rem;
 }

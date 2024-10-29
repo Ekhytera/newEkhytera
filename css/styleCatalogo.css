@@ -1,9 +1,11 @@
 main {
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 25px;
 }
 main .selectors {
     display: flex;
@@ -15,24 +17,47 @@ main .selectors button {
     border: none;
     font-weight: bold;
 }
-main .carrossel {
-    width: 80%;
-    overflow-x: auto; 
-    padding: 1rem; 
-    box-sizing: border-box;
+
+main .selectors .selected{
+    border-bottom: 5px solid #79A7DD;
 }
-main .carrossel .images {
+
+main .carrossel{
     display: flex;
-    align-items: center; 
-    gap: 1rem; 
-}
-main .carrossel .images div {
-    flex: 0 0 282px; 
-    height: 454px;
-}
-main .carrossel .images div img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .carrossel i{
+    cursor: pointer;
+    font-size: 22px;
+    height: auto;
+}
+
+main .carrossel .images :nth-child(2), main .carrossel .images :nth-child(3), main .carrossel .images :nth-child(4){
+    display: none;
+}
+
+main .carrossel .images .carrossel-image{
+    width: 275px;
+    height: 450px;
+    background-image: url('/imgsCarrossel/csgoCar.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main .mais-opcoes{
+    padding: 0.5rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+main .mais-opcoes:hover{
+    color: black;
+    background-color: white;
+    transition: 0.3s;
 }

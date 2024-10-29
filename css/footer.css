@@ -48,9 +48,19 @@ footer .box select{
 footer .box select option{
     color: hsl(75, 6%, 87%);
 }
-
+@media only screen and (min-width: 680px) {
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
+    }
+    footer .box:nth-of-type(3){
+        grid-column: span 2;
+    }
+}
 @media only screen and (min-width: 992px){
     footer{
+        display: flex;
         padding: 2rem;
         flex-direction: row;
         justify-content: space-between;

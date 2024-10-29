@@ -10,6 +10,14 @@ main h1 {
     margin-top: 2rem;
 }
 
+main a{
+    color: rgba(224, 225, 221, 1);
+}
+
+main a:hover{
+    color: rgba(224, 225, 221, 0.7);
+}
+
 main .content {
     background-color: rgba(0, 0, 0, 0.555);
     margin: 1rem;
@@ -77,7 +85,7 @@ main .content-icons i {
     font-size: 1.3rem;
 }
 
-main .content-icons i:nth-child(1n){
+main .content-icons i:nth-child(1n) {
     margin-inline-start: 1rem;
 }
 
@@ -181,6 +189,8 @@ main .noticias .info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 3rem;
+    border-bottom: 1px solid;
 }
 
 main .noticias .info .title,
@@ -189,8 +199,9 @@ main .noticias .posts-destaques {
     margin: 0%;
 }
 
-main .noticias .posts-destaques #title-destaque{
+main .noticias .posts-destaques #title-destaque {
     text-align: center;
+    border-bottom: 1px solid;
 }
 
 main .noticias .container-noticias .posts-noticias {
@@ -217,9 +228,9 @@ main .noticias .container-noticias .posts-noticias .img {
     }
 
     main .educacao .destaques {
-        height: 1000px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        margin-top: 3rem;
     }
 
     main .educacao .destaques .not1 {
@@ -231,35 +242,51 @@ main .noticias .container-noticias .posts-noticias .img {
     }
 }
 
-@media only screen and (min-width: 1000px){
-    main{
+@media only screen and (min-width: 1000px) {
+    main {
         margin: 7rem;
     }
 
-    main .container .title-tema{
+    main .container .title-tema p {
+        font-size: 1.3rem;
+        border-radius: 20px;
+    }
+
+    main .content-icons {
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    main .content-icons i {
+        margin-right: .3rem;
+        font-size: 1.5rem;
+    }
+
+    main .content-icons i:nth-child(1n) {
+        margin-inline-start: 1.5rem;
+    }
+
+    main .container .title-tema {
         width: 100%;
         justify-content: space-between;
     }
 
-    main .noticias{
+    main .noticias {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
-    main .noticias .info{
+    main .noticias .info {
         justify-content: flex-start;
-        gap: 10rem;
+        gap: 5rem;
         border-bottom: 1px solid white;
     }
 
-    main .container-noticias{
+    main .container-noticias {
         grid-column: 1/2;
     }
 
-    main .posts-destaques{
-        margin-top: 0;
-    }
-    main .posts-destaques #title-destaque{
+    main .posts-destaques #title-destaque {
         border-bottom: 1px solid;
     }
 }

@@ -11,6 +11,7 @@ main h1 {
 }
 
 main a{
+    text-decoration: underline 1.4px;
     color: rgba(224, 225, 221, 1);
 }
 
@@ -104,6 +105,7 @@ main #verMais:hover {
     background-color: rgba(224, 225, 221, 1);
     color: rgba(13, 27, 42, 1);
     border-radius: 5px;
+    transition: .3s;
 }
 
 main .educacao {

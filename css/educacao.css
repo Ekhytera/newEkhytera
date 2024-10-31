@@ -10,12 +10,12 @@ main h1 {
     margin-top: 2rem;
 }
 
-main a{
+main a {
     text-decoration: underline 1.4px;
     color: rgba(224, 225, 221, 1);
 }
 
-main a:hover{
+main a:hover {
     color: rgba(224, 225, 221, 0.7);
 }
 
@@ -242,6 +242,12 @@ main .noticias .container-noticias .posts-noticias .img {
     main .noticias {
         padding: 2rem;
     }
+
+    main .container-noticias .posts-noticias,
+    main .posts-destaques .posts-noticias {
+        flex-direction: column;
+        /* border: solid 1px aliceblue; */
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -286,6 +292,13 @@ main .noticias .container-noticias .posts-noticias .img {
 
     main .container-noticias {
         grid-column: 1/2;
+        height: 800px;
+        overflow: auto;
+    }
+
+    main .posts-destaques {
+        height: 800px;
+        overflow: auto;
     }
 
     main .posts-destaques #title-destaque {

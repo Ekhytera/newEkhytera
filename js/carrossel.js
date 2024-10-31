@@ -1,10 +1,10 @@
-let softwares = ['/imgsCarrossel/produtividade/afterCar.jpg', '/imgsCarrossel/produtividade/blenderCar.png', '/imgsCarrossel/produtividade/discordCar.webp', '/imgsCarrossel/produtividade/excelCar.svg', '/imgsCarrossel/produtividade/notionCar.png', '/imgsCarrossel/produtividade/photoCar.jpg', '/imgsCarrossel/produtividade/vegasCar.png'];
+let softwares = ['./imgsCarrossel/produtividade/afterCar.jpg', './imgsCarrossel/produtividade/blenderCar.png', './imgsCarrossel/produtividade/discordCar.webp', './imgsCarrossel/produtividade/excelCar.svg', './imgsCarrossel/produtividade/notionCar.png', './imgsCarrossel/produtividade/photoCar.jpg', './imgsCarrossel/produtividade/vegasCar.png'];
 
 let gameImages = [
-    '/imgsCarrossel/csgoCar.png', '/imgsCarrossel/fortniteCar.jpeg', '/imgsCarrossel/gtavCar.jpg',
-    '/imgsCarrossel/hollowkCar.webp', '/imgsCarrossel/leagueCar.webp', '/imgsCarrossel/minecraftCar.jpg',
-    '/imgsCarrossel/nfsCar.webp', '/imgsCarrossel/reddeadCar.jpg', '/imgsCarrossel/robloxCar.jpg',
-    '/imgsCarrossel/rocketleagueCar.jpeg', '/imgsCarrossel/thesims4Car.webp', '/imgsCarrossel/valorantCar.webp'
+    './imgsCarrossel/csgoCar.png', './imgsCarrossel/fortniteCar.jpeg', './imgsCarrossel/gtavCar.jpg',
+    './imgsCarrossel/hollowkCar.webp', './imgsCarrossel/leagueCar.webp', './imgsCarrossel/minecraftCar.jpg',
+    './imgsCarrossel/nfsCar.webp', './imgsCarrossel/reddeadCar.jpg', './imgsCarrossel/robloxCar.jpg',
+    './imgsCarrossel/rocketleagueCar.jpeg', './imgsCarrossel/thesims4Car.webp', './imgsCarrossel/valorantCar.webp'
 ];
 
 let selectedArray = gameImages;

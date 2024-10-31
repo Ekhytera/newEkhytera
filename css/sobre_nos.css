@@ -55,7 +55,7 @@ main{
 }
 
 #img3{
-    margin-top: 2550px;
+    margin-top: 2450px;
     -webkit-mask-image: 
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
@@ -162,7 +162,7 @@ main{
 }
 
 #rian{
-    background-image: url(rian.png);
+    background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/rian.png?raw=true);
     transition-delay: 1.2s;
 }
 
@@ -172,7 +172,7 @@ main{
 }
 
 #luiz{
-    background-image: url(luiz.jpg);
+    background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/luiz.jpg?raw=true);
     transition-delay: 2s;
 }
 
@@ -274,7 +274,7 @@ main{
 
 @media only screen and (min-width: 1200px) {
     #img3{
-        margin-top: 2700px;
+        margin-top: 2600px;
     }
     
     .blurry-light:nth-child(2){

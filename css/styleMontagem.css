@@ -50,6 +50,23 @@ main .gameSelector .allGames div{
     width: 79px;
     height: 130px;
     cursor: pointer;
+    position: relative;
+}
+
+main .gameSelector .allGames div .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    pointer-events: none;
 }
 
 main .gameSelector .allGames::-webkit-scrollbar{

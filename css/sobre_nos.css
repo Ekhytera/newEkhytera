@@ -206,6 +206,10 @@ main{
 }
 
 @media only screen and (min-width: 360px){
+    body{
+        overflow-x: hidden;
+    }
+    
     #img1{
         width: 2000px;
         background-size: cover;
@@ -241,6 +245,10 @@ main{
 }
 
 @media only screen and (min-width: 728px) {
+    body{
+        overflow-x: hidden;
+    }
+    
     .blurry-light:nth-child(1){
         margin-top: -30px;
         height: 700px;
@@ -276,6 +284,10 @@ main{
 
 
 @media only screen and (min-width: 1200px) {
+    body{
+        overflow-x: hidden;
+    }
+    
     #img3{
         margin-top: 2300px;
     }

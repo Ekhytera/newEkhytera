@@ -4,6 +4,7 @@ body{
         #0D1B2A,
         #0D1B2A
     );
+    overflow-x: hidden;
 }
 
 main{

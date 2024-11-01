@@ -215,7 +215,8 @@ main .noticias .container-noticias .posts-noticias h4 {
     font-weight: bold;
 }
 
-main .noticias .container-noticias .posts-noticias .img {
+main .noticias .container-noticias .posts-noticias .img,
+main .noticias .posts-destaques .posts-destaques .img{
     margin: .5rem;
 }
 
@@ -244,9 +245,9 @@ main .noticias .container-noticias .posts-noticias .img {
     }
 
     main .container-noticias .posts-noticias,
-    main .posts-destaques .posts-noticias {
+    main .noticias .posts-destaques .posts-noticias {
         flex-direction: column;
-        /* border: solid 1px aliceblue; */
+        margin-inline: 1rem;
     }
 }
 

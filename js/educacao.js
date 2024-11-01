@@ -21,8 +21,8 @@ class CreateCard {
     cardDestaque(){
         const card = 
         `<div class="posts-noticias">
-            <div>
-                <img src="${this.img}" alt="${this.title}" width="200px>
+            <div class="img">
+                <img src="${this.img}" alt="${this.title}" width="200px">
             </div>
             <h4><a href="${this.link}" target="_blank">${this.title}</a></h4>
         </div>
@@ -34,7 +34,7 @@ class CreateCard {
 const noticias = document.querySelector('.container-noticias');
 const destaques = document.querySelector('.posts-destaques');
 
-const apiKey = 'pub_5787380025aa0f26c2a8490b0ac61475ea7b8';
+const apiKey = 'pub_579622e53f99c5ff7ce852fa6cdb335a1a447';
 
 
 async function getNews() {
@@ -47,15 +47,14 @@ async function getNews() {
     for (let i = 0; i <= 10; i++) {
         const news = new CreateCard(dados.results[i].title, dados.results[i].link, dados.results[i].image_url, dados.results[i].pubDate.slice(11, 19))
         const key = dados.results[i].keywords.map(item => item);
-        // console.log(key)
 
-        const keyNoticias = ['notícias', 'games']
+        const keyNoticias = ['notícias']
         const contem = keyNoticias.every(item => key.includes(item))
         
         if(contem){
-            destaques.innerHTML += news.cardDestaque()
-        } else{
             noticias.innerHTML += news.cardNews()
+        } else{
+            destaques.innerHTML += news.cardDestaque()
         }
     }
 

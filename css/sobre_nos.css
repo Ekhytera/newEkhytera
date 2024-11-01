@@ -4,6 +4,7 @@ body{
         #0D1B2A,
         #0D1B2A
     );
+    overflow-x: hidden;
 }
 
 main{
@@ -56,11 +57,13 @@ main{
 
 #img3{
     margin-top: 2450px;
+    opacity: 70%;
     -webkit-mask-image: 
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
     
 }
 
@@ -167,7 +170,7 @@ main{
 }
 
 #pedro{
-    background-image: url(https://media.licdn.com/dms/image/v2/D4D03AQGuYtJ0anafqw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724871254483?e=1732147200&v=beta&t=Ed8DcLn98azPUOYxjq6xaQEm2K2hhW9hAH3JKwATFMw);
+    background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/pedrao.jpg?raw=true);
     transition-delay: 1.8s;
 }
 
@@ -203,6 +206,10 @@ main{
 }
 
 @media only screen and (min-width: 360px){
+    body{
+        overflow-x: hidden;
+    }
+    
     #img1{
         width: 2000px;
         background-size: cover;
@@ -238,6 +245,10 @@ main{
 }
 
 @media only screen and (min-width: 728px) {
+    body{
+        overflow-x: hidden;
+    }
+    
     .blurry-light:nth-child(1){
         margin-top: -30px;
         height: 700px;
@@ -273,18 +284,23 @@ main{
 
 
 @media only screen and (min-width: 1200px) {
+    body{
+        overflow-x: hidden;
+    }
+    
     #img3{
         margin-top: 2300px;
     }
     
     .blurry-light:nth-child(2){
-        margin-left: 1250px;
+        width: 200px;
+        margin-left: 1350px;
     }
     
 
 
     #container3{
-        margin-top: 850px;
+        margin-top: 650px;
     }
     
 }

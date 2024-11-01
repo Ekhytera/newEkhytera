@@ -34,6 +34,7 @@ const minSpecsButton = document.getElementById('minSpecs');
 
 let selectedGames = [];
 
+/*
 function selectionToggler(button, game) {
     if (button.style.textDecoration === '') {
         button.style.textDecoration = 'line-through';
@@ -43,6 +44,32 @@ function selectionToggler(button, game) {
     else {
         button.style.textDecoration = '';
         button.style.opacity = 1;
+        const index = selectedGames.indexOf(game);
+        if (index > -1) {
+            selectedGames.splice(index, 1);
+        }
+    }
+}
+*/
+
+function selectionToggler(button, game) {
+    let checkmark = button.querySelector('.checkmark');
+    const img = button.querySelector('img');
+
+    if (!checkmark) {
+        checkmark = document.createElement('span');
+        checkmark.classList.add('checkmark');
+        checkmark.innerHTML = '✔';
+        button.appendChild(checkmark);
+    }
+
+    if (checkmark.style.display === 'none' || checkmark.style.display === '') {
+        checkmark.style.display = 'flex';
+        img.style.opacity = 0.5;
+        selectedGames.push(game);
+    } else {
+        checkmark.style.display = 'none';
+        img.style.opacity = 1;
         const index = selectedGames.indexOf(game);
         if (index > -1) {
             selectedGames.splice(index, 1);

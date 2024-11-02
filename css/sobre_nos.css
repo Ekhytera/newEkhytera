@@ -247,6 +247,11 @@ main{
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .blurry-light:nth-child(2){
+        margin-left: 350px;
+        margin-top: 300px;
+    }
 }
 
 @media only screen and (min-width: 728px) {

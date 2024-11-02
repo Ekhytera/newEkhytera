@@ -5,6 +5,7 @@ body{
         #0D1B2A
     );
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 main{

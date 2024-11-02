@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-image: linear-gradient(
         0deg,
@@ -5,7 +9,6 @@ body{
         #0D1B2A
     );
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 main{

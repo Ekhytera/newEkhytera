@@ -62,8 +62,8 @@ function renderNews(newsList) {
 
 getNews();
 
+let userAtual = sessionStorage.getItem('userLogado');
 document.querySelectorAll('.likeIcon').forEach((el, i) => {
-    let userAtual = sessionStorage.getItem('userLogado');
     el.addEventListener("click", () => {
         const likeCount = document.querySelectorAll('.likeCount')
         if (userAtual) {
@@ -73,3 +73,35 @@ document.querySelectorAll('.likeIcon').forEach((el, i) => {
         }
     });
 });
+
+document.querySelectorAll('.share').forEach((el, i) => {
+    const shareCount = document.querySelectorAll('.shareCount');
+    el.addEventListener('click', async () => {
+        if(userAtual){
+            if (navigator.share) {
+                try {
+                    if (i == 0) {
+                        await navigator.share({
+                            title: 'Computer Organization and Design',
+                            text: 'Confira esse livro incrivel sobre arquitetura de computadores!',
+                            url: 
+                            'https://edisciplinas.usp.br/pluginfile.php/7898320/mod_resource/content/1/Computer%20Organization%20and%20Design%205E%20-%20Patterson%20Hennessy%20-%200124077269.pdf'
+                        })
+                        shareCount[i].innerHTML++
+                    } else if (i == 1) {
+                        await navigator.share({
+                            title: 'Modern Operating Systems',
+                            text: 'Confira esse livro incrivel sobre arquitetura de computadores!',
+                            url: 'https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618880'
+                        })
+                        shareCount[i].innerHTML++
+                    }
+                } catch (error) {
+                    console.error('Erro ao compartilhar:', error);
+                }
+            } else {
+                alert('Função de compartilhar não suportada pelo navegador.')
+            }
+        } // caso não esteja logado else{alert('faça Login')}
+    })
+})

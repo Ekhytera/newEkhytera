@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/educacao.css">
+    <link rel="stylesheet" href="css/alertModal.css">
 
 </head>
 
@@ -87,6 +88,18 @@
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAdFJREFUWEftV9txAjEQ2+0kVJJQSUIlCZUEKoFUEjrZnBib8fn8kB3D3GTiT+a8J7SSdk9lZUdXhkf+BiAzexKRTxF5yTB8FpGdql5aO9DFkJl9iMh75WUAdFgToL2qAnjTuSdDYwE5naAt0MtND2S7PCv76f4BWsrVi+nLMmRm3w6MvwM9QMQA2HIgbIj8LbiE37Yp0ScBNbLQAi58NtnSBSBHLdi590mylALEWHoU2AVLM0Ad7EBXX04jAAl9vUZ6qYHfhFqKAbHsgG44D2JdHDOD+JHkjAHgwp0v0gsIDkmC8YUdqFONHhGZtS2lIdjT50+qHh14ZgaWQrvH9RbjpSWHfLEqOwFLAANQ8bmo6ib1b5sB6TSgiDZcHymYZBwgEZm5ogRuNCDLvIxeKwrC5keHmY0UdSlGAAoGme1Mvbavtm2I7Qmb+i4ywchkEOrlc8iJEIWYhEUx0H2csgauwc6Ddj8PGx3Oquz4YN1feq48XINAi5ezES+nwnH9C1qBpd+usOH625XU/mPQ58X1o885kd2tbxpxMYChjTrH3LZAz6VQAGQ80FtBWLsXEOPEhwLKrRXhn30oIOirFKBnVd32ZEVXy3pexN75B1Rj6ge6yPUlgIC6FQAAAABJRU5ErkJggg==" />
         </nav>
     </header>
+
+    <section class="alertModal hide">
+        <div class="containerModal">
+            <div class="circle">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <p>Faça Login para interagir com a pagina!</p>
+
+            <div class="btns"><button id="logar">Fazer Login</button> <button id="fechar">Fechar</button></div>
+        </div>
+    </section>
 
     <main>
 
@@ -221,5 +234,6 @@
         crossorigin="anonymous"></script>
     <script src="js/nome.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/alertaModal.js"></script>
 </body>
 </html>

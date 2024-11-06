@@ -62,6 +62,7 @@ function renderNews(newsList) {
 
 getNews();
 
+// const modal = document.querySelector('.alertModal');
 let userAtual = sessionStorage.getItem('userLogado');
 document.querySelectorAll('.likeIcon').forEach((el, i) => {
     el.addEventListener("click", () => {
@@ -70,6 +71,8 @@ document.querySelectorAll('.likeIcon').forEach((el, i) => {
             el.classList.add('like');
             likeCount[i].innerHTML++;
             likeCount[i].classList.add('like');
+        } else{
+            modal.classList.remove('hide')
         }
     });
 });
@@ -102,6 +105,8 @@ document.querySelectorAll('.share').forEach((el, i) => {
             } else {
                 alert('Função de compartilhar não suportada pelo navegador.')
             }
-        } // caso não esteja logado else{alert('faça Login')}
+        } else{
+            modal.classList.remove('hide')
+        }
     })
 })

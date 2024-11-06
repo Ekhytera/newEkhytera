@@ -14,26 +14,14 @@ class CreateCard {
             </div>
             <h4><a href="${this.link}" target="_blank">${this.title}</a></h4>
             <p class="sup">Hora da postagem: ${this.hr}</p>
-        </div>
-        <hr>`;
-    }
-
-    cardDestaque() {
-        return `
-        <div class="posts-noticias">
-            <div class="img">
-                <img src="${this.img}" alt="${this.title}" width="200px">
-            </div>
-            <h4><a href="${this.link}" target="_blank">${this.title}</a></h4>
-        </div>
-        <hr>`;
+        </div>`;
     }
 }
 
 const noticias = document.querySelector('.container-noticias');
-const destaques = document.querySelector('.posts-destaques');
+// const apiKey = 'pub_579622e53f99c5ff7ce852fa6cdb335a1a447';
+const apiKey = 'pub_578735429f4fc6aeda0faf6e4e3fd66085b40';
 
-const apiKey = 'pub_579622e53f99c5ff7ce852fa6cdb335a1a447';
 async function getNews() {
     const storedNews = JSON.parse(localStorage.getItem('noticias'));
     const lastFetchDate = localStorage.getItem('lastFetchDate');
@@ -65,17 +53,20 @@ async function getNews() {
 
 function renderNews(newsList) {
     noticias.innerHTML = '';
-    destaques.innerHTML = '';
 
-    newsList.forEach((noticia, index) => {
+    newsList.forEach((noticia) => {
         const news = new CreateCard(noticia.title, noticia.link, noticia.image_url, noticia.pubDate);
-        
-        if (index < 6) {
-            noticias.innerHTML += news.cardNews();
-        } else {
-            destaques.innerHTML += news.cardDestaque();
-        }
+        noticias.innerHTML += news.cardNews();
     });
 }
 
 getNews();
+
+document.querySelectorAll('.likeIcon').forEach((el, i) => {
+    el.addEventListener("click", () => {
+        const likeCount = document.querySelectorAll('.likeCount')
+        el.classList.add('like');
+        likeCount[i].innerHTML++
+        likeCount[i].classList.add('like')
+    })
+})

@@ -63,10 +63,13 @@ function renderNews(newsList) {
 getNews();
 
 document.querySelectorAll('.likeIcon').forEach((el, i) => {
+    let userAtual = sessionStorage.getItem('userLogado');
     el.addEventListener("click", () => {
         const likeCount = document.querySelectorAll('.likeCount')
-        el.classList.add('like');
-        likeCount[i].innerHTML++
-        likeCount[i].classList.add('like')
-    })
-})
+        if (userAtual) {
+            el.classList.add('like');
+            likeCount[i].innerHTML++;
+            likeCount[i].classList.add('like');
+        }
+    });
+});

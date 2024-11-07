@@ -7,58 +7,106 @@ class CreateCard {
     }
 
     cardNews() {
-        const card =
-        `<div class="posts-noticias">
+        return `
+        <div class="posts-noticias">
             <div class="img">
                 <img src="${this.img}" alt="${this.title}" width="200px">
             </div>
             <h4><a href="${this.link}" target="_blank">${this.title}</a></h4>
             <p class="sup">Hora da postagem: ${this.hr}</p>
-        </div>
-        <hr>`;
-        return card
-    }
-    cardDestaque(){
-        const card = 
-        `<div class="posts-noticias">
-            <div class="img">
-                <img src="${this.img}" alt="${this.title}" width="200px">
-            </div>
-            <h4><a href="${this.link}" target="_blank">${this.title}</a></h4>
-        </div>
-        <hr>`;
-        return card
+        </div>`;
     }
 }
 
 const noticias = document.querySelector('.container-noticias');
-const destaques = document.querySelector('.posts-destaques');
-
-const apiKey = 'pub_579622e53f99c5ff7ce852fa6cdb335a1a447';
-
+// const apiKey = 'pub_579622e53f99c5ff7ce852fa6cdb335a1a447';
+const apiKey = 'pub_578735429f4fc6aeda0faf6e4e3fd66085b40';
 
 async function getNews() {
+    const storedNews = JSON.parse(localStorage.getItem('noticias'));
+    const lastFetchDate = localStorage.getItem('lastFetchDate');
+    const today = new Date().toISOString().split('T')[0];
+
+    if (storedNews && lastFetchDate === today) {
+        renderNews(storedNews);
+        return;
+    }
+
     const url = `https://newsdata.io/api/1/latest?country=br&category=technology&apikey=${apiKey}`;
     const resp = await fetch(url);
     const dados = await resp.json();
 
-    console.log(dados)
+    if (!dados.results) return;
 
-    for (let i = 0; i <= 10; i++) {
-        const news = new CreateCard(dados.results[i].title, dados.results[i].link, dados.results[i].image_url, dados.results[i].pubDate.slice(11, 19))
-        const key = dados.results[i].keywords.map(item => item);
+    const listaDeNoticias = dados.results.slice(0, 10).map(noticia => ({
+        title: noticia.title,
+        link: noticia.link,
+        image_url: noticia.image_url,
+        pubDate: noticia.pubDate.slice(11, 19)
+    }));
 
-        const keyNoticias = ['notícias']
-        const contem = keyNoticias.every(item => key.includes(item))
-        
-        if(contem){
-            noticias.innerHTML += news.cardNews()
-        } else{
-            destaques.innerHTML += news.cardDestaque()
-        }
-    }
+    localStorage.setItem('noticias', JSON.stringify(listaDeNoticias));
+    localStorage.setItem('lastFetchDate', today);
 
+    renderNews(listaDeNoticias);
 }
-getNews()
 
+function renderNews(newsList) {
+    noticias.innerHTML = '';
 
+    newsList.forEach((noticia) => {
+        const news = new CreateCard(noticia.title, noticia.link, noticia.image_url, noticia.pubDate);
+        noticias.innerHTML += news.cardNews();
+    });
+}
+
+getNews();
+
+// const modal = document.querySelector('.alertModal');
+let userAtual = sessionStorage.getItem('userLogado');
+document.querySelectorAll('.likeIcon').forEach((el, i) => {
+    el.addEventListener("click", () => {
+        const likeCount = document.querySelectorAll('.likeCount')
+        if (userAtual) {
+            el.classList.add('like');
+            likeCount[i].innerHTML++;
+            likeCount[i].classList.add('like');
+        } else{
+            modal.classList.remove('hide')
+        }
+    });
+});
+
+document.querySelectorAll('.share').forEach((el, i) => {
+    const shareCount = document.querySelectorAll('.shareCount');
+    el.addEventListener('click', async () => {
+        if(userAtual){
+            if (navigator.share) {
+                try {
+                    if (i == 0) {
+                        await navigator.share({
+                            title: 'Computer Organization and Design',
+                            text: 'Confira esse livro incrivel sobre arquitetura de computadores!',
+                            url: 
+                            'https://edisciplinas.usp.br/pluginfile.php/7898320/mod_resource/content/1/Computer%20Organization%20and%20Design%205E%20-%20Patterson%20Hennessy%20-%200124077269.pdf'
+                        })
+                        shareCount[i].innerHTML++
+                    } else if (i == 1) {
+                        await navigator.share({
+                            title: 'Modern Operating Systems',
+                            text: 'Confira esse livro incrivel sobre arquitetura de computadores!',
+                            url: 'https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618880'
+                        })
+                        shareCount[i].innerHTML++
+                    }
+                } catch (error) {
+                    console.error('Erro ao compartilhar:', error);
+                }
+            } else {
+                alert('Função de compartilhar não suportada pelo navegador.')
+            }
+        } else{
+            modal.classList.remove('hide')
+        }
+    })
+})

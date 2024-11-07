@@ -89,6 +89,7 @@ main .content-icons {
 main .content-icons i {
     margin-right: .3rem;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 main .content-icons i:nth-child(1n) {

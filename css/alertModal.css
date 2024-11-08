@@ -48,6 +48,7 @@
 
 .containerModal p{
     font-weight: 400;
+    text-align: center;
     animation: openModal .8s ease-in-out;
 }
 

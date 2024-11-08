@@ -23,6 +23,7 @@
     padding: 1rem;
     border-radius: 15px;
     box-shadow: 1px 1px 5px 1px black;
+    animation: openModal .5s ease-in-out;
 }
 
 .containerModal .circle{
@@ -33,6 +34,7 @@
     border-radius: 50%;
     height: 80px;
     width: 80px;
+    animation: xAlert .5s ease-in-out;
 }
 
 .containerModal .circle i{
@@ -46,6 +48,7 @@
 
 .containerModal p{
     font-weight: 400;
+    animation: openModal .8s ease-in-out;
 }
 
 .containerModal .btns button{
@@ -55,10 +58,29 @@
     width: fit-content;
     padding-inline: 5px;
     border-radius: 5px;
+    animation: openModal .8s ease-in-out;
 }
 
 .containerModal .btns button:hover{
     background-color: rgba(65, 90, 119, 0.9);
     color: white;
     transition: .3s;
+}
+
+@keyframes openModal {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes xAlert {
+    from{
+        transform: scale(.5) rotateY(360deg);
+    }
+    to{
+        transform: scale(1.5);
+    }
 }

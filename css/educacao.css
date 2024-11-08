@@ -1,4 +1,6 @@
 body {
+    min-height: 100vh;
+    /* background-image: url('https://ekhytera.github.io/newEkhytera/imgs/img-noise-500x500.png'); */
     background-color: rgba(13, 27, 42, 1);
     color: rgba(224, 225, 221, 1);
 }
@@ -95,7 +97,7 @@ main .content-icons button .likeIcon {
     margin: .3rem;
     font-size: 1.8rem;
     cursor: pointer;
-    color: white;
+    color: rgba(224, 225, 221, 1);
 }
 
 main .content-icons .icon{

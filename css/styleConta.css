@@ -12,6 +12,15 @@ body{
     background-size: cover;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 2rem;
+}
+
 #bemVindo{
     width: 50%;
     display: none;
@@ -71,7 +80,7 @@ div input{
 div #senha, div #addSenha, div #senhaNova, div #confSenha{
     background-color: transparent;
 }
-#login div #viewPassword{
+#login form div #viewPassword{
     display: flex;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
@@ -86,7 +95,7 @@ div #senha, div #addSenha, div #senhaNova, div #confSenha{
     cursor: pointer;
 }
 
-.erro, #senhaDiferentes, #emailNaoEnc{
+.erro, #senhaDiferentes, #emailNaoEnc, #senhaInv{
     color: white;
     font-weight: 500;
     border-radius: 5px;
@@ -98,7 +107,7 @@ a{
     color: white;
     text-decoration: none;
 }
-button{
+.entrarBtn{
     width: 50%;
     padding: 0.75rem;
     border-radius: 5px;

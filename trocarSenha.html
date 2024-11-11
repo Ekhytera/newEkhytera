@@ -14,29 +14,31 @@
     </div>
     <div id="login">
         <a href="index.html"><img src="imgs/ekhyteralogo.png" alt="logo" class="logo"></a>
-        <div>
-            <label for="email">Email ou Telefone</label>
-            <input type="email" id="emailTrocarSenha">
-            <span id="emailNaoEnc"></span>
-        </div>
-        <div>
-            <label for="newSenha">Nova Senha</label>
-            <div id="viewPassword">
-                <input type="password" id="senhaNova">
-                <img src="imgs/verSenha.png" id="nSenha">
+        <form action="login.html">
+            <div>
+                <label for="email">Email ou Telefone</label>
+                <input type="email" id="emailTrocarSenha">
+                <span id="emailNaoEnc"></span>
             </div>
-        </div>
-        <div>
-            <label for="confSenha">Confirmar Senha</label>
-            <div id="viewPassword">
-                <input type="password" id="confSenha">
-                <img src="imgs/verSenha.png" id="cSenha">
+            <div>
+                <label for="newSenha">Nova Senha</label>
+                <div id="viewPassword">
+                    <input type="password" id="senhaNova">
+                    <img src="imgs/verSenha.png" id="nSenha">
+                </div>
+                <span id="senhaInv"></span>
             </div>
-            <span id="senhaDiferentes"></span>
-        </div>
-        
-        <button onclick="trocarSenha()">Trocar</button>
-        <a href="login.html">Voltar</a>
+            <div>
+                <label for="confSenha">Confirmar Senha</label>
+                <div id="viewPassword">
+                    <input type="password" id="confSenha">
+                    <img src="imgs/verSenha.png" id="cSenha">
+                </div>
+                <span id="senhaDiferentes"></span>
+            </div>
+            <input class="entrarBtn" type="submit" onclick="trocarSenha()" value="Trocar Senha">
+            <a href="login.html">Voltar</a>
+        </form>
     </div>
     <script src="js/versenha.js"></script>
     <script src="js/login.js"></script>

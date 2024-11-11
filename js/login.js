@@ -8,6 +8,10 @@ let allUsers = JSON.parse(localStorage.getItem('allUsers')) || [
     { id: 7, email: 'rian@gmail.com', userName: 'Rian', senha: '123', tipo: 'adm' }
 ];
 
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
 const erroEmail = document.querySelector('#erroEmail');
 const erroSenha = document.querySelector('#erroSenha');
 const erroUser = document.querySelector('#erroUser');
@@ -112,8 +116,8 @@ function cadastrar() {
         valid = false;
     }
 
-    if (inputSenha.value.length < 3) {
-        erroSenha.textContent = 'A senha deve ter pelo menos 3 caracteres';
+    if (inputSenha.value.length < 8) {
+        erroSenha.textContent = 'A senha deve ter pelo menos 8 caracteres';
         erroSenha.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
         inputSenha.style.border = '2px solid rgba(255, 0, 0, 0.7)';
         valid = false;
@@ -156,6 +160,7 @@ function trocarSenha() {
     const inputConfSenha = document.querySelector('#confSenha');
     const senhaDif = document.querySelector('#senhaDiferentes');
     const emailNaoEnc = document.querySelector('#emailNaoEnc');
+    const senhaInv = document.querySelector('#senhaInv');
 
     let usuarioEncontrado = false;
     let valid = true;
@@ -165,6 +170,7 @@ function trocarSenha() {
     inputEmail.style.border = '';
     inputSenha.style.border = '';
     inputConfSenha.style.border = '';
+    senhaInv.textContent = '';
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(inputEmail.value)) {
@@ -175,11 +181,12 @@ function trocarSenha() {
     }
 
     if (inputSenha.value.length < 8) {
-        senhaDif.textContent = 'A senha deve ter pelo menos 8 caracteres';
-        senhaDif.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+        senhaInv.textContent = 'A senha deve ter pelo menos 8 caracteres';
+        senhaInv.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
         inputSenha.style.border = '2px solid rgba(255, 0, 0, 0.7)';
         valid = false;
-    } else if (inputSenha.value !== inputConfSenha.value) {
+    }
+    if (inputSenha.value !== inputConfSenha.value) {
         senhaDif.textContent = 'As senhas não coincidem';
         senhaDif.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
         inputSenha.style.border = '2px solid rgba(255, 0, 0, 0.7)';

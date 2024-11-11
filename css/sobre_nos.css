@@ -40,6 +40,7 @@ main{
     margin-top: -150px;
     width: 100%;
     align-self: center;
+    opacity: .4;
     mask-image: linear-gradient(black, transparent);
     -webkit-mask-image: linear-gradient(black, transparent);
 }

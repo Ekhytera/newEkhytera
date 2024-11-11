@@ -1,3 +1,7 @@
+body {
+    background-color: hsla(211, 53%, 11%, 1);
+}
+
 hr {
 	margin-top: 2rem;
 	margin-bottom: 1rem;
@@ -5,6 +9,8 @@ hr {
 
 main{
 	gap: 1rem;
+	width: 80%;
+	margin-inline: auto;
 }
 .posts>*{
 	margin-top: 3rem;

@@ -221,7 +221,7 @@ body .hidden{
     }
     main{
         padding-inline: 2rem;
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 
     main .middle-part .both-inputs{

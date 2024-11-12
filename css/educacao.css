@@ -12,12 +12,12 @@ main h1 {
     margin-top: 2rem;
 }
 
-main{
+main {
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem;
-    padding-right: 2rem;
+    padding: 0.5rem;
 }
+
 main a {
     text-decoration: none;
     color: rgba(224, 225, 221, 1);
@@ -27,7 +27,7 @@ main a:hover {
     color: rgba(224, 225, 221, 0.7);
 }
 
-main button{
+main button {
     background: none;
     border: none;
 }
@@ -46,6 +46,7 @@ main .capa-content {
 }
 
 main .capa-content img {
+    display: flex;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -58,7 +59,10 @@ main .container {
     gap: 1rem;
     margin: 0;
     margin-bottom: 1rem;
-    max-width: 100%; /* essa regra está conflitando com alguma biblioteca (provavelmente bootstrap) pois ".container" também é uma classe do bootstrap */
+
+    /* essas regras estão conflitando com a classe .container do bootstrap. */
+    padding: 0;
+    max-width: 100%;
 }
 
 main .container .autor {
@@ -68,54 +72,60 @@ main .container .autor {
 main .container .title-tema {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main .container .title-tema>* {
+    margin-bottom: 0.35rem;
 }
 
 main .container .title-tema h3 {
     font-weight: bold;
     font-size: 1.2rem;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-main .content .symbols i {
-    padding-inline-start: 1rem;
+main .container .informacoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-main .content .symbols i {
-    margin-inline-end: 1rem;
-    font-size: 1.3rem;
+main .content .download.button {
+    font-variation-settings: 'FILL' 1;
 }
 
 .like {
-    Color: blue;
     pointer-events: none;
+    font-variation-settings: 'FILL' 1;
+}
+.like>*{
+    color: rgb(65, 105, 225);
 }
 
 main .content-icons {
     display: flex;
 }
 
-main .content-icons button .likeIcon {
-    margin: .3rem;
-    cursor: pointer;
-    color: rgba(224, 225, 221, 1);
-}
-
-main .content-icons .icon{
-    padding: 1rem;
+main .content-icons .icon {
+    padding: 0 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-main .content-icons .icon span{
-    margin: .3rem;
+main .content-icons .icon>* {
+    display: flex;
+    color: rgba(224, 225, 221, 1);
 }
-main .content-icons .icon button>img{
-    max-width: 24px;
-    min-width: 24px;
-    max-height: 24px;
-    min-height: 24px;
+
+main .content-icons .icon button>.material-symbols-outlined {
     object-fit: contain;
+    margin-right: 0.25rem;
 }
 
 main #verMais {
@@ -153,30 +163,34 @@ main .noticias .info .title {
 main .noticias .container-noticias .posts-noticias {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     border-bottom: 1px solid;
 }
 
-main .noticias .container-noticias .posts-noticias h4 {
+main .noticias .container-noticias .posts-noticias h3 {
     font-weight: bold;
+    font-size: large;
+    margin: 0;
 }
 
 main .noticias .container-noticias .posts-noticias .img {
-    margin: .5rem;
+    margin: .5rem 0;
 }
-section.materiais, aside.noticias{
+main .noticias .container-noticias .posts-noticias .sup{
+    font-size: small;
+    opacity: 70%;
+}
+section.materiais,
+aside.noticias {
     display: flex;
     flex-direction: column;
     padding: .5rem;
     width: 100%;
 }
-section .content .container button.tag{
-    margin-left: auto;
-}
-@media only screen and (min-width: 768px) {
 
-}
+@media only screen and (min-width: 768px) {}
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     main {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -186,10 +200,8 @@ section .content .container button.tag{
         align-items: center;
     }
 
-    main .container .title-tema {
-        width: 100%;
-        justify-content: space-between;
-        flex-direction: column;
+    main .content .title-tema{
+        flex-direction: row;
     }
 
     main .noticias .info {
@@ -216,46 +228,56 @@ section .content .container button.tag{
 
 
 /* Config. de Botões */
-.button, .tag {
-    display: block;
+.button,
+.tag {
     align-items: center;
     justify-content: center;
     border: none;
-}.button, .iconButton, .tag{
+}
+
+.button,
+.iconButton,
+.tag {
     transition: 0.3s;
 }
-.button{
+
+.button {
+    display: flex;
     padding: 0.5em 1em;
 }
-.tag{
-    width: 100%;
+
+.tag {
+    display: block;
+    font-size: small;
     text-wrap: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 16em;
     white-space: nowrap;
-    padding: 0.2em 1em;
+    padding: 0.1em 1em;
 }
+
 .vazado {
     border: 1px solid #E0E1DD;
     color: #E0E1DD;
     background-color: transparent;
 }
 
-.vazado:hover, .buttonAdd:hover {
+.vazado:hover,
+.buttonAdd:hover {
     background-color: #e0e1dd;
     color: #191919;
 }
 
 .primario {
-    background: rgb(65,90,119);
-    background: linear-gradient(90deg, rgba(65,90,119,1) 0%, rgba(121,167,221,1) 100%); 
+    background: rgb(65, 90, 119);
+    background: linear-gradient(90deg, rgba(65, 90, 119, 1) 0%, rgba(121, 167, 221, 1) 100%);
     color: #e0e1dd;
 }
 
-.primario:hover{
+.primario:hover {
     background: rgb(84, 121, 164);
-    background: linear-gradient(90deg, rgb(84, 121, 164) 0%, rgb(140, 194, 255) 100%); 
+    background: linear-gradient(90deg, rgb(84, 121, 164) 0%, rgb(140, 194, 255) 100%);
 }
 
 .secundario {
@@ -263,6 +285,7 @@ section .content .container button.tag{
     color: #79a7dd;
     box-shadow: 0px 0px 0px 1px #79a7dd inset;
 }
+
 .secundario:hover {
     background-color: #79a7dd;
     color: #191919;
@@ -272,7 +295,7 @@ section .content .container button.tag{
     border-radius: 10em;
 }
 
-.buttonAdd{
+.buttonAdd {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,11 +310,32 @@ section .content .container button.tag{
 }
 
 /* Indicadores de status (online, ausente, dnd) */
-.statusIndicator{
+.statusIndicator {
     display: inline-flex;
     width: 1em;
     height: 1em;
     border-radius: 50rem;
     background-color: rgb(29, 196, 93);
     margin-right: 0.5em;
+}
+
+/* Classe geral para botões com ícone dentro */
+.iconButton {
+    display: inline-flex;
+    padding: 0.5rem;
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconButton>span {
+    object-fit: contain;
+}
+/* Troca cor quando está com o mouse em cima */
+.iconButton:hover {
+    background-color: rgba(224, 225, 221, 0.15);
+    border-radius: 100rem;
 }

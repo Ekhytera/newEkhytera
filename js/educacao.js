@@ -12,8 +12,8 @@ class CreateCard {
             <div class="img">
                 <img src="${this.img}" alt="${this.title}" width="200px">
             </div>
-            <h4><a href="${this.link}" target="_blank">${this.title}</a></h4>
-            <p class="sup">Hora da postagem: ${this.hr}</p>
+            <h3><a href="${this.link}" target="_blank">${this.title}</a></h3>
+            <p class="sup">Postado hoje às ${this.hr}</p>
         </div>`;
     }
 }
@@ -69,8 +69,8 @@ document.querySelectorAll('.likeIcon').forEach((el, i) => {
         const likeCount = document.querySelectorAll('.likeCount')
         if (userAtual) {
             el.classList.add('like');
-            likeCount[i].innerHTML++;
-            likeCount[i].classList.add('like');
+            likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML)+ 1;
+            el.classList.add('like');
         } else {
             modal.classList.remove('hide')
         }

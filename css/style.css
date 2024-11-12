@@ -77,6 +77,17 @@ main .firstContainer .imgPart::before {
     border-radius: 50%;
     filter: blur(150px);
     z-index: -1;
+    animation: size1 0.5s infinite;
+}
+
+@keyframes size1 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
 }
 
 main .categorias {
@@ -359,7 +370,7 @@ main .materiais .content .card ul li a {
         font-size: 3rem;
     }
 
-    main .categorias .options .texts a{
+    main .categorias .options .texts a {
         width: fit-content;
     }
 
@@ -398,7 +409,7 @@ main .materiais .content .card ul li a {
         width: 50%;
     }
 
-    main .categorias .options .texts a{
+    main .categorias .options .texts a {
         width: 50%;
     }
 

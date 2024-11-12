@@ -1,10 +1,10 @@
-.alertModal{
+.alertModal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.7);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -12,47 +12,59 @@
     align-items: center;
 }
 
-.containerModal{
+.containerModal {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    background-color: white;
-    color: red;
-    font-size: 1.5rem;
+    background-color: #0D1B2A;
+    color: #EB4B61;
     padding: 1rem;
+    border: 1px solid white;
     border-radius: 15px;
     box-shadow: 1px 1px 5px 1px black;
     animation: openModal .5s ease-in-out;
 }
 
-.containerModal .circle{
+.containerModal p {
+    font-size: 1.5rem;
+}
+
+.containerModal .circle {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 5px red;
+    border: solid 5px #EB4B61;
     border-radius: 50%;
     height: 80px;
     width: 80px;
     animation: xAlert .5s ease-in-out;
 }
 
-.containerModal .circle i{
+.containerModal .circle i {
     font-size: 3.5rem;
     padding: 1rem;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.containerModal p{
+.containerModal p {
     font-weight: 400;
     text-align: center;
     animation: openModal .8s ease-in-out;
+    margin: 0;
 }
 
-.containerModal .btns button{
+.containerModal .btns{
+    display: flex;
+    flex-direction: row;
+}
+.containerModal .btns>*{
+    margin: 0.5rem;
+}
+/* .containerModal .btns button{
     border: solid 2px rgba(65, 90, 119, 1);
     background-color: rgba(65, 90, 119, 1);
     color: white;
@@ -66,22 +78,24 @@
     background-color: rgba(65, 90, 119, 0.9);
     color: white;
     transition: .3s;
-}
+} */
 
 @keyframes openModal {
-    from{
+    from {
         opacity: 0%;
     }
-    to{
+
+    to {
         opacity: 100%;
     }
 }
 
 @keyframes xAlert {
-    from{
+    from {
         transform: scale(.5) rotateY(360deg);
     }
-    to{
+
+    to {
         transform: scale(1.5);
     }
 }

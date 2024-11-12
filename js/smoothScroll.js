@@ -9,9 +9,9 @@ function SmoothScroll(target, speed, smooth) {
             || document.body.parentNode
             || document.body)
 
-    var moving = false
-    var pos = target.scrollTop
-    var frame = target === document.body
+    let moving = false
+    let pos = target.scrollTop
+    let frame = target === document.body
         && document.documentElement
         ? document.documentElement
         : target
@@ -22,7 +22,7 @@ function SmoothScroll(target, speed, smooth) {
     function scrolled(e) {
         e.preventDefault();
 
-        var delta = normalizeWheelDelta(e)
+        let delta = normalizeWheelDelta(e)
 
         pos += -delta * speed
         pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight))
@@ -43,7 +43,7 @@ function SmoothScroll(target, speed, smooth) {
     function update() {
         moving = true
 
-        var delta = (pos - target.scrollTop) / smooth
+        let delta = (pos - target.scrollTop) / smooth
 
         target.scrollTop += delta
 
@@ -53,7 +53,7 @@ function SmoothScroll(target, speed, smooth) {
             moving = false
     }
 
-    var requestFrame = function () {
+    let requestFrame = function () {
         return (
             window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||

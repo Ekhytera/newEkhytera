@@ -7,25 +7,25 @@ function SmoothScroll(target, speed, smooth) {
         target = (document.scrollingElement
             || document.documentElement
             || document.body.parentNode
-            || document.body) // cross browser support for document scrolling
+            || document.body)
 
     var moving = false
     var pos = target.scrollTop
     var frame = target === document.body
         && document.documentElement
         ? document.documentElement
-        : target // safari is the new IE
+        : target
 
     target.addEventListener('mousewheel', scrolled, { passive: false })
     target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
 
     function scrolled(e) {
-        e.preventDefault(); // disable default scrolling
+        e.preventDefault();
 
         var delta = normalizeWheelDelta(e)
 
         pos += -delta * speed
-        pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
+        pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight))
 
         if (!moving) update()
     }
@@ -33,11 +33,11 @@ function SmoothScroll(target, speed, smooth) {
     function normalizeWheelDelta(e) {
         if (e.detail) {
             if (e.wheelDelta)
-                return e.wheelDelta / e.detail / 40 * (e.detail > 0 ? 1 : -1) // Opera
+                return e.wheelDelta / e.detail / 40 * (e.detail > 0 ? 1 : -1)
             else
-                return -e.detail / 3 // Firefox
+                return -e.detail / 3
         } else
-            return e.wheelDelta / 120 // IE,Safari,Chrome
+            return e.wheelDelta / 120
     }
 
     function update() {
@@ -53,7 +53,7 @@ function SmoothScroll(target, speed, smooth) {
             moving = false
     }
 
-    var requestFrame = function () { // requestAnimationFrame cross browser
+    var requestFrame = function () {
         return (
             window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||

@@ -62,15 +62,22 @@ function renderNews(newsList) {
 
 getNews();
 
-// const modal = document.querySelector('.alertModal');
 let userAtual = sessionStorage.getItem('userLogado');
+let clickLike  = 0
 document.querySelectorAll('.likeIcon').forEach((el, i) => {
     el.addEventListener("click", () => {
         const likeCount = document.querySelectorAll('.likeCount')
         if (userAtual) {
-            el.classList.add('like');
-            likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML)+ 1;
-            el.classList.add('like');
+            if(clickLike==0){
+                el.classList.add('like');
+                likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML)+ 1;
+                clickLike = 1;
+            }
+            else if(clickLike==1){
+                el.classList.remove('like');
+                likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML)- 1;
+                clickLike = 0;
+            }
         } else {
             modal.classList.remove('hide')
         }

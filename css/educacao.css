@@ -99,7 +99,6 @@ main .content .download.button {
 }
 
 .like {
-    pointer-events: none;
     font-variation-settings: 'FILL' 1;
 }
 

@@ -75,18 +75,23 @@ main .firstContainer .imgPart::before {
     height: 100%;
     background: radial-gradient(circle, rgb(121, 167, 221, 1) 0%, rgba(0, 150, 255, 0) 100%);
     border-radius: 50%;
-    filter: blur(150px);
     z-index: -1;
-    animation: size1 0.5s infinite;
+    animation: size1 4s infinite;
 }
 
 @keyframes size1 {
-    from {
-        transform: scale(1);
+    0%{
+        filter: blur(150px);
+        border-radius: 50%;
     }
 
-    to {
-        transform: scale(1.5);
+    50%{
+        filter: blur(50px);
+        border-radius: 40%;
+    }
+
+    100%{
+        filter: blur(150px);
     }
 }
 

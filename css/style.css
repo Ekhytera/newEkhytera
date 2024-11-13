@@ -76,7 +76,8 @@ main .firstContainer .imgPart::before {
     background: radial-gradient(circle, rgb(121, 167, 221, 1) 0%, rgba(0, 150, 255, 0) 100%);
     border-radius: 50%;
     z-index: -1;
-    animation: size1 4s infinite;
+    filter: blur(150px);
+    animation: size1 3s infinite;
 }
 
 @keyframes size1 {

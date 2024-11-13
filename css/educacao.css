@@ -59,6 +59,7 @@ main .container {
     gap: 1rem;
     margin: 0;
     margin-bottom: 1rem;
+    flex-direction: column;
 
     /* essas regras estão conflitando com a classe .container do bootstrap. */
     padding: 0;
@@ -101,7 +102,8 @@ main .content .download.button {
     pointer-events: none;
     font-variation-settings: 'FILL' 1;
 }
-.like>*{
+
+.like>* {
     color: rgb(65, 105, 225);
 }
 
@@ -175,10 +177,12 @@ main .noticias .container-noticias .posts-noticias h3 {
 main .noticias .container-noticias .posts-noticias .img {
     margin: .5rem 0;
 }
-main .noticias .container-noticias .posts-noticias .sup{
+
+main .noticias .container-noticias .posts-noticias .sup {
     font-size: small;
     opacity: 70%;
 }
+
 section.materiais,
 aside.noticias {
     display: flex;
@@ -189,7 +193,7 @@ aside.noticias {
 
 @media only screen and (min-width: 768px) {}
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
     main {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -199,7 +203,15 @@ aside.noticias {
         align-items: center;
     }
 
-    main .content .title-tema{
+    main .content-icons .icon {
+        padding: 0.5 1rem;
+    }
+
+    main .content .title-tema {
+        flex-direction: row;
+    }
+
+    main .container {
         flex-direction: row;
     }
 
@@ -252,8 +264,9 @@ aside.noticias {
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 16em;
+    max-height: 2em;
     white-space: nowrap;
-    padding: 0.1em 1em;
+    padding: 0.1rem 1rem;
 }
 
 .vazado {
@@ -321,9 +334,8 @@ aside.noticias {
 /* Classe geral para botões com ícone dentro */
 .iconButton {
     display: inline-flex;
-    padding: 0.5rem;
     background-color: transparent;
-    border-radius: 20px;
+    border-radius: 0.3rem;
     border: none;
     cursor: pointer;
     align-items: center;
@@ -333,6 +345,7 @@ aside.noticias {
 .iconButton>span {
     object-fit: contain;
 }
+
 /* Troca cor quando está com o mouse em cima */
 .iconButton:hover {
     background-color: rgba(224, 225, 221, 0.15);

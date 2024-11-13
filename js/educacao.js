@@ -63,12 +63,11 @@ function renderNews(newsList) {
 getNews();
 
 let userAtual = sessionStorage.getItem('userLogado');
-let clickLike  = 1
 document.querySelectorAll('.likeIcon').forEach((el, i) => {
     el.addEventListener("click", () => {
         const likeCount = document.querySelectorAll('.likeCount')
         if (userAtual) {
-            if(clickLike){
+            if(!el.classList.contains('like')){
                 el.classList.add('like');
                 likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML)+ 1;
                 clickLike = 0;

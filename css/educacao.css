@@ -104,10 +104,10 @@ main .content .download.button {
 
 .like>* {
     color: rgb(65, 105, 225);
-    animation: animeted-like .5s ease;
+    animation: size-like .5s ease;
 }
 
-@keyframes animeted-like {
+@keyframes size-like {
     from{
         transform: scale(1.5);
     }

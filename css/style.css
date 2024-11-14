@@ -266,6 +266,18 @@ main .materiais .content .card {
     padding: 1rem;
 }
 
+main .materiais .content .card ul li{
+    padding-bottom: .5rem;
+    transition: .3s;
+}
+
+main .materiais .content .card ul li a:hover{
+    color: #79A7DD;
+    transition: .3s;
+}
+
+
+
 main .materiais .content .card:nth-child(1) {
     background-image: url('https://ekhytera.github.io/newEkhytera/imgs/gpubackimg.png');
     background-repeat: no-repeat;

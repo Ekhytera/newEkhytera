@@ -13,7 +13,7 @@ class CreateCard {
                 <img src="${this.img}" alt="${this.title}" width="200px">
             </div>
             <h3><a href="${this.link}" target="_blank">${this.title}</a></h3>
-            <p class="sup">Postado hoje às ${this.hr}</p>
+            <p class="sup">Postado às ${this.hr}</p>
         </div>`;
     }
 }

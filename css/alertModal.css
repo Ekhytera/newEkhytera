@@ -64,21 +64,6 @@
 .containerModal .btns>*{
     margin: 0.5rem;
 }
-/* .containerModal .btns button{
-    border: solid 2px rgba(65, 90, 119, 1);
-    background-color: rgba(65, 90, 119, 1);
-    color: white;
-    width: fit-content;
-    padding-inline: 5px;
-    border-radius: 5px;
-    animation: openModal .8s ease-in-out;
-}
-
-.containerModal .btns button:hover{
-    background-color: rgba(65, 90, 119, 0.9);
-    color: white;
-    transition: .3s;
-} */
 
 @keyframes openModal {
     from {

@@ -99,7 +99,7 @@ main{
     margin-top: 2800px;
     margin-left: -700px;
     width: 900px;
-    height: 600px;
+    height: 400px;
     filter: blur(100px);
     background-image: radial-gradient(closest-side, rgba(121, 168, 221, 0.954), rgba(0, 0, 0, 0));
     z-index: -1;

@@ -316,6 +316,10 @@ main{
     
 }
 
+.blurry-light:nth-child(3){
+        margin-top: 2500px;
+    }
+
 .conf p {
     margin: 0;
     margin-bottom: 16px;

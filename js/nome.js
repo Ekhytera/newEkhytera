@@ -9,14 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (userAtual) {
-        document.querySelectorAll('#nomeUser').forEach(function (element) {
-            if(userAtual.length>10){
-                element.innerHTML = userAtual.slice(0, 10).toUpperCase()+'...' + ', ';
-            } else {
-                element.innerHTML = userAtual.toUpperCase() + ', ';
-            }
-
-        });
         document.querySelectorAll('#userName').forEach(function (element) {
                 element.innerHTML = userAtual;
         })

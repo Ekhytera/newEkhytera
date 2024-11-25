@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://ekhytera.github.io/newEkhytera/imgs/img-noise-500x500.png');
+	background-image: url('https://ekhytera.github.io/newEkhytera/imgs/img-noise-500x500.png');
 }
 
 hr {
@@ -7,379 +7,431 @@ hr {
 	margin-bottom: 1rem;
 }
 
-main{
+main {
 	gap: 1rem;
 	width: 80%;
 	margin-inline: auto;
 }
-.posts>*{
+
+.posts>* {
 	margin-top: 3rem;
 }
 
 /* Parte de cima do post (foto de perfil e campo de texto) */
 
-	#postsContainer{
-		display: flex;
-		flex-direction: column-reverse;
-	}
-	article.post {
-		background-color: rgba(0, 0, 0, 0.55);
-		color: #E0E1DD;
-		padding: 1rem;	
-		margin-inline: 1rem;
-	}
+#postsContainer {
+	display: flex;
+	flex-direction: column-reverse;
+}
 
-	article.post>.postBody {
-		margin-left: 4rem;
-	}
+article.post {
+	background-color: rgba(0, 0, 0, 0.55);
+	color: #E0E1DD;
+	padding: 1rem;
+	margin-inline: 1rem;
+}
 
-	.postBody {
-		display: flex;
-		flex-direction: column;
-		width: auto;
-	}
+article.post>.postBody {
+	margin-left: 4rem;
+}
 
-	.postBody img{
-		max-width: 40em;
-		/* assumindo que o tamanho padrão da fonte da página seja 
+.postBody {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+}
+
+.postBody img {
+	max-width: 40em;
+	/* assumindo que o tamanho padrão da fonte da página seja 
 		16px, a largura máxima das imagens nos posts será de 640px. 
 		(40 x 16px) */
-	}
-	
-	.fotoPerfil {
-		padding: 0.5rem;
-		width: 4rem;
-		height: 4rem;
-		border-radius: 50%;
-		object-fit: cover;
+}
+
+.fotoPerfil {
+	padding: 0.5rem;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.postAuthor {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	flex: 4;
+}
+
+.postAuthor>div {
+	display: flex;
+	flex-direction: column;
+}
+
+.postAuthor .username {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.postAuthor .subtitle {
+	font-size: 1.20em;
+}
+
+.postFooter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.postFooter button {
+	margin-right: 1.5rem;
+	color: white;
+}
+
+.postFooter button span {
+	margin-left: 5px;
+}
+
+.like {
+	font-variation-settings: 'FILL' 1;
+}
+
+.like>* {
+	color: rgb(65, 105, 225);
+	animation: size-like .5s ease;
+}
+
+@keyframes size-like {
+	from {
+		transform: scale(1.5);
 	}
 
-	.postAuthor {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-		flex: 4;
-	}.postAuthor>div{
-		display: flex;
-		flex-direction: column;
-	}.postAuthor .username{
-		font-size: 1.25em;
-		margin: 0;
-	}.postAuthor .subtitle{
-		font-size: 1.20em;
+	to {
+		transform: scale(1);
 	}
-	
-	.postFooter{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-	.postFooter button{
-		margin-right: 1.5rem;
-		color: white;
-	}
+}
 
-	.postFooter button span{
-		margin-left: 5px;
-	}
+.postDetails {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
 
-	.like {
-		font-variation-settings: 'FILL' 1;
-	}
-	
-	.like>* {
-		color: rgb(65, 105, 225);
-		animation: size-like .5s ease;
-	}
-	
-	@keyframes size-like {
-		from{
-			transform: scale(1.5);
-		}
-		to{
-			transform: scale(1);
-		}
-	}
+.subtitle {
+	opacity: 50%;
+	font-weight: 200;
+}
 
-	.postDetails{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-	}
-	
-	.subtitle {
-		opacity: 50%;
-		font-weight: 200;
-	}
+.postAside {
+	display: inline-flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: flex-end;
+}
 
-	.postAside{
-		display: inline-flex;
-		flex-direction: row;
-		flex: 1;
-		justify-content: flex-end;
-	}.categoryButtons{
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-	}.categoryButtons>*{
-		margin-inline: 0.2rem;
-		overflow: hidden;
-		text-wrap: nowrap;
-		text-overflow: ellipsis;
-	}
+.categoryButtons {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.categoryButtons>* {
+	margin-inline: 0.2rem;
+	overflow: hidden;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
+}
 
 /* Input para digitar novo post */
-	.writePostContainer {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 1rem;
-		border-top: 1px solid #E0E1DD;
-		border-bottom: 1px solid #E0E1DD;
-		border-left: none;
-		border-right: none;
-	}
-	
-	.writePost {
-		display: flex;
-		align-items: center;
-		color: #E0E1DD;
-		background-color: transparent;
-		border: none;
-		resize: none;
-		width: 100%;
-	}
+.writePostContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	border-top: 1px solid #E0E1DD;
+	border-bottom: 1px solid #E0E1DD;
+	border-left: none;
+	border-right: none;
+}
 
-	.writePost:focus {
-		outline: 0;
-		border: 0;
-	}
+.writePost {
+	display: flex;
+	align-items: center;
+	color: #E0E1DD;
+	background-color: transparent;
+	border: none;
+	resize: none;
+	width: 100%;
+}
 
-	.writePost::placeholder {
-		color: #E0E1DD;
-		opacity: 60%;
-		font-weight: bold;
-	}
+.writePost:focus {
+	outline: 0;
+	border: 0;
+}
 
-	.writePostBody{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-end;
-		width: 100%;
-	}
+.writePost::placeholder {
+	color: #E0E1DD;
+	opacity: 60%;
+	font-weight: bold;
+}
 
-	.writePostFooter {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		width: 100%;
-		justify-content: space-around;
-		align-items: center;
-	}
+.writePostBody {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+}
 
-	.writePostFooter>div>* {
-		margin-inline: 0.5rem;
-	}
+.writePostFooter {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
 
-	.writePostCategories{
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
+.writePostFooter>div>* {
+	margin-inline: 0.5rem;
+}
+
+.writePostCategories {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+@media only screen and (max-width: 992px) {
+	.writePostCategories>div {
+		display: none;
 	}
-	
-	@media only screen and (max-width: 992px){
-		.writePostCategories>div{
-			display: none;
-		}
-	}
+}
 
 /* Seção de comunidades */
-	.communitiesContainer{
-		display: flex;
-		flex-direction: column;
-		margin: 2em 0;
-		color: #e0e1dd;
-	}.communitiesContainer>div, .communityCards{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.communityCards{
+.communitiesContainer {
+	display: flex;
+	flex-direction: column;
+	margin: 2em 0;
+	color: #e0e1dd;
+}
+
+.communitiesContainer>div,
+.communityCards {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.communityCards {
+	width: 100%;
+	padding-inline: 2em;
+}
+
+.communityCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5em;
+	margin-inline: 1em;
+	flex: 1;
+	background-color: rgba(0, 0, 0, 0.55);
+}
+
+.communityCard * {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.communityCard h3 {
+	margin-top: 0.5em;
+	font-size: 1.5em;
+}
+
+.communityCard h4 {
+	font-size: 0.9em;
+}
+
+.communityCard h5 {
+	font-size: 0.9em;
+}
+
+.communityIcon {
+	width: 8em;
+	height: 8em;
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+	main {
 		width: 100%;
-		padding-inline: 2em;
-	}
-	.communityCard{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 1.5em;
-		margin-inline: 1em;
-		flex: 1;
-		background-color: rgba(0, 0, 0, 0.55);
-	}
-	.communityCard *{
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
-	.communityCard h3{
-		margin-top: 0.5em;
-		font-size: 1.5em;
-	}.communityCard h4{
-		font-size: 0.9em;
-	}.communityCard h5{
-		font-size: 0.9em;
-	}
-	.communityIcon{
-		width: 8em;
-		height: 8em;
-		object-fit: cover;
 	}
 
-	@media only screen and (max-width: 768px) {
-		.communityCard{
-			margin-inline: 0.3em;
-		}
-		.communityCard h3{
-			font-size: 1em;
-		}
-		.communityIcon{
-			width: 5em;
-			height: 5em;
-		}
+	div .icon{
+		width: 90px;
+		padding: 5px;
 	}
+
+	.communityCard {
+		margin-inline: 0.3em;
+	}
+
+	.communityCard h3 {
+		font-size: 1em;
+	}
+
+	.communityIcon {
+		width: 5em;
+		height: 5em;
+	}
+}
+
 /* Menu 3 pontos */
-	.postOptions{
-		opacity: 0%;
-		display: flex;
-		position: absolute;
-		background-color: #191919;
-		color: #E0E1DD;
-		transition: 1s;
-	}
-	.postOptions>ul{
-		list-style: none;
-		margin: 0;
-		padding: 1rem;
-	}
-	.postOptions>ul>li{
-		margin: 0;
-		padding: 1rem;
-		font-weight: bold;
-	}
-	.postOptions>ul>li:hover{
-		background-color: rgba(255, 255, 255, 0.1);
-	}
-	.postOptions>ul>hr{
-		margin: 0 0.1rem
-	}
-	.delete{
-		color: var(--bs-red)
-	}
-/* Classe geral para botões com ícone dentro */
-	.iconButton {
-		display: inline-flex;
-		padding: 0.5rem;
-		background-color: transparent;
-		border-radius: 0.5rem;
-		border: none;
-		cursor: pointer;
-		align-items: center;
-		justify-content: center;
-	}
+.postOptions {
+	opacity: 0%;
+	display: flex;
+	position: absolute;
+	background-color: #191919;
+	color: #E0E1DD;
+	transition: 1s;
+}
 
-	.iconButton>img {
-		min-width: 1.5em;
-		height: 1.5em;
-		object-fit: contain;
-	}
+.postOptions>ul {
+	list-style: none;
+	margin: 0;
+	padding: 1rem;
+}
+
+.postOptions>ul>li {
+	margin: 0;
+	padding: 1rem;
+	font-weight: bold;
+}
+
+.postOptions>ul>li:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.postOptions>ul>hr {
+	margin: 0 0.1rem
+}
+
+.delete {
+	color: var(--bs-red)
+}
+
+/* Classe geral para botões com ícone dentro */
+.iconButton {
+	display: inline-flex;
+	padding: 0.5rem;
+	background-color: transparent;
+	border-radius: 0.5rem;
+	border: none;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+.iconButton>img {
+	min-width: 1.5em;
+	height: 1.5em;
+	object-fit: contain;
+}
+
 /* Troca cor quando está com o mouse em cima */
-	.iconButton:hover {
-		background-color: rgba(224, 225, 221, 0.15);
-		border-radius: 50%;
-	}
+.iconButton:hover {
+	background-color: rgba(224, 225, 221, 0.15);
+	border-radius: 50%;
+}
 
 /* Config. de Botões */
-	.button {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.5em 1em;
-		border: none;
-	}.button, .iconButton{
-		transition: 0.3s;
-	}
-	
-	.vazado {
-		border: 1px solid #E0E1DD;
-		color: #E0E1DD;
-		background-color: transparent;
-	}
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em 1em;
+	border: none;
+}
 
-	.button.vazado:hover, .buttonAdd:hover {
-		background-color: #e0e1dd;
-		color: #191919;
-	}
+.button,
+.iconButton {
+	transition: 0.3s;
+}
 
-	.primario {
-		background: rgb(65,90,119);
-		background: linear-gradient(90deg, rgba(65,90,119,1) 0%, rgba(121,167,221,1) 100%); 
-		color: #e0e1dd;
-	}
+.vazado {
+	border: 1px solid #E0E1DD;
+	color: #E0E1DD;
+	background-color: transparent;
+}
 
-	.primario:hover{
-		background: rgb(84, 121, 164);
-		background: linear-gradient(90deg, rgb(84, 121, 164) 0%, rgb(140, 194, 255) 100%); 
-	}
+.button.vazado:hover,
+.buttonAdd:hover {
+	background-color: #e0e1dd;
+	color: #191919;
+}
 
-	.secundario {
-		background-color: transparent;
-		color: #79a7dd;
-		box-shadow: 0px 0px 0px 1px #79a7dd inset;
-	}
-	.secundario:hover {
-		background-color: #79a7dd;
-		color: #191919;
-	}
+.primario {
+	background: rgb(65, 90, 119);
+	background: linear-gradient(90deg, rgba(65, 90, 119, 1) 0%, rgba(121, 167, 221, 1) 100%);
+	color: #e0e1dd;
+}
 
-	.arredondado {
-		border-radius: 10em;
-	}
+.primario:hover {
+	background: rgb(84, 121, 164);
+	background: linear-gradient(90deg, rgb(84, 121, 164) 0%, rgb(140, 194, 255) 100%);
+}
 
-	.buttonAdd{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 1rem;
-		width: 1rem;
-		height: 1rem;
-		font-weight: bold;
-		font-size: larger;
-		background-color: transparent;
-		color: #e0e1dd;
-		border: 2px solid #e0e1dd;
-	}
+.secundario {
+	background-color: transparent;
+	color: #79a7dd;
+	box-shadow: 0px 0px 0px 1px #79a7dd inset;
+}
+
+.secundario:hover {
+	background-color: #79a7dd;
+	color: #191919;
+}
+
+.arredondado {
+	border-radius: 10em;
+}
+
+.buttonAdd {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	width: 1rem;
+	height: 1rem;
+	font-weight: bold;
+	font-size: larger;
+	background-color: transparent;
+	color: #e0e1dd;
+	border: 2px solid #e0e1dd;
+}
 
 /* Indicadores de status (online, ausente, dnd) */
-	.statusIndicator{
-		display: inline-flex;
-		width: 1em;
-		height: 1em;
-		border-radius: 50rem;
-		background-color: rgb(29, 196, 93);
-		margin-right: 0.5em;
-	}
+.statusIndicator {
+	display: inline-flex;
+	width: 1em;
+	height: 1em;
+	border-radius: 50rem;
+	background-color: rgb(29, 196, 93);
+	margin-right: 0.5em;
+}
 
-@media only screen and (max-width: 600px){
-	.card2, .card3{
+@media only screen and (max-width: 600px) {
+
+	.card2,
+	.card3 {
 		display: none;
 	}
 }

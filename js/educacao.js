@@ -86,7 +86,6 @@ document.querySelectorAll('.likeIcon').forEach((el, i) => {
 document.querySelectorAll('.share').forEach((el, i) => {
     const shareCount = document.querySelectorAll('.shareCount');
     el.addEventListener('click', async () => {
-        // if (userAtual) {
             if (navigator.share) {
                 try {
                     if (i == 0) {
@@ -103,7 +102,7 @@ document.querySelectorAll('.share').forEach((el, i) => {
                             text: 'Confira esse livro incrivel sobre arquitetura de computadores!',
                             url: 'https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618880'
                         })
-                        shareCount[i].innerHTML++
+                        shareCount[i].parseInt(likeCount[i].innerHTML) + 1;
                     }
                 } catch (error) {
                     console.error('Erro ao compartilhar:', error);
@@ -111,8 +110,5 @@ document.querySelectorAll('.share').forEach((el, i) => {
             } else {
                 alert('Função de compartilhar não suportada pelo navegador.')
             }
-        // } else {
-        //     modal.classList.remove('hide')
-        // }
     })
 })

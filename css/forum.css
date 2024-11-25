@@ -75,10 +75,31 @@ main{
 		flex-direction: row;
 		align-items: center;
 	}
-	.postFooter>span{
-		font-weight: bold;
+	.postFooter button{
 		margin-right: 1.5rem;
-		margin-left: 0.1rem;
+		color: white;
+	}
+
+	.postFooter button span{
+		margin-left: 5px;
+	}
+
+	.like {
+		font-variation-settings: 'FILL' 1;
+	}
+	
+	.like>* {
+		color: rgb(65, 105, 225);
+		animation: size-like .5s ease;
+	}
+	
+	@keyframes size-like {
+		from{
+			transform: scale(1.5);
+		}
+		to{
+			transform: scale(1);
+		}
 	}
 
 	.postDetails{

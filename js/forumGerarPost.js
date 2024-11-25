@@ -36,9 +36,21 @@ function addPost(settings) {
 				</div>
 				<hr>
 				<div class="postFooter">
-					<button class="iconButton add-like" id="buttonImgLike"><img src="imgs/icon_like.png"></button><span id="likeCount">354</span>
-					<button class="iconButton add-comment"><img src="imgs/icon_comment.png"></button><span>76</span>
-					<button class="iconButton add-share"><img src="imgs/icon_share.png"></button><span>3</span>
+                    <div class="icon">
+                        <button class="iconButton likeIcon"><span class="material-symbols-outlined">thumb_up</span>
+                            <span class="likeCount">484</span>
+                        </button>
+                    </div>
+                    <div class="icon">
+                        <button class="share iconButton"><span class="material-symbols-outlined">share</span>
+                            <span class="shareCount">560</span>
+                        </button>
+                    </div>
+                    <div class="icon">
+                        <button class="iconButton add-comment"><span class="material-symbols-outlined">sms</span>
+                            <span class="comment">123</span>
+                        </button>
+                    </div>
 				</div>
 			</article>`;
 
@@ -46,42 +58,59 @@ function addPost(settings) {
 	const postsContainer = document.getElementById('postsContainer');
 	postsContainer.appendChild(post);
 }
-// function darLike(){
-// 	const likeButtons = document.querySelectorAll('.add-like');
-// 	let userAtual = sessionStorage.getItem('userLogado');
 
-// 	likeButtons.forEach(button => {
-// 		button.addEventListener('click', () => {
-// 		const likeCountDisplay = button.nextElementSibling;
-// 		let likeCount = parseInt(likeCountDisplay.textContent);
-
-// 		if(userAtual){
-// 			likeCount++;
-// 			likeCountDisplay.textContent = likeCount;
-// 			likeCountDisplay.style.color = '#4169E1'
-// 			button.disabled = true;	
-// 		}
-// 		});
-// 	});
-// };
+// Função dar Like -------------------------------
+let userAtual = sessionStorage.getItem('userLogado');
 document.addEventListener('DOMContentLoaded', () => {
-	const likeButtons = document.querySelectorAll('.add-like');
-	let userAtual = sessionStorage.getItem('userLogado');
-
-	likeButtons.forEach(button => {
-		button.addEventListener('click', () => {
-			const likeCountDisplay = button.nextElementSibling;
-			let likeCount = parseInt(likeCountDisplay.textContent);
-
+	document.querySelectorAll('.likeIcon').forEach((el, i) => {
+		el.addEventListener("click", () => {
+			const likeCount = document.querySelectorAll('.likeCount')
 			if (userAtual) {
-				likeCount++;
-				likeCountDisplay.textContent = likeCount;
-				likeCountDisplay.style.color = '#4169E1'
-				button.disabled = true;
+				if (!el.classList.contains('like')) {
+					el.classList.add('like');
+					likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML) + 1;
+					clickLike = 0;
+				}
+				else {
+					el.classList.remove('like');
+					likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML) - 1;
+					clickLike = 1;
+				}
+			} else {
+				modal.classList.remove('hide')
 			}
 		});
 	});
 })
+
+document.querySelector('.writePostContainer').addEventListener('click', function(){
+	if(!userAtual){
+		modal.classList.remove('hide');
+	}
+})
+
+// Função compartilhar -------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('.share').forEach((el) => {
+	const shareCount = document.querySelectorAll('.shareCount');
+	el.addEventListener('click', async () => {
+		if (navigator.share) {
+			try {
+				await navigator.share({
+					title: 'Olhe nosso Forum',
+					text: 'Confira esses comentarios!',
+					url: 'https://ekhytera.github.io/newEkhytera/forum.html'
+				})
+				shareCount[i].parseInt(likeCount[i].innerHTML) + 1;
+			} catch (error) {
+				console.error('Erro ao compartilhar:', error);
+			}
+		} else {
+			alert('Função de compartilhar não suportada pelo navegador.')
+		}
+	})
+})
+});
 
 
 function addCommunities() {
@@ -147,12 +176,10 @@ function postar() {
 			text: document.getElementById('writePostInput').value,
 			categories: ['Teste']
 		});
-		// document.addEventListener('DOMContentLoaded', darLike())
 
 		textArea.value = '';
 	}
 }
-
 
 addPost({
 	username: 'Usuário 1',

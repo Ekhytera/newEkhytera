@@ -75,7 +75,7 @@ main{
 
 .blurry-light{
     position: absolute;
-    margin-top: -300px;
+    margin-top: 50px;
     margin-left: -700px;
     width: 800px;
     height: 2000px;

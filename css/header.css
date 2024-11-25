@@ -71,7 +71,6 @@ header .verticalNav .contorno {
 
 header .verticalNav .contorno h1 {
     font-size: 1rem;
-    font-weight: bold;
 }
 
 header .verticalNav .contorno #infoUser {
@@ -84,7 +83,7 @@ header .verticalNav .contorno #infoUser {
 header .verticalNav .contorno #infoUser h1,
 span {
     margin: 0;
-    width: 100px;
+    max-width: 130px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -293,5 +292,15 @@ header .iconsNav .userIcons {
 
     header .iconsNav {
         display: flex;
+    }
+
+    header .verticalNav .contorno #infoUser h1,
+    span {
+        margin: 0;
+        width: 100%;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

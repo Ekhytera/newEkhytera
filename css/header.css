@@ -220,6 +220,18 @@ header .iconsNav {
     display: none;
     justify-self: flex-end;
     gap: 1rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+header .iconsNav p {
+    display: none;
+    color: white;
+    margin: 0;
 }
 
 header .iconsNav input {

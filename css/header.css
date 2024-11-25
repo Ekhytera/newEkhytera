@@ -55,8 +55,8 @@ header .verticalNav .container-logo #logo {
 }
 
 header .verticalNav .contorno #userFoto {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -70,7 +70,8 @@ header .verticalNav .contorno {
 }
 
 header .verticalNav .contorno h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 header .verticalNav .contorno #infoUser {
@@ -78,12 +79,15 @@ header .verticalNav .contorno #infoUser {
     flex-direction: column;
     padding-left: 1rem;
     width: 100%;
-    align-items: flex-start;
 }
 
 header .verticalNav .contorno #infoUser h1,
 span {
     margin: 0;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 header .verticalNav .contorno #seta {
@@ -244,6 +248,15 @@ header .iconsNav .userIcons {
 }
 
 @media only screen and (min-width: 768px) {
+    header .verticalNav .contorno #userFoto {
+        width: 50px;
+        height: 50px;
+    }
+
+    header .verticalNav .contorno h1 {
+        font-size: 1.5rem;
+    }
+
     header .verticalNav {
         width: 400px;
     }

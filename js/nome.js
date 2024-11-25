@@ -12,13 +12,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (userAtual) {
         document.querySelectorAll('#nomeUser').forEach(function (element) {
-            element.innerHTML = userAtual.toUpperCase() + ', ';
+            if(userAtual.length>10){
+                element.innerHTML = userAtual.slice(0, 10).toUpperCase()+'...' + ', ';
+            } else {
+                element.innerHTML = userAtual.toUpperCase() + ', ';
+            }
+
         });
         document.querySelectorAll('#userName').forEach(function (element) {
-            element.innerHTML = userAtual;
+                element.innerHTML = userAtual;
         })
         document.querySelectorAll('#CadatroInfo').forEach(function (element) {
-            element.innerHTML = userAtualEmail;
+                element.innerHTML = userAtualEmail;
         })
         document.querySelectorAll('.userNameLogged').forEach(function (element) {
             element.innerHTML = userAtual;

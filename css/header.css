@@ -80,14 +80,15 @@ header .verticalNav .contorno #infoUser {
     width: 100%;
 }
 
-header .verticalNav .contorno #infoUser h1,
-span {
-    margin: 0;
-    max-width: 130px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+header .verticalNav .contorno #infoUser #userName,
+    #CadatroInfo {
+        margin: 0;
+        width: 100%;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
 header .verticalNav .contorno #seta {
     width: 20px;
@@ -294,8 +295,8 @@ header .iconsNav .userIcons {
         display: flex;
     }
 
-    header .verticalNav .contorno #infoUser h1,
-    span {
+    header .verticalNav .contorno #infoUser #userName,
+    #CadatroInfo {
         margin: 0;
         width: 100%;
         max-width: 200px;

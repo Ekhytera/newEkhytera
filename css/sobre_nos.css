@@ -1,42 +1,41 @@
-*{
+* {
     box-sizing: border-box;
     max-width: 100%
 }
 
-body{
-    background-image: linear-gradient(
-        0deg,
-        #0D1B2A,
-        #0D1B2A
-    );
-    overflow-x: hidden;
+body {
+    background-image: linear-gradient(0deg,
+            #0D1B2A,
+            #0D1B2A);
 }
 
-main{
+main {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 6rem;
 }
 
-.text_container{
+.text_container {
     margin-top: -100px;
     color: aliceblue;
     transition: ease-in 0.3s;
 }
 
-.text_container h1{
+.text_container h1 {
     font-weight: 700;
 }
 
-#img1, #img2, #img3{
-    width: 2000vh;
+#img1,
+#img2,
+#img3 {
+    width: 100%;
     opacity: 100%;
     position: absolute;
     mix-blend-mode: color-dodge;
 }
 
-#img1{
+#img1 {
     margin-top: -150px;
     width: 100%;
     align-self: center;
@@ -45,35 +44,35 @@ main{
     -webkit-mask-image: linear-gradient(black, transparent);
 }
 
-#img2{
+#img2 {
     margin-top: 875px;
-    mask-image: 
-    -webkit-mask-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
-    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
-    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+        linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+
     -webkit-mask-size: cover;
     mask-size: cover;
 }
 
-#imagens2{
+#imagens2 {
     mask-image: linear-gradient(black, transparent 10%);
 }
 
-#img3{
+#img3 {
     margin-top: 2450px;
     opacity: 70%;
-    -webkit-mask-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
-    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
-    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+        linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
     z-index: -1;
-    
+
 }
 
-.blurry-light{
+.blurry-light {
     position: absolute;
     margin-top: 50px;
     margin-left: -700px;
@@ -84,7 +83,7 @@ main{
     transition: all 3s;
 }
 
-.blurry-light:nth-child(2){
+.blurry-light:nth-child(2) {
     position: absolute;
     margin-top: 400px;
     margin-left: 1200px;
@@ -94,7 +93,7 @@ main{
     background-image: radial-gradient(closest-side, rgba(121, 168, 221, 0.954), rgba(0, 0, 0, 0))
 }
 
-.blurry-light:nth-child(3){
+.blurry-light:nth-child(3) {
     position: absolute;
     margin-top: 2800px;
     margin-left: -700px;
@@ -105,21 +104,22 @@ main{
     z-index: -1;
 }
 
-#text2{
+#text2 {
     position: relative;
     margin-top: 600px;
 }
 
-.text_container h1, p{
-    color:aliceblue;
+.text_container h1,
+p {
+    color: aliceblue;
     margin: 50px;
 }
 
-.feather{
+.feather {
     width: 100px;
 }
 
-#equipe{
+#equipe {
     position: relative;
     display: flex;
     margin-left: 150px;
@@ -129,11 +129,11 @@ main{
     gap: 20px;
 }
 
-#equipe h3{
+#equipe h3 {
     text-align: center;
 }
 
-#equipe p{
+#equipe p {
     display: inline;
     text-align: center;
     margin-left: 10px;
@@ -141,7 +141,7 @@ main{
     width: 100px;
 }
 
-.image_space{
+.image_space {
     background-position: 0px 0px;
     background-size: cover;
     width: 10px;
@@ -153,94 +153,100 @@ main{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-#henrique{
+#henrique {
     background-image: url(https://raw.githubusercontent.com/Ekhytera/newEkhytera/refs/heads/main/imgs/membros_equipe/henrique.png);
     transition-delay: 0.3s;
 }
 
-#eve{
+#eve {
     background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/evellyn.jpg?raw=true);
     transition-delay: 1.5s;
 }
 
-#savyo{
+#savyo {
     background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/savyo.png?raw=true);
     background-size: 200px;
     background-position: -80px -10px;
     transition-delay: 0.9s;
 }
 
-#rian{
+#rian {
     background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/rian.png?raw=true);
     transition-delay: 1.2s;
 }
 
-#pedro{
+#pedro {
     background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/pedrao.jpg?raw=true);
     transition-delay: 1.8s;
 }
 
-#luiz{
+#luiz {
     background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/luiz.jpg?raw=true);
     transition-delay: 2s;
 }
 
-#joao{
+#joao {
     background-image: url(https://github.com/Ekhytera/newEkhytera/blob/main/imgs/membros_equipe/joao.jpg?raw=true);
     transition-delay: 0.6s;
 }
 
-.membros img{
+.membros img {
     width: 100px;
     max-width: 100%;
     border-radius: 50%;
 }
 
-.membros{
+.membros {
     display: flex;
     flex-direction: column;
 }
 
-#container3{
+#container3 {
     margin-top: 200px;
     padding: 50px;
     text-align: center;
 }
 
-#container3 blockquote{
+#container3 blockquote {
     padding: 50px;
+    position: relative;
 }
 
-@media only screen and (min-width: 360px){
-    body{
+#container3 #logo_vazada1 {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media only screen and (min-width: 320px) {
+    body {
         overflow-x: hidden;
     }
-    
-    #img1{
+
+    #img1 {
         width: 2000px;
         background-size: cover;
         margin-top: 30px;
         margin-left: -20px;
-        -webkit-mask-image: 
+        -webkit-mask-image:
             linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
             linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
-        mask-image: 
+        mask-image:
             linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%),
             linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
     }
 
-    #img2{
+    #img2 {
         margin-left: -15px;
     }
 
-    #img3{
+    #img3 {
         display: flex;
         flex-direction: column;
-        margin-top: 3160px;
+        margin-bottom: 0;
         margin-left: -10px;
     }
 
-    #equipe{
+    #equipe {
         display: flex;
         flex-direction: row;
         margin-left: 30px;
@@ -249,45 +255,44 @@ main{
         justify-content: center;
     }
 
-    .blurry-light:nth-child(2){
-        margin-left: 350px;
-        margin-top: 300px;
+    .blurry-light:nth-child(2) {
+        display: none;
     }
 }
 
 @media only screen and (max-width: 728px) {
-    body{
+    body {
         overflow-x: hidden;
     }
-    
-    .blurry-light:nth-child(1){
+
+    .blurry-light:nth-child(1) {
         margin-top: -30px;
         height: 700px;
     }
 
-    .blurry-light:nth-child(2){
+    .blurry-light:nth-child(2) {
         margin-left: 650px;
         margin-top: 300px;
     }
 
-    .blurry-light:nth-child(3){
+    .blurry-light:nth-child(3) {
         margin-top: 2500px;
     }
 
-    #img2{
+    #img2 {
         margin-left: -15px;
     }
 
-    .text_container p{
+    .text_container p {
         font-size: 1.5ch;
     }
 
-    #container3{
+    #container3 {
         font-size: 1.5ch;
         margin-top: -40px;
     }
 
-    #img3{
+    #img3 {
         margin-top: 2350px;
     }
 }
@@ -295,30 +300,30 @@ main{
 
 
 @media only screen and (min-width: 1200px) {
-    body{
+    body {
         overflow-x: hidden;
     }
-    
-    #img3{
+
+    #img3 {
         margin-top: 2300px;
     }
-    
-    .blurry-light:nth-child(2){
+
+    .blurry-light:nth-child(2) {
         width: 200px;
         margin-left: 1350px;
     }
-    
 
 
-    #container3{
+
+    #container3 {
         margin-top: 650px;
     }
-    
+
 }
 
-.blurry-light:nth-child(3){
-        margin-top: 2200px;
-    }
+.blurry-light:nth-child(3) {
+    margin-top: 2200px;
+}
 
 .conf p {
     margin: 0;

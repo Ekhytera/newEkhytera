@@ -91,7 +91,7 @@ document.querySelector('.writePostContainer').addEventListener('click', function
 
 // Função compartilhar -------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-document.querySelectorAll('.share').forEach((el) => {
+document.querySelectorAll('.share').forEach((el, i) => {
 	const shareCount = document.querySelectorAll('.shareCount');
 	el.addEventListener('click', async () => {
 		if (navigator.share) {
@@ -101,7 +101,7 @@ document.querySelectorAll('.share').forEach((el) => {
 					text: 'Confira esses comentarios!',
 					url: 'https://ekhytera.github.io/newEkhytera/forum.html'
 				})
-				shareCount[i].parseInt(likeCount[i].innerHTML) + 1;
+				shareCount[i].innerHTML++
 			} catch (error) {
 				console.error('Erro ao compartilhar:', error);
 			}

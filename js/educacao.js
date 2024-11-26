@@ -102,7 +102,7 @@ document.querySelectorAll('.share').forEach((el, i) => {
                             text: 'Confira esse livro incrivel sobre arquitetura de computadores!',
                             url: 'https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618880'
                         })
-                        shareCount[i].parseInt(likeCount[i].innerHTML) + 1;
+                        shareCount[i].innerHTML++;
                     }
                 } catch (error) {
                     console.error('Erro ao compartilhar:', error);

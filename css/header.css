@@ -25,7 +25,6 @@ header .icons div {
 
 header .iconsNav .menuIcon {
     cursor: pointer;
-
 }
 
 header .verticalNav {
@@ -37,6 +36,7 @@ header .verticalNav {
     background-color: rgb(26, 26, 26);
     border-radius: 0px 0px 0px 10px;
     width: 90%;
+    max-width: 350px;
     height: 100vh;
     overflow-y: scroll;
     color: hsla(75, 6%, 87%, 1);
@@ -76,7 +76,7 @@ header .verticalNav .contorno h1 {
 header .verticalNav .contorno #infoUser {
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
+    padding-left: .8rem;
     width: 100%;
 }
 
@@ -92,7 +92,7 @@ header .verticalNav .contorno #infoUser #userName,
 
 header .verticalNav .contorno #seta {
     width: 20px;
-    margin-left: 1.5rem;
+    margin-left: .5rem;
     transform: rotate(90deg);
     transition: .3s;
 }

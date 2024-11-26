@@ -147,6 +147,7 @@ main #verMais {
     border: 2px solid rgba(224, 225, 221, 1);
     padding: .5rem;
     font-weight: bold;
+    transition: .3s;
 }
 
 main #verMais:hover {

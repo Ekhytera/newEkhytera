@@ -222,8 +222,7 @@ header .iconsNav {
     justify-self: flex-end;
     border: 2px solid white;
     border-radius: 50%;
-    padding-block: 5px;
-    padding-inline: 10px;
+    padding: 5px;
     cursor: pointer;
     align-items: center;
     gap: 10px;
@@ -233,6 +232,7 @@ header .iconsNav p {
     display: none;
     color: white;
     margin: 0;
+    padding-inline: 10px;
 }
 
 header .iconsNav input {

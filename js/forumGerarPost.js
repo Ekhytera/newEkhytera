@@ -37,12 +37,12 @@ function addPost(settings) {
 				<hr>
 				<div class="postFooter">
                     <div class="icon">
-                        <button class="iconButton likeIcon"><span class="material-symbols-outlined">thumb_up</span>
+                        <button class="iconButton likeIcon" onclick=darLike(this)><span class="material-symbols-outlined">thumb_up</span>
                             <span class="likeCount">484</span>
                         </button>
                     </div>
                     <div class="icon">
-                        <button class="share iconButton"><span class="material-symbols-outlined">share</span>
+                        <button class="share iconButton" onclick=compartilhar(this)><span class="material-symbols-outlined">share</span>
                             <span class="shareCount">560</span>
                         </button>
                     </div>
@@ -61,56 +61,50 @@ function addPost(settings) {
 
 // Função dar Like -------------------------------
 let userAtual = sessionStorage.getItem('userLogado');
-document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll('.likeIcon').forEach((el, i) => {
-		el.addEventListener("click", () => {
-			const likeCount = document.querySelectorAll('.likeCount')
-			if (userAtual) {
-				if (!el.classList.contains('like')) {
-					el.classList.add('like');
-					likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML) + 1;
-					clickLike = 0;
-				}
-				else {
-					el.classList.remove('like');
-					likeCount[i].innerHTML = parseInt(likeCount[i].innerHTML) - 1;
-					clickLike = 1;
-				}
-			} else {
-				modal.classList.remove('hide')
-			}
-		});
-	});
-})
 
-document.querySelector('.writePostContainer').addEventListener('click', function(){
-	if(!userAtual){
+function darLike(el) {
+	const likeCount = el.querySelector('.likeCount');
+	if (userAtual) {
+		if (!el.classList.contains('like')) {
+			el.classList.add('like')
+			likeCount.innerHTML = parseInt(likeCount.innerHTML) + 1;
+		} else {
+			el.classList.remove('like');
+			likeCount.innerHTML = parseInt(likeCount.innerHTML) - 1;
+		}
+	} else {
+		modal.classList.remove('hide');
+	}
+}
+
+document.querySelector('.writePostContainer').addEventListener('click', function () {
+	if (!userAtual) {
 		modal.classList.remove('hide');
 	}
 })
 
 // Função compartilhar -------------------------------------------
-document.addEventListener('DOMContentLoaded', () => {
-document.querySelectorAll('.share').forEach((el, i) => {
-	const shareCount = document.querySelectorAll('.shareCount');
-	el.addEventListener('click', async () => {
-		if (navigator.share) {
-			try {
-				await navigator.share({
-					title: 'Olhe nosso Forum',
-					text: 'Confira esses comentarios!',
-					url: 'https://ekhytera.github.io/newEkhytera/forum.html'
-				})
-				shareCount[i].innerHTML++
-			} catch (error) {
-				console.error('Erro ao compartilhar:', error);
-			}
-		} else {
-			alert('Função de compartilhar não suportada pelo navegador.')
+async function compartilhar(el) {
+	const shareCount = el.querySelector('.shareCount');
+
+	if (navigator.share) {
+		try {
+			await navigator.share({
+				title: 'Olhe nosso Forum',
+				text: 'Confira esses comentarios!',
+				url: 'https://ekhytera.github.io/newEkhytera/forum.html'
+			})
+			shareCount.innerHTML++
+
+
+
+		} catch (error) {
+			console.error('Erro ao compartilhar:', error)
 		}
-	})
-})
-});
+	} else {
+		alert('Função de compartilhar não suportada pelo navegador.')
+	}
+}
 
 
 function addCommunities() {

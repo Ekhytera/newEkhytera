@@ -220,13 +220,13 @@ header .horizontalNav ul li a:hover {
 header .iconsNav {
     display: none;
     justify-self: flex-end;
-    gap: 1rem;
     border: 2px solid white;
     border-radius: 50%;
-    padding: 5px;
+    padding-block: 5px;
+    padding-inline: 10px;
     cursor: pointer;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
 }
 
 header .iconsNav p {

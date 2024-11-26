@@ -96,20 +96,29 @@ article.post>.postBody {
 .like {
 	font-variation-settings: 'FILL' 1;
 }
-
-.like>* {
-	color: rgb(65, 105, 225);
-	animation: size-like .5s ease;
+.like > span:first-child{
+    animation: rotate-like .5s ease;
 }
 
-@keyframes size-like {
-	from {
-		transform: scale(1.5);
-	}
+.like>* {
+    color: rgb(65, 105, 225);
+    animation: size-likeCount .5s ease;
+}
 
-	to {
-		transform: scale(1);
-	}
+@keyframes size-likeCount {
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate-like {
+    0% { transform: rotate(0)scale(1.5); }
+    25% { transform: rotate(10deg) scale(1.5); }
+    50% { transform: rotate(-10deg) scale(1.5); }
+    75% { transform: rotate(10deg) scale(1.5); }
 }
 
 .postDetails {

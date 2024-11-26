@@ -17,8 +17,9 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('#CadatroInfo').forEach(function (element) {
                 element.innerHTML = userAtualEmail;
         })
-        document.querySelectorAll('.userNameLogged').forEach(function (element) {
-            element.innerHTML = userAtual;
+        document.querySelectorAll('.userNameLogged').forEach(function (element, name) {
+            name = userAtual.split(' ')[0]
+            element.innerHTML = name
         })
         iconsNav.style.borderRadius = '10px';
         userNameLogged.style.display = 'block';

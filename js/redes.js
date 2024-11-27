@@ -17,7 +17,7 @@ const henrique = `
 const joao = `
     <div class="redes">
         <a href="https://www.instagram.com/joaogabriel3871" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-de-alc%C3%A2ntara-teixeira-6600b030b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://github.com/JoaodeAlcantara" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>`
 

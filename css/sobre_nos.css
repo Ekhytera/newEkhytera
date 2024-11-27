@@ -260,6 +260,39 @@ p {
     }
 }
 
+.redes{
+    display: none;
+    position: absolute;
+    top: -20%;
+    z-index: 5;
+    gap: 1rem;
+    background-color: hsla(0, 0%, 10%, 1);
+    width: fit-content;
+    padding: 1rem;
+    border: solid 1px white;
+    border-radius: 15px;
+    animation: transition .5s;
+}
+
+.redes a, .redes a > i{
+    color: aliceblue;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.redes a > i:hover{
+    transition: .3s;
+    color: rgba(240, 248, 255, 0.6);
+    transform: scale(1.3);
+}
+
+@keyframes transition{
+    0%{ opacity: .2; }
+    100% { opacity: 1; }
+}
+
+
 @media only screen and (max-width: 728px) {
     body {
         overflow-x: hidden;

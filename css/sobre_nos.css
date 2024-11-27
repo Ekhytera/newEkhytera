@@ -199,6 +199,7 @@ p {
 .membros {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #container3 {
@@ -263,7 +264,7 @@ p {
 .redes{
     display: none;
     position: absolute;
-    top: -20%;
+    top: -50px;
     z-index: 5;
     gap: 1rem;
     background-color: hsla(0, 0%, 10%, 1);

@@ -85,8 +85,8 @@
 
     <main>
         <section class="gameSelector">
-            <h1>Jogos & Softwares</h1>
-            <p>Populares</p>
+            <h1>Jogos</h1>
+            <p>Selecione seus jogos preferidos!</p>
             <div class="allGames">
                 <div id="cs"><img src="imgs/cs2.png" alt="Counter Strike 2"></div>
                 <div id="fort"><img src="imgs/fortnite.png" alt="Fortnite"></div>
@@ -124,24 +124,28 @@
         </section>
 
         <section class="addedGames">
-            <div class="pcSpecs">
-                <button id="recSpecs">REQUISITOS RECOMENDADOS</button>
-                <button id="minSpecs">REQUISITOS MÍNIMOS</button>
-            </div>
-            <div class="pcBuild">
-                <div class="component">
-                    <img src="imgs/placadevideo.png" alt="GPU">
-                    <span id="gpu">Nenhum jogo selecionado!</span>
-                </div>
-                <div class="component">
-                    <img src="imgs/processador.png" alt="CPU">
-                    <span id="cpu">Nenhum jogo selecionado!</span>
-                </div>
-                <div class="component">
-                    <img src="imgs/ram.png" alt="RAM">
-                    <span id="ram">Nenhum jogo selecionado!</span>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>Componente</th>
+                    <th>Requisitos Mínimos</th>
+                    <th>Requisitos Recomendados</th>
+                </tr>
+                <tr>
+                    <td><img src="imgs/placadevideo.png" alt="GPU"></td>
+                    <td id="minGpu"></td>
+                    <td id="recGpu"></td>
+                </tr>
+                <tr>
+                    <td><img src="imgs/processador.png" alt="CPU"></td>
+                    <td id="minCpu"></td>
+                    <td id="recCpu"></td>
+                </tr>
+                <tr>
+                    <td><img src="imgs/ram.png" alt="RAM"></td>
+                    <td id="minRam"></td>
+                    <td id="recRam"></td>
+                </tr>
+            </table>
         </section>
     </main>
 

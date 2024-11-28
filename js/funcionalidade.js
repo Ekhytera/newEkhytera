@@ -26,11 +26,13 @@ let robloxButton = document.getElementById('roblox');
 let rleagueButton = document.getElementById('rleague');
 let theSims4Button = document.getElementById('thesims4');
 
-const printGPU = document.getElementById('gpu');
-const printCPU = document.getElementById('cpu');
-const printRAM = document.getElementById('ram');
-const recSpecsButton = document.getElementById('recSpecs');
-const minSpecsButton = document.getElementById('minSpecs');
+const minGpu = document.getElementById('minGpu');
+const minCpu = document.getElementById('minCpu');
+const minRam = document.getElementById('minRam');
+
+const recGpu = document.getElementById('recGpu');
+const recCpu = document.getElementById('recCpu');
+const recRam = document.getElementById('recRam');
 
 let selectedGames = [];
 
@@ -67,6 +69,8 @@ function selectionToggler(button, game) {
         checkmark.style.display = 'flex';
         img.style.opacity = 0.5;
         selectedGames.push(game);
+        calculateMinSpecsPC();
+        calculateRecSpecsPC();
     } else {
         checkmark.style.display = 'none';
         img.style.opacity = 1;
@@ -74,6 +78,8 @@ function selectionToggler(button, game) {
         if (index > -1) {
             selectedGames.splice(index, 1);
         }
+        calculateMinSpecsPC();
+        calculateRecSpecsPC();
     }
 }
 
@@ -127,9 +133,9 @@ theSims4Button.addEventListener('click', function () {
 
 function calculateRecSpecsPC() {
     if (selectedGames.length === 0) {
-        printCPU.textContent = 'Nenhum jogo selecionado!';
-        printGPU.textContent = 'Nenhum jogo selecionado!';
-        printRAM.textContent = 'Nenhum jogo selecionado!';
+        recGpu.textContent = '';
+        recCpu.textContent = '';
+        recRam.textContent = '';
     }
     else {
         let maxGPU = selectedGames[0].recHardware.GPU;
@@ -154,17 +160,17 @@ function calculateRecSpecsPC() {
             RAM: maxRAM,
         };
 
-        printGPU.textContent = pcBuild.GPU;
-        printCPU.textContent = pcBuild.CPU;
-        printRAM.textContent = pcBuild.RAM + 'GB';
+        recGpu.textContent = pcBuild.GPU;
+        recCpu.textContent = pcBuild.CPU;
+        recRam.textContent = pcBuild.RAM + 'GB';
     }
 }
 
 function calculateMinSpecsPC() {
     if (selectedGames.length === 0) {
-        printCPU.textContent = 'Nenhum jogo selecionado!';
-        printGPU.textContent = 'Nenhum jogo selecionado!';
-        printRAM.textContent = 'Nenhum jogo selecionado!';
+        minGpu.textContent = '';
+        minCpu.textContent = '';
+        minRam.textContent = '';
     }
     else {
         let maxGPU = selectedGames[0].minHardware.GPU;
@@ -189,11 +195,8 @@ function calculateMinSpecsPC() {
             RAM: maxRAM,
         };
 
-        printGPU.textContent = pcBuild.GPU;
-        printCPU.textContent = pcBuild.CPU;
-        printRAM.textContent = pcBuild.RAM + 'GB';
+        minGpu.textContent = pcBuild.GPU;
+        minCpu.textContent = pcBuild.CPU;
+        minRam.textContent = pcBuild.RAM + 'GB';
     }
 };
-
-recSpecsButton.addEventListener('click', calculateRecSpecsPC);
-minSpecsButton.addEventListener('click', calculateMinSpecsPC);

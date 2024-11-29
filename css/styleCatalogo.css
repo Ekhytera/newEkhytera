@@ -11,6 +11,16 @@ main {
     align-items: center;
     margin-top: 25px;
 }
+
+i{
+    transition: 0.3s;
+}
+
+i:hover{
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+
 main .selectors {
     display: flex;
     gap: 1rem;

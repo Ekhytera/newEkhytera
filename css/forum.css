@@ -343,7 +343,7 @@ article.post>.postBody {
 	display: inline-flex;
 	padding: 0.5rem;
 	background-color: transparent;
-	border-radius: 0.5rem;
+	border-radius: 10px;
 	border: none;
 	cursor: pointer;
 	align-items: center;
@@ -359,7 +359,7 @@ article.post>.postBody {
 /* Troca cor quando está com o mouse em cima */
 .iconButton:hover {
 	background-color: rgba(224, 225, 221, 0.15);
-	border-radius: 50%;
+	border-radius: 15px;
 }
 
 /* Config. de Botões */

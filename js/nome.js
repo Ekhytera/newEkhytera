@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
         iconsNav.style.borderRadius = '10px';
         userNameLogged.style.display = 'block';
 
-        infoConta.innerHTML = '<h3>Minha conta</h3> <p id="leave">Sair</p>'
+        infoConta.innerHTML = '<h3>Minha conta</h3> <p id="leave">Sair</p> <a href="trocarSenha.html">Alterar Senha</a>'
 
         document.querySelectorAll('#leave').forEach(function (element) {
             element.addEventListener('click', function () {

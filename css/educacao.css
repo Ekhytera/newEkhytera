@@ -96,6 +96,7 @@ main .container .informacoes {
 
 main .content .download.button {
     font-variation-settings: 'FILL' 1;
+    cursor: pointer;
 }
 
 .like {

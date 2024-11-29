@@ -323,6 +323,7 @@ article.post>.postBody {
 	margin: 0;
 	padding: 1rem;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .postOptions>ul>li:hover {

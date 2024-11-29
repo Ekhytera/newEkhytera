@@ -11,7 +11,6 @@ function hideMenu() {
 
 function listItem(text) {
     const li = document.createElement('li');
-    li.addEventListener('mouseup', hideMenu);
     li.innerHTML = text;
     return li;
 }
@@ -52,9 +51,17 @@ function showMenu(caller) {
         deleteOption.classList.add('delete');
 
         deleteOption.addEventListener('click', function () {
-            const post = caller.closest('.postWrapper');
-            if (post) {
-                post.remove();
+            if (deleteOption.innerHTML === 'Deletar') {
+                deleteOption.innerHTML = 'Confirmar';
+                deleteOption.removeEventListener('click', arguments.callee);
+                deleteOption.addEventListener('click', function () {
+                    const post = caller.closest('.postWrapper');
+                    if (post) {
+                        document.body.removeChild(clickOutArea);
+                        post.remove();
+                        hideMenu();
+                    }
+                });
             }
         });
         ul.appendChild(deleteOption);
